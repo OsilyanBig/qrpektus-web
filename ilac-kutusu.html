@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İlaç Kutusu – QrPektüs</title>
+  <meta name="description" content="QrPektüs ilaç kütüphanesi. Tüm ilaçların dijital prospektüslerine buradan ulaşabilirsiniz." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container">
+
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="QrPektüs Logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-placeholder" style="display:none;">Q</div>
+        QrPektüs
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav_home">Ana Sayfa</a></li>
+        <li><a href="ilac-kutusu.html" data-i18n="nav_drugs">İlaç Kutusu</a></li>
+        <li>
+          <div class="lang-selector">
+            <button class="lang-btn">
+              <span class="lang-current">
+                <span class="flag">🇹🇷</span> TR <span>▾</span>
+              </span>
+            </button>
+            <div class="lang-dropdown">
+              <a href="#" data-lang="tr"><span class="flag">🇹🇷</span> Türkçe</a>
+              <a href="#" data-lang="en"><span class="flag">🇬🇧</span> English</a>
+              <a href="#" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</a>
+              <a href="#" data-lang="fr"><span class="flag">🇫🇷</span> Français</a>
+              <a href="#" data-lang="es"><span class="flag">🇪🇸</span> Español</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="index.html#download" class="btn btn-primary" style="padding:10px 20px; font-size:0.9rem;"
+             data-i18n="nav_download">Uygulamayı İndir</a>
+        </li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="drug-library-hero">
+    <div class="container">
+      <h1>
+        <span style="font-size:2.8rem;">📦</span><br />
+        <span data-i18n="lib_title">İlaç Kutusu</span>
+      </h1>
+      <p data-i18n="lib_subtitle">
+        Tüm ilaçların prospektüslerine buradan ulaşabilirsiniz.
+      </p>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="drug-search"
+               data-i18n-placeholder="lib_search"
+               placeholder="İlaç ara..." />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== İLAÇ LİSTESİ ===== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+
+      <div class="drugs-grid">
+
+        <!-- ===== OCURIN ===== -->
+        <div class="drug-card">
+          <div class="drug-card-image">
+            <img src="images/ocurin.png" alt="Ocurin %0,05 Göz Damlası"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <span class="placeholder-icon" style="display:none;">👁️</span>
+          </div>
+          <div class="drug-card-body">
+            <h3>Ocurin %0,05 Göz Damlası</h3>
+            <div class="drug-barcode">📊 8699569610359</div>
+            <p class="drug-short-desc">
+              Göz kuruluğuna bağlı iltihap tedavisinde gözyaşı yapımını artıran
+              siklosporin içerikli göz damlası emülsiyonu.
+            </p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+              <span style="display:inline-block; padding:3px 10px; background:#DBEAFE; color:#1E40AF; border-radius:20px; font-size:0.75rem; font-weight:600;">Göz</span>
+              <span style="display:inline-block; padding:3px 10px; background:#D1FAE5; color:#065F46; border-radius:20px; font-size:0.75rem; font-weight:600;">Reçeteli</span>
+            </div>
+            <a href="ocurin.html" class="btn btn-primary" data-i18n="lib_detail_btn">Prospektüsü Gör</a>
+          </div>
+        </div>
+
+        <!-- ===== PAROL ===== -->
+        <div class="drug-card">
+          <div class="drug-card-image">
+            <img src="images/parol.png" alt="Parol 500mg Tablet"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <span class="placeholder-icon" style="display:none;">💊</span>
+          </div>
+          <div class="drug-card-body">
+            <h3>Parol 500mg Tablet</h3>
+            <div class="drug-barcode">📊 8699717010093</div>
+            <p class="drug-short-desc">
+              Hafif ve orta şiddetli ağrıların giderilmesi ile ateş düşürmek için
+              kullanılan parasetamol içerikli tablet.
+            </p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+              <span style="display:inline-block; padding:3px 10px; background:#FEF3C7; color:#92400E; border-radius:20px; font-size:0.75rem; font-weight:600;">Ağrı Kesici</span>
+              <span style="display:inline-block; padding:3px 10px; background:#FEE2E2; color:#991B1B; border-radius:20px; font-size:0.75rem; font-weight:600;">Ateş Düşürücü</span>
+            </div>
+            <a href="parol.html" class="btn btn-primary" data-i18n="lib_detail_btn">Prospektüsü Gör</a>
+          </div>
+        </div>
+
+        <!-- ===== ROACCUTANE ===== -->
+        <div class="drug-card">
+          <div class="drug-card-image">
+            <img src="images/roaccutane.png" alt="Roaccutane 20mg Kapsül"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <span class="placeholder-icon" style="display:none;">💊</span>
+          </div>
+          <div class="drug-card-body">
+            <h3>Roaccutane 20mg Kapsül</h3>
+            <div class="drug-barcode">📊 8699505191287</div>
+            <p class="drug-short-desc">
+              Şiddetli ve dirençli akne tiplerinin tedavisinde kullanılan izotretinoin
+              etkin maddeli yumuşak jelatin kapsül.
+            </p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+              <span style="display:inline-block; padding:3px 10px; background:#E0E7FF; color:#3730A3; border-radius:20px; font-size:0.75rem; font-weight:600;">Cilt</span>
+              <span style="display:inline-block; padding:3px 10px; background:#D1FAE5; color:#065F46; border-radius:20px; font-size:0.75rem; font-weight:600;">Reçeteli</span>
+            </div>
+            <a href="roaccutane.html" class="btn btn-primary" data-i18n="lib_detail_btn">Prospektüsü Gör</a>
+          </div>
+        </div>
+
+        <!-- ===== İBURAMİN COLD ===== -->
+        <div class="drug-card">
+          <div class="drug-card-image">
+            <img src="images/iburamin.png" alt="İburamin Cold Kapsül"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <span class="placeholder-icon" style="display:none;">🤧</span>
+          </div>
+          <div class="drug-card-body">
+            <h3>İburamin Cold Kapsül</h3>
+            <div class="drug-barcode">📊 8699591090099</div>
+            <p class="drug-short-desc">
+              Soğuk algınlığının sebep olduğu hapşırma, burun akıntısı, burun tıkanıklığı,
+              ağrı ve ateş belirtilerini gideren kombine kapsül.
+            </p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+              <span style="display:inline-block; padding:3px 10px; background:#DBEAFE; color:#1E40AF; border-radius:20px; font-size:0.75rem; font-weight:600;">Soğuk Algınlığı</span>
+              <span style="display:inline-block; padding:3px 10px; background:#FEF3C7; color:#92400E; border-radius:20px; font-size:0.75rem; font-weight:600;">Ağrı Kesici</span>
+            </div>
+            <a href="iburamin-cold.html" class="btn btn-primary" data-i18n="lib_detail_btn">Prospektüsü Gör</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bilgilendirme Kutusu -->
+      <div style="margin-top:48px;">
+        <div class="info-box" style="max-width:700px; margin:0 auto; text-align:center;">
+          <p style="margin:0;">
+            <strong data-i18n="warning_title">⚠️ Önemli Uyarı</strong><br />
+            <span data-i18n="warning_text">
+              Bu sayfa yalnızca bilgilendirme amaçlıdır. İlaç kullanımında mutlaka
+              doktorunuza veya eczacınıza danışınız.
+            </span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== UYGULAMA CTA ===== -->
+  <section class="section" style="background: var(--bg); padding-top:0;">
+    <div class="container">
+      <div class="cta-box">
+        <h2>📱 Mobil Uygulamamızı Deneyin</h2>
+        <p>
+          QrPektüs uygulaması ile ilaç kutunuzdaki barkodu tarayarak
+          prospektüse anında erişin, hatırlatıcı kurun ve ilaçlarınızı takip edin.
+        </p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="index.html#download" class="btn btn-accent">
+            <span>📱</span>
+            <span data-i18n="cta_btn2">Uygulamayı İndir</span>
+          </a>
+          <a href="index.html" class="btn btn-secondary"
+             style="background:rgba(255,255,255,0.15); color:white; border-color:rgba(255,255,255,0.4);">
+            <span>🏠</span>
+            <span data-i18n="nav_home">Ana Sayfa</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-placeholder">Q</div>
+            QrPektüs
+          </div>
+          <p data-i18n="footer_desc">
+            İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor,
+            çok dilli sağlık bilgisine erişimi kolaylaştırıyoruz.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_links">Hızlı Bağlantılar</h4>
+          <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
+          <a href="ilac-kutusu.html" data-i18n="nav_drugs">İlaç Kutusu</a>
+          <a href="index.html#download" data-i18n="nav_download">Uygulamayı İndir</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_drugs_title">İlaçlar</h4>
+          <a href="ocurin.html">Ocurin %0,05</a>
+          <a href="parol.html">Parol 500mg</a>
+          <a href="roaccutane.html">Roaccutane 20mg</a>
+          <a href="iburamin-cold.html">İburamin Cold</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_contact">İletişim</h4>
+          <a href="mailto:info@qrpektus.com">info@qrpektus.com</a>
+          <a href="#">qrpektus.vercel.app</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2025 QrPektüs. Tüm hakları saklıdır.</span>
+        <span data-i18n="footer_disclaimer">
+          Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Yukarı çık">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
