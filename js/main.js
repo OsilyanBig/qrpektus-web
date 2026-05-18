@@ -1,27 +1,50 @@
 /* ============================================
-   QrPektüs - Main JavaScript (UPDATED)
-   Prospektüs çeviri sistemi eklendi
+   QRpektüs - Main JavaScript (FINAL)
+   Only TR + EN
    ============================================ */
 
-/* ---------- Language System ---------- */
 const translations = {
   tr: {
+    /* NAV */
     nav_home: "Ana Sayfa",
     nav_drugs: "İlaç Kutusu",
-    nav_about: "Hakkımızda",
     nav_download: "Uygulamayı İndir",
+
+    /* HERO */
     hero_badge: "🌿 Kağıtsız Sağlık Devrimi",
     hero_title_1: "İlaç Prospektüsünü",
     hero_title_2: "Dijitalde Taşı",
-    hero_desc: "QrPektüs ile ilaç kutunuzdaki QR kodu tarayın, prospektüse anında ulaşın. Çoklu dil desteği, hatırlatıcılar ve daha fazlası.",
+    hero_desc: "QRpektüs ile ilaç kutunuzdaki QR kodu tarayın, prospektüse anında ulaşın. Çoklu dil desteği, hatırlatıcılar ve daha fazlası.",
     hero_btn_primary: "İlaçları Keşfet",
     hero_btn_secondary: "Uygulamayı İndir",
-    features_title: "Neden QrPektüs?",
+
+    /* PHONE MOCKUP */
+    phone_header: "QRpektüs",
+    phone_scan: "📷",
+    phone_card1_title: "Ocurin %0,05 Göz Damlası",
+    phone_card1_text: "Göz kuruluğuna bağlı iltihap tedavisinde kullanılır. 12 saatte bir 1 damla uygulanır.",
+    phone_card1_badge: "Detaylı Bak →",
+    phone_card2_title: "⏰ Hatırlatıcı",
+    phone_card2_text: "Ocurin – Her gün 09:00 ve 21:00",
+    phone_card2_badge: "Aktif",
+    pill1_text: "Parol 500mg",
+    pill1_sub: "Tarandı ✓",
+    pill2_text: "İlaç Vakti!",
+    pill2_sub: "Roaccutane 20mg",
+
+    /* STATS */
+    stats_drugs: "Kayıtlı İlaç",
+    stats_languages: "Dil Desteği",
+    stats_free: "Ücretsiz",
+    stats_paper: "Kağıt İsrafı",
+
+    /* FEATURES */
+    features_title: "Neden QRpektüs?",
     features_subtitle: "Sağlığınızı dijital dünyaya taşıyan akıllı çözümler",
     feat1_title: "QR Kod ile Anında Erişim",
     feat1_desc: "İlaç kutusundaki barkodu tarayın, prospektüse saniyeler içinde ulaşın.",
     feat2_title: "Çoklu Dil Desteği",
-    feat2_desc: "Türkçe, İngilizce, Almanca, Fransızca ve İspanyolca dil seçenekleri.",
+    feat2_desc: "Türkçe ve İngilizce dil seçenekleri ile herkes için erişilebilir.",
     feat3_title: "İlaç Hatırlatıcısı",
     feat3_desc: "İlaç saatlerinizi asla unutmayın. Akıllı bildirimler ile zamanında hatırlatma.",
     feat4_title: "Kağıt İsrafını Azalt",
@@ -30,45 +53,75 @@ const translations = {
     feat5_desc: "Günlük ilaç takibinizi kolayca yapın, aldığınız ilaçları işaretleyin.",
     feat6_title: "Güvenli Veri",
     feat6_desc: "Verileriniz Firebase altyapısı ile güvenli şekilde saklanır.",
+
+    /* HOW IT WORKS */
     how_title: "Nasıl Çalışır?",
     how_subtitle: "4 adımda ilaç prospektüsünüze ulaşın",
     step1_title: "Uygulamayı İndir",
-    step1_desc: "QrPektüs uygulamasını telefonuna yükle.",
+    step1_desc: "QRpektüs uygulamasını telefonuna yükle.",
     step2_title: "Barkodu Tara",
     step2_desc: "İlaç kutusundaki barkodu kamerayla tara.",
     step3_title: "Bilgiyi Gör",
     step3_desc: "İlaç hakkında özet bilgiyi anında görüntüle.",
     step4_title: "Detay İçin Tıkla",
     step4_desc: "Tam prospektüse web sitemizden ulaş.",
-    stats_drugs: "Kayıtlı İlaç",
-    stats_users: "Aktif Kullanıcı",
-    stats_languages: "Dil Desteği",
-    stats_saved: "Kağıt Kurtarıldı",
+
+    /* DRUG PREVIEW */
+    drug_preview_title: "İlaç Kütüphanemiz",
+    drug_preview_subtitle: "Kayıtlı ilaçlarımızdan bazıları – tümünü görmek için İlaç Kutusu sayfasını ziyaret edin.",
+    drug_preview_btn: "Tüm İlaçları Gör →",
+    drug_oc_name: "Ocurin %0,05",
+    drug_oc_desc: "Göz kuruluğuna bağlı iltihap tedavisinde kullanılan göz damlası.",
+    drug_pa_name: "Parol 500mg",
+    drug_pa_desc: "Ağrı kesici ve ateş düşürücü parasetamol tableti.",
+    drug_ro_name: "Roaccutane 20mg",
+    drug_ro_desc: "Şiddetli akne tedavisinde kullanılan izotretinoin kapsülü.",
+    drug_ib_name: "İburamin Cold",
+    drug_ib_desc: "Soğuk algınlığı semptomlarını gideren kombine kapsül.",
+
+    /* CTA */
     cta_title: "Sağlığınızı Dijitale Taşıyın",
     cta_desc: "Hemen uygulamayı indirin veya ilaç kütüphanemizi keşfedin.",
     cta_btn1: "İlaç Kutusu",
     cta_btn2: "Uygulamayı İndir",
+    cta_soon: "Yakında Google Play Store'da",
+    cta_mobile_title: "📱 Mobil Uygulamamızı Deneyin",
+    cta_mobile_desc: "QRpektüs uygulaması ile ilaç kutunuzdaki barkodu tarayarak prospektüse anında erişin, hatırlatıcı kurun ve ilaçlarınızı takip edin.",
+
+    /* FOOTER */
     footer_desc: "İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor, çok dilli sağlık bilgisine erişimi kolaylaştırıyoruz.",
     footer_links: "Hızlı Bağlantılar",
     footer_drugs_title: "İlaçlar",
-    footer_contact: "İletişim",
-    footer_rights: "© 2025 QrPektüs. Tüm hakları saklıdır.",
+    footer_rights: "© 2025 QRpektüs. Tüm hakları saklıdır.",
     footer_disclaimer: "Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.",
+
+    /* LIBRARY */
     lib_title: "İlaç Kutusu",
     lib_subtitle: "Tüm ilaçların prospektüslerine buradan ulaşabilirsiniz.",
     lib_search: "İlaç ara...",
     lib_detail_btn: "Prospektüsü Gör",
+    lib_oc_desc: "Göz kuruluğuna bağlı iltihap tedavisinde gözyaşı yapımını artıran siklosporin içerikli göz damlası emülsiyonu.",
+    lib_pa_desc: "Hafif ve orta şiddetli ağrıların giderilmesi ile ateş düşürmek için kullanılan parasetamol içerikli tablet.",
+    lib_ro_desc: "Şiddetli ve dirençli akne tiplerinin tedavisinde kullanılan izotretinoin etkin maddeli yumuşak jelatin kapsül.",
+    lib_ib_desc: "Soğuk algınlığının sebep olduğu hapşırma, burun akıntısı, burun tıkanıklığı, ağrı ve ateş belirtilerini gideren kombine kapsül.",
+    lib_tag_eye: "Göz",
+    lib_tag_rx: "Reçeteli",
+    lib_tag_pain: "Ağrı Kesici",
+    lib_tag_fever: "Ateş Düşürücü",
+    lib_tag_skin: "Cilt",
+    lib_tag_cold: "Soğuk Algınlığı",
+
+    /* SHARED PROSPEKTUS */
     back_to_library: "← İlaç Kutusuna Dön",
     prospektus_barcode: "Barkod",
     prospektus_manufacturer: "Üretici",
-    prospektus_read_more: "Prospektüsü Oku",
     warning_title: "⚠️ Önemli Uyarı",
     warning_text: "Bu sayfa yalnızca bilgilendirme amaçlıdır. İlaç kullanımında mutlaka doktorunuza veya eczacınıza danışınız.",
     toc_title: "İçindekiler",
     btn_back: "← İlaç Kutusuna Dön",
     btn_download: "📱 Uygulamayı İndir",
 
-    /* ===== OCURIN ===== */
+    /* ===== OCURIN TR ===== */
     oc_title: "Ocurin %0,05 Göz Damlası Emülsiyon",
     oc_form: "💧 5 mL Şişe",
     oc_route: "👁️ Göze Uygulama",
@@ -110,78 +163,78 @@ const translations = {
     oc_s3_l7: "Herpes virüsünden kaynaklanan bir göz enfeksiyonunuz varsa veya geçirdiyseniz",
     oc_s3_l8: "Steroid içeren herhangi bir ilaç kullanıyorsanız",
     oc_s3_l9: "Glokom tedavisi için herhangi bir ilaç kullanıyorsanız",
-    oc_s3_info: "Yaş Sınırı: Siklosporinin etkililiği ve güvenliliği 16 yaşın altındaki çocuklarda incelenmemiştir. Genç ve yaşlı hastalar arasında farklılık göstermemektedir.",
+    oc_s3_info: "Yaş Sınırı: Siklosporinin etkililiği ve güvenliliği 16 yaşın altındaki çocuklarda incelenmemiştir.",
     oc_s3_food_h: "🍽️ Yiyecek ve İçecek ile Kullanımı",
     oc_s3_food: "Ocurin'in yiyecek ve içecekler ile etkileşmesi beklenmemektedir.",
     oc_s3_preg_h: "🤰 Hamilelik ve Emzirme",
-    oc_s3_preg: "Hamilelik: Hamileyseniz Ocurin kullanılmamalıdır. Hamile kalma ihtimaliniz varsa doğum kontrolü sağlamalısınız. Tedavi sırasında hamile olduğunuzu fark ederseniz hemen doktorunuza danışınız.",
-    oc_s3_lact: "Emzirme: Ocurin'in anne sütünde çok küçük miktarlarda bulunması olasıdır. Emziriyorsanız bu ilacı kullanmadan önce doktorunuza danışınız.",
+    oc_s3_preg: "Hamileyseniz Ocurin kullanılmamalıdır. Hamile kalma ihtimaliniz varsa doğum kontrolü sağlamalısınız.",
+    oc_s3_lact: "Ocurin'in anne sütünde çok küçük miktarlarda bulunması olasıdır. Emziriyorsanız doktorunuza danışınız.",
     oc_s3_drive_h: "🚗 Araç ve Makine Kullanımı",
-    oc_s3_drive: "Ocurin damlatıldıktan sonra gözünüzde rahatsızlık veya görme bulanıklığı oluşabilir. Araç ve makine kullanmaya başlamadan önce görmeniz netleşene kadar bekleyiniz.",
+    oc_s3_drive: "Ocurin damlatıldıktan sonra görme bulanıklığı oluşabilir. Görmeniz netleşene kadar bekleyiniz.",
     oc_s3_inter_h: "💊 Diğer İlaçlar ile Birlikte Kullanımı",
-    oc_s3_inter: "Gözünüze birden fazla damla damlatmanız gerekiyorsa, iki ayrı ilacın damlatılması arasında 15 dakika bırakınız.",
-    oc_s3_inter_w: "Ocurin ile birlikte steroid içeren göz damlaları kullanıyorsanız, bunlar yan etki riskini artırabileceğinden doktorunuza danışınız.",
+    oc_s3_inter: "Birden fazla göz damlası kullanıyorsanız, aralarında 15 dakika bırakınız.",
+    oc_s3_inter_w: "Steroid içeren göz damlaları ile birlikte kullanıyorsanız doktorunuza danışınız.",
     oc_s4_title: "3. Ocurin Nasıl Kullanılır?",
-    oc_s4_box: "Doz: Her bir göze yaklaşık 12 saat arayla günde 2 kez 1 damla Ocurin göz damlası emülsiyonu damlatınız.",
+    oc_s4_box: "Doz: Her bir göze yaklaşık 12 saat arayla günde 2 kez 1 damla damlatınız.",
     oc_s4_h1: "📋 Uygulama Adımları",
-    oc_s4_pre: "Kullanmadan önce homojen, beyaz, opak bir emülsiyon elde etmek için şişeyi birkaç kez ters çeviriniz.",
+    oc_s4_pre: "Kullanmadan önce şişeyi birkaç kez ters çeviriniz.",
     oc_s4_l1: "Adım 1: Ellerinizi yıkayınız ve kapağı açınız",
-    oc_s4_l2: "Adım 2: Şişeyi baş ve orta parmaklarınız arasında tutarak ters çeviriniz",
-    oc_s4_l3: "Adım 3: İşaret parmağınız ile hafif basınç uygulayarak bir damla akıtınız",
-    oc_s4_l4: "Adım 4: Kafanızı hafifçe geriye yatırınız",
-    oc_s4_l5: "Adım 5: Parmağınızla alt göz kapağınızı aşağı çekerek bir kese oluşturunuz",
-    oc_s4_l6: "Adım 6: Damlayı oluşan kese içine damlatınız",
-    oc_s4_l7: "Adım 7: Alt göz kapağınızı yavaşça serbest bırakınız, gözünüzü kapatınız",
-    oc_s4_l8: "Adım 8: Göz-burun arası bölgeye parmağınız ile hafifçe bastırınız",
-    oc_s4_l9: "Adım 9: İki gözünüze de kullanmanız gerekiyorsa diğer göz için de tekrarlayınız",
-    oc_s4_l10: "Adım 10: Kullandıktan sonra kapağı sıkıca kapatınız",
-    oc_s4_warn: "Dikkat: Damlalık ucunu gözünüze, göz kapağınıza veya diğer yüzeylere değdirmeyiniz.",
-    oc_s4_info: "Suni gözyaşları ile birlikte: Ocurin suni gözyaşları ile kullanılabilir; iki preparatın arasında 15 dakika bırakınız.",
+    oc_s4_l2: "Adım 2: Şişeyi ters çeviriniz",
+    oc_s4_l3: "Adım 3: Hafif basınç ile bir damla akıtınız",
+    oc_s4_l4: "Adım 4: Kafanızı geriye yatırınız",
+    oc_s4_l5: "Adım 5: Alt göz kapağını çekerek kese oluşturunuz",
+    oc_s4_l6: "Adım 6: Damlayı keseye damlatınız",
+    oc_s4_l7: "Adım 7: Göz kapağını bırakınız, gözünüzü kapatınız",
+    oc_s4_l8: "Adım 8: Göz-burun arasına hafifçe bastırınız",
+    oc_s4_l9: "Adım 9: İki göze de gerekiyorsa tekrarlayınız",
+    oc_s4_l10: "Adım 10: Kapağı sıkıca kapatınız",
+    oc_s4_warn: "Damlalık ucunu gözünüze veya yüzeylere değdirmeyiniz.",
+    oc_s4_info: "Suni gözyaşları ile birlikte kullanılabilir; araya 15 dakika bırakınız.",
     oc_s4_spec_h: "Özel Durumlar",
     oc_s4_spec1: "Açıldıktan sonra: 28 gün içinde kullanılmalıdır",
-    oc_s4_spec2: "Çocuklar: 16 yaşın altında etkililik ve güvenlilik incelenmemiştir",
-    oc_s4_spec3: "Yaşlılar: Genç ve yaşlı hastalar arasında fark yoktur",
-    oc_s4_spec4: "Böbrek/Karaciğer yetmezliği: Göze uygulama için özel bildirim bulunmamaktadır",
+    oc_s4_spec2: "Çocuklar: 16 yaşın altında incelenmemiştir",
+    oc_s4_spec3: "Yaşlılar: Fark yoktur",
+    oc_s4_spec4: "Böbrek/Karaciğer: Özel bildirim yoktur",
     oc_s4_od_h: "Doz Aşımı veya Unutma",
-    oc_s4_od1: "Fazla kullanım: Gereğinden fazla kullandıysanız doktor veya eczacı ile konuşunuz",
-    oc_s4_od2: "Doz unutma: Unutulan dozları dengelemek için çift doz almayınız",
-    oc_s4_od3: "Tedavi sonlandırma: Tedavi sonlandırıldığında herhangi bir etki bulunmamaktadır",
+    oc_s4_od1: "Fazla kullandıysanız doktora danışınız",
+    oc_s4_od2: "Çift doz almayınız",
+    oc_s4_od3: "Tedavi sonlandırmada etki yoktur",
     oc_s5_title: "4. Olası Yan Etkiler",
-    oc_s5_p1: "Tüm ilaçlar gibi Ocurin'in içeriğinde bulunan maddelere duyarlı olan kişilerde yan etkiler olabilir.",
-    oc_s5_emerg: "ACİL DURUM: Aşağıdakilerden biri olursa Ocurin'i kullanmayı durdurunuz ve DERHAL doktorunuza bildiriniz veya en yakın acil bölümüne başvurunuz: Alerjik reaksiyon (gözde şişme, kurdeşen, ciddi anjiyoödem, yüzde şişme, dilde şişme, yutakta ödem ve nefes darlığı)",
-    oc_s5_vc: "Çok Yaygın (10 hastanın en az 1'inde)",
+    oc_s5_p1: "Duyarlı kişilerde yan etkiler olabilir.",
+    oc_s5_emerg: "ACİL: Alerjik reaksiyon (şişme, kurdeşen, nefes darlığı) olursa DERHAL doktora başvurunuz.",
+    oc_s5_vc: "Çok Yaygın (≥1/10)",
     oc_s5_vc1: "Gözde yanma",
-    oc_s5_c: "Yaygın (100 hastanın 1'inden fazla)",
+    oc_s5_c: "Yaygın (≥1/100)",
     oc_s5_c1: "Gözde kızarıklık",
     oc_s5_c2: "Gözde akıntı",
     oc_s5_c3: "Göz yaşarması",
     oc_s5_c4: "Gözde ağrı",
-    oc_s5_c5: "Gözde yabancı cisim hissi",
+    oc_s5_c5: "Yabancı cisim hissi",
     oc_s5_c6: "Gözde kaşıntı",
     oc_s5_c7: "Gözde batma",
-    oc_s5_c8: "Görme bozukluğu (genellikle bulanık görme)",
+    oc_s5_c8: "Bulanık görme",
     oc_s5_c9: "Gözde tahriş",
-    oc_s5_uc: "Yaygın Olmayan (1.000 hastanın 1'inden fazla)",
-    oc_s5_uc1: "Kornea iltihabı (gözün şeffaf ön kısmı)",
+    oc_s5_uc: "Yaygın Olmayan (≥1/1.000)",
+    oc_s5_uc1: "Kornea iltihabı",
     oc_s5_uc2: "Göz kapağında kızarıklık",
-    oc_s5_uc3: "Herpes simpleks virüsünün neden olduğu kornea iltihabı",
-    oc_s5_un: "Bilinmiyor (Sıklığı tahmin edilemiyor)",
-    oc_s5_un1: "Gözün yüzeyel yaralanması (flakon ucunun göze temas etmesi sonucu)",
-    oc_s5_un2: "Hipersensitivite (gözde şişme, kurdeşen, ciddi anjiyoödem, yüzde şişme, dilde şişme, boğazda şişme ve nefes darlığı)",
-    oc_s5_report: "Yan Etki Bildirimi: Yan etkileri www.titck.gov.tr sitesinden veya 0800 314 00 08 numaralı hattı arayarak TÜFAM'a bildirebilirsiniz.",
+    oc_s5_uc3: "Herpes kaynaklı kornea iltihabı",
+    oc_s5_un: "Bilinmiyor",
+    oc_s5_un1: "Yüzeyel göz yaralanması",
+    oc_s5_un2: "Aşırı duyarlılık reaksiyonu",
+    oc_s5_report: "Yan etkileri www.titck.gov.tr veya 0800 314 00 08'den bildirebilirsiniz.",
     oc_s6_title: "5. Saklama Koşulları",
-    oc_s6_l1: "Çocukların göremeyeceği, erişemeyeceği yerlerde ve ambalajında saklayınız",
-    oc_s6_l2: "25°C'nin altındaki oda sıcaklığında saklayınız",
-    oc_s6_l3: "Kapağı açılıncaya kadar sterildir",
-    oc_s6_l4: "Açıldıktan sonra 25°C altında 28 gün içerisinde kullanılmalıdır",
+    oc_s6_l1: "Çocukların erişemeyeceği yerde saklayınız",
+    oc_s6_l2: "25°C altında saklayınız",
+    oc_s6_l3: "Açılıncaya kadar sterildir",
+    oc_s6_l4: "Açıldıktan sonra 28 gün içinde kullanınız",
     oc_s6_l5: "Son kullanma tarihinden sonra kullanmayınız",
-    oc_s6_l6: "Üründe veya ambalajında bozukluk fark ederseniz kullanmayınız",
-    oc_s6_env: "Çevre: Son kullanma tarihi geçmiş veya kullanılmayan ilaçları çöpe atmayınız! Uygun toplama sistemine veriniz.",
+    oc_s6_l6: "Bozukluk varsa kullanmayınız",
+    oc_s6_env: "Kullanılmayan ilaçları çöpe atmayınız!",
     oc_s6_mfg_h: "Üretim Bilgileri",
-    oc_s6_mfg1: "Ruhsat Sahibi: Bilim İlaç San. ve Tic. A.Ş. – Beyoğlu, İstanbul",
-    oc_s6_mfg2: "Üretim Yeri: İdol İlaç Dolum San. ve Tic. A.Ş. – Topkapı, İstanbul",
+    oc_s6_mfg1: "Ruhsat: Bilim İlaç – Beyoğlu, İstanbul",
+    oc_s6_mfg2: "Üretim: İdol İlaç – Topkapı, İstanbul",
 
-    /* ===== PAROL ===== */
+    /* ===== PAROL TR ===== */
     pa_title: "Parol 500 mg Tablet",
     pa_form: "💊 Parasetamol 500 mg",
     pa_route: "🥤 Ağızdan Kullanım",
@@ -197,41 +250,361 @@ const translations = {
     pa_toc10: "4. Yan Etkiler",
     pa_toc11: "5. Saklama Koşulları",
     pa_s1_title: "1. Parol Nedir ve Ne İçin Kullanılır?",
-    pa_s1_p1: "Parol, her tabletinde 500 mg parasetamol içeren, ağrı kesici ve ateş düşürücü olarak etki eden bir ilaçtır. 20 ve 30 tablet içeren blister ambalajlarda sunulur.",
-    pa_s1_box: "Kullanım Amacı: Hafif ve orta şiddetli ağrıların ve ateşin semptomatik tedavisinde kullanılır.",
-    pa_s1_p2: "Baş ağrısı, diş ağrısı, kas ağrısı, soğuk algınlığına eşlik eden ateş gibi durumlarda doktor veya eczacı önerisine göre kullanılabilir.",
+    pa_s1_p1: "Parol, her tabletinde 500 mg parasetamol içeren, ağrı kesici ve ateş düşürücü ilaçtır.",
+    pa_s1_box: "Hafif ve orta şiddetli ağrıların ve ateşin semptomatik tedavisinde kullanılır.",
+    pa_s1_p2: "Baş ağrısı, diş ağrısı, kas ağrısı, soğuk algınlığı ateşi için kullanılabilir.",
+    pa_s2_title: "Etkin ve Yardımcı Maddeler",
+    pa_s2_h1: "Etkin Madde",
+    pa_s2_p1: "Her tablette 500 mg parasetamol bulunur.",
+    pa_s2_h2: "Yardımcı Maddeler",
+    pa_s2_l1: "Mikrokristalin selüloz",
+    pa_s2_l2: "Povidon K-30",
+    pa_s2_l3: "Mısır nişastası",
+    pa_s2_l4: "Stearik asit",
+    pa_s3_title: "2. Dikkat Edilmesi Gerekenler",
+    pa_s3_h1: "❌ Kullanmayınız",
+    pa_s3_l1: "Parasetamole alerjiniz varsa",
+    pa_s3_l2: "Şiddetli karaciğer yetmezliği",
+    pa_s3_l3: "Şiddetli böbrek yetmezliği",
+    pa_s3_h2: "⚡ Dikkatli Kullanınız",
+    pa_s3_l4: "Kansızlık (anemi) varsa",
+    pa_s3_l5: "Akciğer hastalığı varsa",
+    pa_s3_l6: "Karaciğer veya böbrek bozukluğu",
+    pa_s3_l7: "Deride kızarıklık veya döküntü gelişirse",
+    pa_s3_l8: "Başka parasetamol içeren ilaç kullanıyorsanız",
+    pa_s3_l9: "Kilonuz düşükse veya yetersiz besleniyorsanız",
+    pa_s3_l10: "Gilbert sendromu varsa",
+    pa_s3_l11: "Alkol kullanıyorsanız",
+    pa_s3_warn1: "Parasetamol içeren başka ilaçlarla birlikte kullanım doz aşımına neden olabilir.",
+    pa_s3_warn2: "Yüksek dozda ciddi karaciğer toksisitesi riski vardır. Alkol kullananlarda günlük doz 2000 mg'ı aşmamalıdır.",
+    pa_s3_info: "3-5 gün içinde düzelme olmazsa doktorunuza danışınız.",
+    pa_s3_food_h: "🍽️ Yiyecek ve İçecek",
+    pa_s3_food: "Alkol ile karaciğer riski artar. Besinler emilimi azaltabilir.",
+    pa_s3_preg_h: "🤰 Hamilelik ve Emzirme",
+    pa_s3_preg: "Hamilelikte belirgin zarar bildirilmemiştir; hekim önerisi ile kullanılır.",
+    pa_s3_lact: "Az miktarda süte geçer. Emziren anneler hekim önerisi ile kullanabilir.",
+    pa_s3_drive_h: "🚗 Araç Kullanımı",
+    pa_s3_drive: "Bazı hastalarda baş dönmesi veya uyku hali yapabilir.",
+    pa_s4_title: "Diğer İlaçlarla Kullanımı",
+    pa_s4_p1: "Şu ilaçlarla etkileşebilir:",
+    pa_s4_l1: "Mide boşalmasını etkileyen ilaçlar",
+    pa_s4_l2: "Sara ilaçları (fenitoin, fenobarbital, karbamazepin)",
+    pa_s4_l3: "Kloramfenikol, rifampisin",
+    pa_s4_l4: "Varfarin ve kan sulandırıcılar",
+    pa_s4_l5: "Zidovudin",
+    pa_s4_l6: "Sarı kantaron içeren ürünler",
+    pa_s4_l7: "Kolestiramin",
+    pa_s4_l8: "Diğer ağrı kesiciler ve alkol",
+    pa_s4_info: "Tüm kullandığınız ilaçları doktorunuza bildiriniz.",
+    pa_s5_title: "3. Parol Nasıl Kullanılır?",
+    pa_s5_h1: "📋 Doz Bilgisi",
+    pa_s5_box: "Yetişkinler ve 12 yaş üzeri: 1-2 tablet, her 4 saatte bir tekrarlanabilir.",
+    pa_s5_l1: "Günlük en yüksek doz: 4000 mg",
+    pa_s5_l2: "24 saatte 4 dozdan fazla kullanılmamalı",
+    pa_s5_child: "6-12 yaş: 4-6 saat ara ile yarım-1 tablet. Günlük max: 60 mg/kg",
+    pa_s5_how_h: "Uygulama",
+    pa_s5_how1: "Ağızdan alınır",
+    pa_s5_how2: "Bir bardak su ile yutunuz",
+    pa_s5_how3: "En düşük etkili dozda kullanınız",
+    pa_s5_age_h: "Yaş Grupları",
+    pa_s5_age1: "6 yaş altı: Doktor önerisi olmadan kullanılmaz",
+    pa_s5_age2: "6-11 yaş: 3 günden fazla doktorsuz kullanılmaz",
+    pa_s5_age3: "Yaşlılar: Zayıf/hareketsiz yaşlılarda doz azaltılmalı",
+    pa_s5_od_h: "Doz Aşımı",
+    pa_s5_od: "Doz aşımında derhal doktora veya hastaneye başvurunuz.",
+    pa_s5_miss_h: "Doz Unutma",
+    pa_s5_miss: "Çift doz almayınız.",
+    pa_s6_title: "4. Olası Yan Etkiler",
+    pa_s6_p1: "Genellikle hafif yan etkileri vardır.",
+    pa_s6_emerg: "ACİL: Şişme, alerjik belirtiler, nefes darlığı, beklenmeyen kanama olursa DERHAL başvurunuz.",
+    pa_s6_c: "Yaygın",
+    pa_s6_c1: "Uyku hali, baş ağrısı, baş dönmesi",
+    pa_s6_c2: "Bulantı, kusma, karın ağrısı",
+    pa_s6_c3: "Kabızlık, hazımsızlık, gaz",
+    pa_s6_uc: "Yaygın Olmayan",
+    pa_s6_uc1: "Böbrek hasarı (uzun süreli kullanım)",
+    pa_s6_uc2: "Sindirim sistemi kanaması",
+    pa_s6_r: "Seyrek",
+    pa_s6_r1: "Kan hücresi bozuklukları",
+    pa_s6_r2: "Ciddi alerjik reaksiyon (anafilaksi)",
+    pa_s6_r3: "Deri döküntüsü, Stevens-Johnson sendromu",
+    pa_s6_vr: "Çok Seyrek",
+    pa_s6_vr1: "Trombositopeni",
+    pa_s6_vr2: "Karaciğer işlev bozukluğu",
+    pa_s6_report: "Yan etkileri www.titck.gov.tr veya 0800 314 00 08'den bildirebilirsiniz.",
+    pa_s7_title: "5. Saklama Koşulları",
+    pa_s7_l1: "Çocukların erişemeyeceği yerde saklayınız",
+    pa_s7_l2: "25°C altında, orijinal ambalajda saklayınız",
+    pa_s7_l3: "Son kullanma tarihinden sonra kullanmayınız",
+    pa_s7_l4: "Kullanılmayan ilaçları uygun şekilde atınız",
+    pa_s7_mfg_h: "Üretim Bilgileri",
+    pa_s7_mfg1: "Ruhsat: Atabay Kimya – Kadıköy, İstanbul",
+    pa_s7_mfg2: "Üretim: Atabay İlaç Fabrikası – Kadıköy, İstanbul",
 
-    /* ===== ROACCUTANE ===== */
+    /* ===== ROACCUTANE TR ===== */
     ro_title: "Roaccutane 20 mg Yumuşak Jelatin Kapsül",
     ro_form: "💊 İzotretinoin 20 mg",
     ro_route: "🥤 Ağızdan Kullanım",
     ro_count: "📦 30 Kapsül",
-    ro_preg_warn: "🚨 Hamilelik Uyarısı: Roaccutane doğmamış bebeğe ciddi zarar verebilir. Hamileyken kesinlikle kullanılmamalıdır. Tedavi sırasında ve sonraki 1 ay boyunca etkili doğum kontrolü uygulanmalıdır.",
+    ro_preg_warn: "🚨 Hamileyken kesinlikle kullanılmamalıdır. Tedavi sırasında ve sonraki 1 ay boyunca doğum kontrolü uygulanmalıdır.",
+    ro_toc1: "1. Roaccutane Nedir?",
+    ro_toc2: "Etkin ve Yardımcı Maddeler",
+    ro_toc3: "2. Dikkat Edilmesi Gerekenler",
+    ro_toc4: "Kullanmayınız",
+    ro_toc5: "Kadın Hastalar",
+    ro_toc6: "Erkek Hastalar",
+    ro_toc7: "Tüm Hastalar",
+    ro_toc8: "3. Nasıl Kullanılır?",
+    ro_toc9: "Doz Bilgisi",
+    ro_toc10: "4. Yan Etkiler",
+    ro_toc11: "5. Saklama",
+    ro_s1_title: "1. Roaccutane Nedir?",
+    ro_s1_p1: "Roaccutane, izotretinoin içeren, A vitamini ile ilişkili retinoidler grubundan bir ilaçtır.",
+    ro_s1_p2: "30 adet kahverengi-kırmızı ve beyaz renkli, \"ROA 20\" baskılı yumuşak jelatin kapsül içerir.",
+    ro_s1_box: "Şiddetli akne tiplerinin (nodüler, konglobat veya kalıcı yara izi riski olan) tedavisinde kullanılır.",
+    ro_s1_info: "Sadece diğer tedaviler başarısız olduğunda, dermatolog denetiminde kullanılır.",
+    ro_s2_title: "Etkin ve Yardımcı Maddeler",
+    ro_s2_h1: "Etkin Madde",
+    ro_s2_p1: "Her kapsülde 20 mg izotretinoin",
+    ro_s2_h2: "Yardımcı Maddeler",
+    ro_s2_l1: "Titandioksit",
+    ro_s2_l2: "Kırmızı demir oksit",
+    ro_s2_l3: "Soya yağı",
+    ro_s2_l4: "Sarı balmumu",
+    ro_s2_l5: "Soya fasulyesi yağı",
+    ro_s2_l6: "Bitkisel yağlar",
+    ro_s2_l7: "Jelatin",
+    ro_s2_l8: "Gliserol",
+    ro_s2_warn: "Soya alerjiniz varsa kullanmayınız.",
+    ro_s3_title: "2. Dikkat Edilmesi Gerekenler",
+    ro_s3_h1: "❌ Kullanmayınız",
+    ro_s3_l1: "Soya veya yardımcı maddelere alerji",
+    ro_s3_l2: "Hamilelik veya hamilelik şüphesi",
+    ro_s3_l3: "Emzirme",
+    ro_s3_l4: "Karaciğer hastalığı",
+    ro_s3_l5: "Çok yüksek kan yağları",
+    ro_s3_l6: "Yüksek A vitamini düzeyi",
+    ro_s3_l7: "12 yaşından küçükler",
+    ro_s3_l8: "Tetrasiklin tedavisi görenler",
+    ro_s4_title: "Kadın Hastalar İçin",
+    ro_s4_warn: "🚨 KRİTİK: Roaccutane doğmamış bebeğe ciddi zarar verebilir (teratojeniktir).",
+    ro_s4_l1: "Hamileyken kesinlikle kullanılmaz",
+    ro_s4_l2: "Emzirirken kullanılmaz",
+    ro_s4_l3: "İki etkili doğum kontrol yöntemi kullanınız",
+    ro_s4_l4: "Tedaviden 1 ay önce başlayın, 1 ay sonrasına kadar sürdürün",
+    ro_s4_l5: "Tedavi öncesi negatif hamilelik testi gereklidir",
+    ro_s4_l6: "Aylık hamilelik testleri yaptırınız",
+    ro_s4_l7: "Tedavi sonrası 5 hafta bekleyip son test",
+    ro_s4_stop: "Tedavi sırasında veya sonraki 1 ayda hamile kalırsanız HEMEN durdurun.",
+    ro_s5_title: "Erkek Hastalar İçin",
+    ro_s5_p1: "Sperme zarar vermesi beklenmez. Semende çok düşük seviyede izotretinoin bulunur.",
+    ro_s5_info: "İlacınızı başkasıyla, özellikle kadınlarla paylaşmayınız.",
+    ro_s6_title: "Tüm Hastalar İçin",
+    ro_s6_l1: "Ruhsal sağlık geçmişinizi doktorunuza bildirin",
+    ro_s6_l2: "Kan yağları yükselebilir; düzenli test gerekir",
+    ro_s6_l3: "Karaciğer enzimleri yükselebilir",
+    ro_s6_l4: "Kan şekeri artabilir",
+    ro_s6_l5: "Nemlendirici krem ve dudak kremi kullanınız",
+    ro_s6_l6: "En az SPF 15 güneş koruyucu kullanınız",
+    ro_s6_l7: "6 ay boyunca ağda, dermabrazyon, lazer yaptırmayınız",
+    ro_s6_l8: "Yoğun egzersizi azaltınız",
+    ro_s6_l9: "A vitamini takviyesi almayınız",
+    ro_s6_l10: "1 ay boyunca kan bağışı yapmayınız",
+    ro_s6_drive_h: "🚗 Araç Kullanımı",
+    ro_s6_drive: "Gece görüşü azalabilir. Bitkinlik hissederseniz araç kullanmayınız.",
+    ro_s6_inter_h: "💊 İlaç Etkileşimleri",
+    ro_s6_inter: "A vitamini takviyesi veya tetrasiklin almayınız.",
+    ro_s7_title: "3. Nasıl Kullanılır?",
+    ro_s7_box: "Başlangıç: 0,5 mg/kg/gün. Örn: 70 kg → günde 35 mg.",
+    ro_s7_l1: "Günde 1-2 kere tok karnına alınız",
+    ro_s7_l2: "Yemekle birlikte bütün olarak yutunuz",
+    ro_s7_l3: "Doz: 0,5-1,0 mg/kg/gün arasında ayarlanır",
+    ro_s7_l4: "Tedavi süresi: 16-24 hafta",
+    ro_s7_l5: "Genellikle 1 tedavi dönemi yeterli",
+    ro_s7_info: "İlk haftalarda akne kötüleşebilir, zamanla düzelir.",
+    ro_s7_spec_h: "Özel Durumlar",
+    ro_s7_spec1: "12 yaş altı kullanılmaz",
+    ro_s7_spec2: "Böbrek sorunu: Düşük dozla başlanır",
+    ro_s7_spec3: "Karaciğer yetmezliğinde kullanılmaz",
+    ro_s7_od: "Fazla kullandıysanız doktora danışınız. Çift doz almayınız.",
+    ro_s8_title: "4. Olası Yan Etkiler",
+    ro_s8_p1: "Bazı yan etkiler ciddi olabilir ve hastaneye yatış gerektirebilir.",
+    ro_s8_emerg: "ACİL: İntihar düşüncesi, ciddi alerjik reaksiyon, şiddetli deri reaksiyonları görülürse DERHAL başvurunuz.",
+    ro_s8_mental_h: "🧠 Ruhsal",
+    ro_s8_mental_vr: "Çok Seyrek",
+    ro_s8_mental1: "İntihar düşüncesi",
+    ro_s8_mental2: "Olağandışı davranış",
+    ro_s8_mental3: "Gerçekle bağlantı kaybı",
+    ro_s8_mental_r: "Seyrek",
+    ro_s8_mental4: "Depresyon ve ilgili bozukluklar",
+    ro_s8_mental5: "Saldırgan davranış",
+    ro_s8_skin_h: "💆 Cilt ve Saç",
+    ro_s8_skin_vc: "Çok Yaygın",
+    ro_s8_skin1: "Ciltte kuruluk, dudak çatlağı",
+    ro_s8_skin2: "Döküntü, kaşıntı, soyulma",
+    ro_s8_skin_r: "Seyrek: Geçici saç kaybı",
+    ro_s8_blood_h: "🩸 Kan",
+    ro_s8_blood_vc: "Çok Yaygın",
+    ro_s8_blood1: "Kolay çürüme ve kanama",
+    ro_s8_blood2: "Kansızlık belirtileri",
+    ro_s8_blood3: "Artmış karaciğer enzimleri",
+    ro_s8_eye_h: "👁️ Göz",
+    ro_s8_eye_vc: "Çok Yaygın",
+    ro_s8_eye1: "Konjonktivit, göz kuruluğu",
+    ro_s8_eye_vr: "Çok Seyrek",
+    ro_s8_eye2: "Gece görüş azalması",
+    ro_s8_eye3: "Bulanık görme, katarakt",
+    ro_s8_bone_h: "🦴 Kemik ve Kas",
+    ro_s8_bone_vc: "Çok Yaygın: Sırt, kas, eklem ağrısı",
+    ro_s8_bone_warn: "Yoğun fiziksel aktiviteyi azaltınız.",
+    ro_s8_other_h: "📋 Diğer",
+    ro_s8_other1: "Baş ağrısı, yüksek kolesterol",
+    ro_s8_other2: "Diyabet belirtileri (çok seyrek)",
+    ro_s8_other3: "Karın ağrısı, diş eti kanaması (çok seyrek)",
+    ro_s9_title: "5. Saklama",
+    ro_s9_l1: "Çocukların erişemeyeceği yerde",
+    ro_s9_l2: "25°C altında, ışık ve nemden koruyun",
+    ro_s9_l3: "Son kullanma tarihinden sonra kullanmayınız",
+    ro_s9_l4: "Artan kapsülleri eczacınıza teslim ediniz",
+    ro_s9_mfg_h: "Üretim Bilgileri",
+    ro_s9_mfg1: "Ruhsat: Roche – Maslak, İstanbul",
+    ro_s9_mfg2: "Üretim: R.P. Scherer GmbH – Eberbach, Almanya",
 
-    /* ===== İBURAMİN COLD ===== */
+    /* ===== İBURAMİN COLD TR ===== */
     ib_title: "İburamin Cold Kapsül",
     ib_form: "💊 İbuprofen 200mg + Psödoefedrin 30mg + Klorfeniramin 2mg",
     ib_route: "🥤 Ağızdan Kullanım",
     ib_count: "📦 24 Kapsül",
+    ib_toc1: "1. İburamin Cold Nedir?",
+    ib_toc2: "Etkin ve Yardımcı Maddeler",
+    ib_toc3: "2. Dikkat Edilmesi Gerekenler",
+    ib_toc4: "Kullanmayınız",
+    ib_toc5: "Dikkatli Kullanınız",
+    ib_toc6: "Diğer İlaçlarla Kullanımı",
+    ib_toc7: "Hamilelik ve Emzirme",
+    ib_toc8: "3. Nasıl Kullanılır?",
+    ib_toc9: "Doz Bilgisi",
+    ib_toc10: "4. Yan Etkiler",
+    ib_toc11: "5. Saklama",
+    ib_s1_title: "1. İburamin Cold Nedir?",
+    ib_s1_p1: "Üç etkin madde içeren kombine kapsül. 24 kapsül olarak sunulur.",
+    ib_s1_info: "🔵 Klorfeniramin: Antihistaminik 🟠 İbuprofen: Ağrı kesici 🟢 Psödoefedrin: Burun açıcı",
+    ib_s1_box: "Soğuk algınlığının hapşırık, burun akıntısı, tıkanıklık, ağrı ve ateş belirtilerinde kullanılır.",
+    ib_s2_title: "Etkin ve Yardımcı Maddeler",
+    ib_s2_h1: "Etkin Maddeler",
+    ib_s2_l1: "İbuprofen: 200 mg",
+    ib_s2_l2: "Psödoefedrin hidroklorür: 30 mg",
+    ib_s2_l3: "Klorfeniramin maleat: 2 mg",
+    ib_s2_h2: "Yardımcı Maddeler",
+    ib_s2_l4: "Potasyum hidroksit, polisorbat 80, mısırözü yağı, jelatin, titanyum dioksit ve diğerleri",
+    ib_s3_title: "2. Dikkat Edilmesi Gerekenler",
+    ib_s3_h1: "❌ Kullanmayınız",
+    ib_s3_warn1: "Son 14 günde MAO inhibitörü aldıysanız kullanmayınız.",
+    ib_s3_l1: "İbuprofen veya psödoefedrine alerji",
+    ib_s3_l2: "Aktif mide/bağırsak kanaması veya ülser",
+    ib_s3_l3: "Burun polipi",
+    ib_s3_l4: "Aspirin alerjisi",
+    ib_s3_l5: "Bypass ameliyatı öncesi/sonrası 2 hafta",
+    ib_s3_warn2: "İbuprofen kalp ve damar riskini artırabilir.",
+    ib_s3_warn3: "Mide kanaması veya delinme riski vardır.",
+    ib_s3_h2: "⚡ Dikkatli Kullanınız",
+    ib_s3_l6: "Ülser veya kanama geçmişi",
+    ib_s3_l7: "Kalp veya tansiyon sorunu",
+    ib_s3_l8: "Karaciğer/böbrek rahatsızlığı",
+    ib_s3_l9: "Tiroid, glokom, diyabet",
+    ib_s3_l10: "Prostat büyümesi",
+    ib_s3_l11: "Kanama bozukluğu",
+    ib_s3_l12: "Sigara kullanımı",
+    ib_s3_food_h: "🍽️ Yiyecek ve İçecek",
+    ib_s3_food: "Alkol almayınız. Portakal suyu ve koladan 1 saat önce veya 2 saat sonra alınız.",
+    ib_s3_preg_h: "🤰 Hamilelik ve Emzirme",
+    ib_s3_preg: "Son 3 ayda bebek için zararlı olabilir. Anne sütüne geçer.",
+    ib_s3_drive_h: "🚗 Araç Kullanımı",
+    ib_s3_drive: "Düşünce ve reaksiyonlarınızı etkileyebilir. Dikkatli olunuz.",
+    ib_s4_title: "Diğer İlaçlarla Kullanımı",
+    ib_s4_l1: "Kan sulandırıcılar (warfarin)",
+    ib_s4_l2: "Steroidler",
+    ib_s4_l3: "Tansiyon ilaçları, beta-blokerler",
+    ib_s4_l4: "ACE inhibitörleri",
+    ib_s4_l5: "Antidepresanlar",
+    ib_s4_l6: "Aspirin ve diğer antiinflamatuarlar",
+    ib_s4_info: "Bu ilaçları kullanıyorsanız doz ayarı gerekebilir.",
+    ib_s5_title: "3. Nasıl Kullanılır?",
+    ib_s5_box: "En küçük etkili dozu, en kısa süre kullanınız.",
+    ib_s5_l1: "Tek doz max: 800 mg ibuprofen",
+    ib_s5_l2: "Günlük max: 3200 mg ibuprofen",
+    ib_s5_l3: "Ateş 3 günden fazla sürerse doktora başvurun",
+    ib_s5_l4: "7 gün sonra şikayetler geçmediyse doktora başvurun",
+    ib_s5_how_h: "Uygulama",
+    ib_s5_how1: "Sadece ağızdan kullanım",
+    ib_s5_how2: "Kapsülleri bütün yutunuz",
+    ib_s5_how3: "Tercihen yemekle alınız",
+    ib_s5_age_h: "Yaş Grupları",
+    ib_s5_age1: "12 yaş altı: Kullanılmamalıdır",
+    ib_s5_age2: "60 yaş üzeri: Mide kanaması riski artar",
+    ib_s5_spec: "Böbrek/karaciğer yetmezliğinde kullanmayınız.",
+    ib_s5_surg: "Cerrahi operasyon öncesi doktorunuzu bilgilendiriniz.",
+    ib_s5_od: "Fazla kullandıysanız doktora danışınız. Çift doz almayınız.",
+    ib_s6_title: "4. Olası Yan Etkiler",
+    ib_s6_p1: "Duyarlı kişilerde yan etkiler olabilir.",
+    ib_s6_emerg: "ACİL: Nefes güçlüğü, boğaz şişliği, kurdeşen olursa DERHAL başvurunuz.",
+    ib_s6_emerg2: "İdrarda kan, göğüs ağrısı, ağızdan kan, koyu dışkı olursa acile başvurunuz.",
+    ib_s6_c: "Diğer Yan Etkiler",
+    ib_s6_c1: "İshal, kabızlık, karın ağrısı",
+    ib_s6_c2: "Hazımsızlık, ağız kuruluğu",
+    ib_s6_c3: "Döküntü, yorgunluk, baş ağrısı",
+    ib_s6_c4: "Sarılık, ödem, uzun süren kanama",
+    ib_s7_title: "5. Saklama",
+    ib_s7_l1: "Çocukların erişemeyeceği yerde",
+    ib_s7_l2: "25°C altında, nemden uzakta",
+    ib_s7_l3: "Son kullanma tarihinden sonra kullanmayınız",
+    ib_s7_l4: "Bozukluk varsa kullanmayınız",
+    ib_s7_mfg_h: "Üretim Bilgileri",
+    ib_s7_mfg1: "Ruhsat: Berko İlaç – Ataşehir, İstanbul",
+    ib_s7_mfg2: "Üretim: Berko İlaç – Sultanbeyli, İstanbul",
   },
 
   en: {
+    /* NAV */
     nav_home: "Home",
-    nav_drugs: "Drug Library",
-    nav_about: "About",
+    nav_drugs: "Medicine Box",
     nav_download: "Download App",
+
+    /* HERO */
     hero_badge: "🌿 Paperless Health Revolution",
     hero_title_1: "Take Your Drug",
     hero_title_2: "Leaflet Digital",
-    hero_desc: "Scan the QR code on your medicine box with QrPektüs and instantly access the leaflet. Multi-language support, reminders and more.",
-    hero_btn_primary: "Explore Drugs",
+    hero_desc: "Scan the QR code on your medicine box with QRpektüs and instantly access the leaflet. Multi-language support, reminders and more.",
+    hero_btn_primary: "Explore Medicines",
     hero_btn_secondary: "Download App",
-    features_title: "Why QrPektüs?",
+
+    /* PHONE MOCKUP */
+    phone_header: "QRpektüs",
+    phone_scan: "📷",
+    phone_card1_title: "Ocurin 0.05% Eye Drops",
+    phone_card1_text: "Used for dry eye inflammation. Apply 1 drop every 12 hours.",
+    phone_card1_badge: "View Details →",
+    phone_card2_title: "⏰ Reminder",
+    phone_card2_text: "Ocurin – Daily 09:00 and 21:00",
+    phone_card2_badge: "Active",
+    pill1_text: "Parol 500mg",
+    pill1_sub: "Scanned ✓",
+    pill2_text: "Medicine Time!",
+    pill2_sub: "Roaccutane 20mg",
+
+    /* STATS */
+    stats_drugs: "Registered Medicines",
+    stats_languages: "Language Support",
+    stats_free: "Free",
+    stats_paper: "Paper Waste",
+
+    /* FEATURES */
+    features_title: "Why QRpektüs?",
     features_subtitle: "Smart solutions that bring your health into the digital world",
     feat1_title: "Instant Access via QR",
     feat1_desc: "Scan the barcode on the medicine box and access the leaflet in seconds.",
     feat2_title: "Multi-Language Support",
-    feat2_desc: "Turkish, English, German, French and Spanish language options.",
+    feat2_desc: "Turkish and English language options accessible for everyone.",
     feat3_title: "Medicine Reminder",
     feat3_desc: "Never forget your medicine times. Smart notifications remind you on time.",
     feat4_title: "Reduce Paper Waste",
@@ -240,42 +613,72 @@ const translations = {
     feat5_desc: "Easily track your daily medications and mark the ones you've taken.",
     feat6_title: "Secure Data",
     feat6_desc: "Your data is securely stored with Firebase infrastructure.",
+
+    /* HOW IT WORKS */
     how_title: "How Does It Work?",
-    how_subtitle: "Access your drug leaflet in 4 steps",
+    how_subtitle: "Access your medicine leaflet in 4 steps",
     step1_title: "Download the App",
-    step1_desc: "Install QrPektüs on your phone.",
+    step1_desc: "Install QRpektüs on your phone.",
     step2_title: "Scan the Barcode",
     step2_desc: "Scan the barcode on the medicine box with your camera.",
     step3_title: "View the Info",
-    step3_desc: "Instantly view summary information about the drug.",
+    step3_desc: "Instantly view summary information about the medicine.",
     step4_title: "Click for Details",
     step4_desc: "Access the full leaflet from our website.",
-    stats_drugs: "Registered Drugs",
-    stats_users: "Active Users",
-    stats_languages: "Language Support",
-    stats_saved: "Paper Saved",
+
+    /* DRUG PREVIEW */
+    drug_preview_title: "Our Medicine Library",
+    drug_preview_subtitle: "Some of our registered medicines – visit the Medicine Box page to see all.",
+    drug_preview_btn: "See All Medicines →",
+    drug_oc_name: "Ocurin 0.05%",
+    drug_oc_desc: "Eye drops used for inflammation treatment related to dry eye.",
+    drug_pa_name: "Parol 500mg",
+    drug_pa_desc: "Paracetamol tablet for pain relief and fever reduction.",
+    drug_ro_name: "Roaccutane 20mg",
+    drug_ro_desc: "Isotretinoin capsule used for severe acne treatment.",
+    drug_ib_name: "Iburamin Cold",
+    drug_ib_desc: "Combined capsule for relieving common cold symptoms.",
+
+    /* CTA */
     cta_title: "Take Your Health Digital",
-    cta_desc: "Download the app now or explore our drug library.",
-    cta_btn1: "Drug Library",
+    cta_desc: "Download the app now or explore our medicine library.",
+    cta_btn1: "Medicine Box",
     cta_btn2: "Download App",
-    footer_desc: "We prevent paper waste by digitizing drug leaflets and make multilingual health information easily accessible.",
+    cta_soon: "Coming soon to Google Play Store",
+    cta_mobile_title: "📱 Try Our Mobile App",
+    cta_mobile_desc: "Scan the barcode on your medicine box with QRpektüs app to instantly access the leaflet, set reminders and track your medications.",
+
+    /* FOOTER */
+    footer_desc: "We prevent paper waste by digitizing medicine leaflets and make multilingual health information easily accessible.",
     footer_links: "Quick Links",
-    footer_drugs_title: "Drugs",
-    footer_contact: "Contact",
-    footer_rights: "© 2025 QrPektüs. All rights reserved.",
+    footer_drugs_title: "Medicines",
+    footer_rights: "© 2025 QRpektüs. All rights reserved.",
     footer_disclaimer: "This site is for informational purposes only and does not replace medical advice.",
-    lib_title: "Drug Library",
-    lib_subtitle: "You can access the leaflets of all drugs here.",
-    lib_search: "Search drug...",
+
+    /* LIBRARY */
+    lib_title: "Medicine Box",
+    lib_subtitle: "You can access the leaflets of all medicines here.",
+    lib_search: "Search medicine...",
     lib_detail_btn: "View Leaflet",
-    back_to_library: "← Back to Drug Library",
+    lib_oc_desc: "Cyclosporine-containing eye drop emulsion that increases tear production for dry eye inflammation.",
+    lib_pa_desc: "Paracetamol tablet for relieving mild to moderate pain and reducing fever.",
+    lib_ro_desc: "Isotretinoin soft gelatin capsule for the treatment of severe and resistant acne types.",
+    lib_ib_desc: "Combined capsule for relieving sneezing, runny nose, nasal congestion, pain and fever caused by common cold.",
+    lib_tag_eye: "Eye",
+    lib_tag_rx: "Prescription",
+    lib_tag_pain: "Pain Reliever",
+    lib_tag_fever: "Fever Reducer",
+    lib_tag_skin: "Skin",
+    lib_tag_cold: "Common Cold",
+
+    /* SHARED PROSPEKTUS */
+    back_to_library: "← Back to Medicine Box",
     prospektus_barcode: "Barcode",
     prospektus_manufacturer: "Manufacturer",
-    prospektus_read_more: "Read Leaflet",
     warning_title: "⚠️ Important Warning",
     warning_text: "This page is for informational purposes only. Always consult your doctor or pharmacist when using medication.",
     toc_title: "Contents",
-    btn_back: "← Back to Drug Library",
+    btn_back: "← Back to Medicine Box",
     btn_download: "📱 Download App",
 
     /* ===== OCURIN EN ===== */
@@ -293,9 +696,9 @@ const translations = {
     oc_toc9: "4. Side Effects",
     oc_toc10: "5. Storage",
     oc_s1_title: "1. What is Ocurin and What is it Used For?",
-    oc_s1_p1: "Ocurin is an eye drop emulsion containing cyclosporine, which has anti-inflammatory effects and regulates the immune system associated with the eye surface when instilled into the eye. It is presented in a bottle containing 5 mL of white, opaque, slightly cloudy homogeneous emulsion.",
-    oc_s1_box: "Purpose: Used to increase tear production in patients whose tear production is suppressed due to inflammation associated with dry eye.",
-    oc_s1_p2: "No passage into human blood or accumulation in blood has been detected. Applied only by instillation into the eye.",
+    oc_s1_p1: "Ocurin is an eye drop emulsion containing cyclosporine with anti-inflammatory effects that regulates the immune system of the eye surface. Presented in a 5 mL bottle with white, opaque, slightly cloudy homogeneous emulsion.",
+    oc_s1_box: "Purpose: Used to increase tear production in patients whose tear production is suppressed due to dry eye-related inflammation.",
+    oc_s1_p2: "No passage into blood or accumulation in blood has been detected. Applied only by instillation into the eye.",
     oc_s2_title: "Active & Excipient Ingredients",
     oc_s2_h1: "Active Ingredient",
     oc_s2_p1: "Each 1 mL contains 0.5 mg (0.05%) cyclosporine.",
@@ -309,87 +712,87 @@ const translations = {
     oc_s2_l7: "Water for injection",
     oc_s3_title: "2. Before You Use Ocurin",
     oc_s3_h1: "❌ Do NOT Use If",
-    oc_s3_warn: "Do NOT use Ocurin if any of the following conditions apply:",
+    oc_s3_warn: "Do NOT use Ocurin if any of the following apply:",
     oc_s3_l1: "You are allergic to any of the ingredients",
     oc_s3_l2: "You have an eye infection caused by microorganisms",
     oc_s3_l3: "You have or had cancer in or around your eye",
     oc_s3_h2: "⚡ Use with Caution If",
-    oc_s3_l4: "Use Ocurin only for instillation into your eye(s)",
-    oc_s3_l5: "Do not apply while wearing contact lenses. Remove lenses before application and wait 15 minutes before reinserting",
+    oc_s3_l4: "Use only for instillation into your eye(s)",
+    oc_s3_l5: "Do not apply with contact lenses. Remove lenses before and wait 15 minutes after",
     oc_s3_l6: "Remove contact lenses before bedtime use",
     oc_s3_l7: "You have or had a herpes virus eye infection",
     oc_s3_l8: "You are using any steroid-containing medication",
     oc_s3_l9: "You are using any glaucoma medication",
-    oc_s3_info: "Age Limit: The efficacy and safety of cyclosporine has not been studied in children under 16. No difference between young and elderly patients.",
+    oc_s3_info: "Age Limit: Not studied in children under 16. No difference between young and elderly.",
     oc_s3_food_h: "🍽️ Use with Food and Beverages",
     oc_s3_food: "No interaction with food and beverages is expected.",
     oc_s3_preg_h: "🤰 Pregnancy and Breastfeeding",
-    oc_s3_preg: "Pregnancy: If you are pregnant, Ocurin should not be used. If there is a possibility of becoming pregnant, you should use birth control. If you notice you are pregnant during treatment, consult your doctor immediately.",
-    oc_s3_lact: "Breastfeeding: Ocurin may be present in breast milk in very small amounts. Consult your doctor before using this medication if you are breastfeeding.",
+    oc_s3_preg: "If pregnant, do not use Ocurin. Use birth control if there is a possibility of pregnancy.",
+    oc_s3_lact: "May be present in breast milk in very small amounts. Consult your doctor if breastfeeding.",
     oc_s3_drive_h: "🚗 Driving and Using Machines",
-    oc_s3_drive: "You may experience discomfort or blurred vision after instilling Ocurin. Wait until your vision clears before driving or operating machines.",
+    oc_s3_drive: "Blurred vision may occur after instilling. Wait until vision clears.",
     oc_s3_inter_h: "💊 Use with Other Medications",
-    oc_s3_inter: "If you need to instill more than one drop into your eye, leave 15 minutes between two different medications.",
-    oc_s3_inter_w: "If you are using steroid-containing eye drops together with Ocurin, consult your doctor as they may increase the risk of side effects.",
+    oc_s3_inter: "If using multiple eye drops, leave 15 minutes between them.",
+    oc_s3_inter_w: "If using steroid eye drops together, consult your doctor.",
     oc_s4_title: "3. How to Use Ocurin",
-    oc_s4_box: "Dose: Instill 1 drop of Ocurin eye drop emulsion into each eye twice daily, approximately 12 hours apart.",
+    oc_s4_box: "Dose: Instill 1 drop into each eye twice daily, approximately 12 hours apart.",
     oc_s4_h1: "📋 Application Steps",
-    oc_s4_pre: "Before use, invert the bottle several times to obtain a homogeneous, white, opaque emulsion.",
-    oc_s4_l1: "Step 1: Wash your hands and open the cap",
-    oc_s4_l2: "Step 2: Hold the bottle between your thumb and middle finger and invert it",
-    oc_s4_l3: "Step 3: Apply gentle pressure with your index finger to release one drop",
-    oc_s4_l4: "Step 4: Tilt your head slightly back",
-    oc_s4_l5: "Step 5: Pull your lower eyelid down with your finger to create a pocket",
-    oc_s4_l6: "Step 6: Instill the drop into the pocket formed",
-    oc_s4_l7: "Step 7: Slowly release your lower eyelid and close your eye",
-    oc_s4_l8: "Step 8: Press gently on the area between eye and nose with your finger",
-    oc_s4_l9: "Step 9: If using in both eyes, repeat for the other eye",
-    oc_s4_l10: "Step 10: Close the cap tightly after use",
-    oc_s4_warn: "Caution: Do not touch the dropper tip to your eye, eyelid, or any surfaces.",
-    oc_s4_info: "With artificial tears: Ocurin can be used with artificial tears; leave 15 minutes between the two preparations.",
+    oc_s4_pre: "Before use, invert the bottle several times for a homogeneous emulsion.",
+    oc_s4_l1: "Step 1: Wash hands and open the cap",
+    oc_s4_l2: "Step 2: Invert the bottle",
+    oc_s4_l3: "Step 3: Apply gentle pressure for one drop",
+    oc_s4_l4: "Step 4: Tilt your head back",
+    oc_s4_l5: "Step 5: Pull lower eyelid to create a pocket",
+    oc_s4_l6: "Step 6: Instill drop into the pocket",
+    oc_s4_l7: "Step 7: Release eyelid and close eye",
+    oc_s4_l8: "Step 8: Gently press between eye and nose",
+    oc_s4_l9: "Step 9: Repeat for other eye if needed",
+    oc_s4_l10: "Step 10: Close cap tightly",
+    oc_s4_warn: "Do not touch dropper tip to eye or any surface.",
+    oc_s4_info: "Can be used with artificial tears; leave 15 minutes between them.",
     oc_s4_spec_h: "Special Conditions",
-    oc_s4_spec1: "After opening: Must be used within 28 days",
-    oc_s4_spec2: "Children: Efficacy and safety not studied under 16 years",
-    oc_s4_spec3: "Elderly: No difference between young and elderly patients",
-    oc_s4_spec4: "Kidney/Liver failure: No special notification for eye application",
+    oc_s4_spec1: "After opening: Use within 28 days",
+    oc_s4_spec2: "Children: Not studied under 16 years",
+    oc_s4_spec3: "Elderly: No difference",
+    oc_s4_spec4: "Kidney/Liver: No special notification for eye use",
     oc_s4_od_h: "Overdose or Missed Dose",
-    oc_s4_od1: "Overdose: If you used more than necessary, consult a doctor or pharmacist",
-    oc_s4_od2: "Missed dose: Do not take a double dose to make up for forgotten doses",
-    oc_s4_od3: "Stopping treatment: No effects when treatment is discontinued",
+    oc_s4_od1: "Overdose: Consult a doctor",
+    oc_s4_od2: "Do not take a double dose",
+    oc_s4_od3: "No effects when stopping treatment",
     oc_s5_title: "4. Possible Side Effects",
-    oc_s5_p1: "Like all medicines, side effects may occur in people who are sensitive to the ingredients of Ocurin.",
-    oc_s5_emerg: "EMERGENCY: If any of the following occur, stop using Ocurin and IMMEDIATELY inform your doctor or go to the nearest emergency room: Allergic reaction (eye swelling, hives, severe angioedema, facial swelling, tongue swelling, throat edema, and difficulty breathing)",
-    oc_s5_vc: "Very Common (at least 1 in 10 patients)",
+    oc_s5_p1: "Side effects may occur in sensitive individuals.",
+    oc_s5_emerg: "EMERGENCY: If allergic reaction (swelling, hives, breathing difficulty) occurs, seek medical help IMMEDIATELY.",
+    oc_s5_vc: "Very Common (≥1/10)",
     oc_s5_vc1: "Eye burning",
-    oc_s5_c: "Common (more than 1 in 100 patients)",
+    oc_s5_c: "Common (≥1/100)",
     oc_s5_c1: "Eye redness",
     oc_s5_c2: "Eye discharge",
     oc_s5_c3: "Watery eyes",
     oc_s5_c4: "Eye pain",
-    oc_s5_c5: "Foreign body sensation in the eye",
+    oc_s5_c5: "Foreign body sensation",
     oc_s5_c6: "Eye itching",
     oc_s5_c7: "Eye stinging",
-    oc_s5_c8: "Vision impairment (usually blurred vision)",
+    oc_s5_c8: "Blurred vision",
     oc_s5_c9: "Eye irritation",
-    oc_s5_uc: "Uncommon (more than 1 in 1,000 patients)",
+    oc_s5_uc: "Uncommon (≥1/1,000)",
     oc_s5_uc1: "Corneal inflammation",
     oc_s5_uc2: "Eyelid redness",
-    oc_s5_uc3: "Corneal inflammation caused by herpes simplex virus",
-    oc_s5_un: "Unknown (cannot be estimated from available data)",
-    oc_s5_un1: "Superficial eye injury (due to vial tip contact during application)",
-    oc_s5_un2: "Hypersensitivity (eye swelling, hives, severe angioedema, facial swelling, tongue swelling, throat swelling, and difficulty breathing)",
-    oc_s5_report: "Side Effect Reporting: You can report side effects at www.titck.gov.tr or by calling 0800 314 00 08.",
+    oc_s5_uc3: "Herpes-related corneal inflammation",
+    oc_s5_un: "Unknown",
+    oc_s5_un1: "Superficial eye injury",
+    oc_s5_un2: "Hypersensitivity reaction",
+    oc_s5_report: "Report side effects at www.titck.gov.tr or call 0800 314 00 08.",
     oc_s6_title: "5. Storage Conditions",
-    oc_s6_l1: "Store out of the sight and reach of children, in its packaging",
-    oc_s6_l2: "Store at room temperature below 25°C",
-    oc_s6_l3: "Sterile until cap is opened",
-    oc_s6_l4: "Must be used within 28 days after opening when stored below 25°C",
-    oc_s6_l5: "Do not use after the expiry date",
-    oc_s6_l6: "Do not use if you notice defects in the product or packaging",
-    oc_s6_env: "Environment: Do not throw expired or unused medicines in the trash! Return them to the appropriate collection system.",
+    oc_s6_l1: "Keep out of reach of children",
+    oc_s6_l2: "Store below 25°C",
+    oc_s6_l3: "Sterile until opened",
+    oc_s6_l4: "Use within 28 days after opening",
+    oc_s6_l5: "Do not use after expiry date",
+    oc_s6_l6: "Do not use if defects are noticed",
+    oc_s6_env: "Do not throw unused medicines in the trash!",
     oc_s6_mfg_h: "Manufacturing Information",
-    oc_s6_mfg1: "License Holder: Bilim İlaç San. ve Tic. A.Ş. – Beyoğlu, Istanbul",
-    oc_s6_mfg2: "Manufacturing Site: İdol İlaç Dolum San. ve Tic. A.Ş. – Topkapı, Istanbul",
+    oc_s6_mfg1: "License: Bilim İlaç – Beyoğlu, Istanbul",
+    oc_s6_mfg2: "Manufactured: İdol İlaç – Topkapı, Istanbul",
 
     /* ===== PAROL EN ===== */
     pa_title: "Parol 500 mg Tablet",
@@ -407,284 +810,318 @@ const translations = {
     pa_toc10: "4. Side Effects",
     pa_toc11: "5. Storage",
     pa_s1_title: "1. What is Parol and What is it Used For?",
-    pa_s1_p1: "Parol is a pain reliever and fever reducer containing 500 mg paracetamol per tablet. Available in 20 and 30 tablet blister packs.",
-    pa_s1_box: "Purpose: Used for symptomatic treatment of mild to moderate pain and fever.",
-    pa_s1_p2: "Can be used for headache, toothache, muscle pain, fever accompanying common cold, as recommended by a doctor or pharmacist.",
+    pa_s1_p1: "Parol is a pain reliever and fever reducer containing 500 mg paracetamol per tablet.",
+    pa_s1_box: "Used for symptomatic treatment of mild to moderate pain and fever.",
+    pa_s1_p2: "Can be used for headache, toothache, muscle pain, cold-related fever.",
+    pa_s2_title: "Active & Excipient Ingredients",
+    pa_s2_h1: "Active Ingredient",
+    pa_s2_p1: "Each tablet contains 500 mg paracetamol.",
+    pa_s2_h2: "Excipient Ingredients",
+    pa_s2_l1: "Microcrystalline cellulose",
+    pa_s2_l2: "Povidone K-30",
+    pa_s2_l3: "Corn starch",
+    pa_s2_l4: "Stearic acid",
+    pa_s3_title: "2. Before You Use Parol",
+    pa_s3_h1: "❌ Do Not Use",
+    pa_s3_l1: "If allergic to paracetamol",
+    pa_s3_l2: "Severe liver failure",
+    pa_s3_l3: "Severe kidney failure",
+    pa_s3_h2: "⚡ Use with Caution",
+    pa_s3_l4: "If you have anemia",
+    pa_s3_l5: "If you have lung disease",
+    pa_s3_l6: "Liver or kidney dysfunction",
+    pa_s3_l7: "If skin rash or reaction occurs",
+    pa_s3_l8: "If using another paracetamol-containing medicine",
+    pa_s3_l9: "If underweight or malnourished",
+    pa_s3_l10: "If you have Gilbert syndrome",
+    pa_s3_l11: "If you drink alcohol",
+    pa_s3_warn1: "Using with other paracetamol products may cause overdose.",
+    pa_s3_warn2: "High doses can cause severe liver toxicity. Alcohol users should not exceed 2000 mg daily.",
+    pa_s3_info: "Consult your doctor if no improvement within 3-5 days.",
+    pa_s3_food_h: "🍽️ Food and Beverages",
+    pa_s3_food: "Liver risk increases with alcohol. Food may reduce absorption.",
+    pa_s3_preg_h: "🤰 Pregnancy and Breastfeeding",
+    pa_s3_preg: "No significant harm reported in pregnancy; use with doctor's advice.",
+    pa_s3_lact: "Passes into breast milk in small amounts. Nursing mothers can use with doctor's advice.",
+    pa_s3_drive_h: "🚗 Driving",
+    pa_s3_drive: "May cause dizziness or drowsiness in some patients.",
+    pa_s4_title: "Use with Other Drugs",
+    pa_s4_p1: "May interact with:",
+    pa_s4_l1: "Drugs affecting stomach emptying",
+    pa_s4_l2: "Epilepsy drugs (phenytoin, phenobarbital, carbamazepine)",
+    pa_s4_l3: "Chloramphenicol, rifampicin",
+    pa_s4_l4: "Warfarin and blood thinners",
+    pa_s4_l5: "Zidovudine",
+    pa_s4_l6: "St. John's Wort products",
+    pa_s4_l7: "Cholestyramine",
+    pa_s4_l8: "Other pain relievers and alcohol",
+    pa_s4_info: "Inform your doctor about all medicines you use.",
+    pa_s5_title: "3. How to Use Parol",
+    pa_s5_h1: "📋 Dosage",
+    pa_s5_box: "Adults and over 12: 1-2 tablets, may repeat every 4 hours.",
+    pa_s5_l1: "Maximum daily dose: 4000 mg",
+    pa_s5_l2: "Do not exceed 4 doses in 24 hours",
+    pa_s5_child: "Ages 6-12: Half to 1 tablet every 4-6 hours. Max: 60 mg/kg daily",
+    pa_s5_how_h: "Administration",
+    pa_s5_how1: "Take orally",
+    pa_s5_how2: "Swallow with a glass of water",
+    pa_s5_how3: "Use the lowest effective dose",
+    pa_s5_age_h: "Age Groups",
+    pa_s5_age1: "Under 6: Not recommended without doctor's advice",
+    pa_s5_age2: "Ages 6-11: Do not use more than 3 days without doctor",
+    pa_s5_age3: "Elderly: Reduce dose for frail/immobile elderly",
+    pa_s5_od_h: "Overdose",
+    pa_s5_od: "In case of overdose, contact a doctor or hospital immediately.",
+    pa_s5_miss_h: "Missed Dose",
+    pa_s5_miss: "Do not take a double dose.",
+    pa_s6_title: "4. Possible Side Effects",
+    pa_s6_p1: "Generally mild side effects.",
+    pa_s6_emerg: "EMERGENCY: If swelling, allergic signs, breathing difficulty, or unexpected bleeding occurs, seek help IMMEDIATELY.",
+    pa_s6_c: "Common",
+    pa_s6_c1: "Drowsiness, headache, dizziness",
+    pa_s6_c2: "Nausea, vomiting, abdominal pain",
+    pa_s6_c3: "Constipation, indigestion, gas",
+    pa_s6_uc: "Uncommon",
+    pa_s6_uc1: "Kidney damage (long-term use)",
+    pa_s6_uc2: "Gastrointestinal bleeding",
+    pa_s6_r: "Rare",
+    pa_s6_r1: "Blood cell disorders",
+    pa_s6_r2: "Severe allergic reaction (anaphylaxis)",
+    pa_s6_r3: "Skin rash, Stevens-Johnson syndrome",
+    pa_s6_vr: "Very Rare",
+    pa_s6_vr1: "Thrombocytopenia",
+    pa_s6_vr2: "Liver dysfunction",
+    pa_s6_report: "Report side effects at www.titck.gov.tr or call 0800 314 00 08.",
+    pa_s7_title: "5. Storage Conditions",
+    pa_s7_l1: "Keep out of reach of children",
+    pa_s7_l2: "Store below 25°C in original packaging",
+    pa_s7_l3: "Do not use after expiry date",
+    pa_s7_l4: "Dispose of unused medicines properly",
+    pa_s7_mfg_h: "Manufacturing Information",
+    pa_s7_mfg1: "License: Atabay Kimya – Kadıköy, Istanbul",
+    pa_s7_mfg2: "Manufactured: Atabay İlaç – Kadıköy, Istanbul",
 
     /* ===== ROACCUTANE EN ===== */
     ro_title: "Roaccutane 20 mg Soft Gelatin Capsule",
     ro_form: "💊 Isotretinoin 20 mg",
     ro_route: "🥤 Oral Use",
     ro_count: "📦 30 Capsules",
-    ro_preg_warn: "🚨 Pregnancy Warning: Roaccutane can seriously harm an unborn baby. It must never be used during pregnancy. Effective birth control must be used during treatment and for 1 month after.",
+    ro_preg_warn: "🚨 Must NEVER be used during pregnancy. Effective birth control must be used during and 1 month after treatment.",
+    ro_toc1: "1. What is Roaccutane?",
+    ro_toc2: "Active & Excipient Ingredients",
+    ro_toc3: "2. Before You Use",
+    ro_toc4: "Do Not Use",
+    ro_toc5: "For Female Patients",
+    ro_toc6: "For Male Patients",
+    ro_toc7: "For All Patients",
+    ro_toc8: "3. How to Use",
+    ro_toc9: "Dosage",
+    ro_toc10: "4. Side Effects",
+    ro_toc11: "5. Storage",
+    ro_s1_title: "1. What is Roaccutane?",
+    ro_s1_p1: "Roaccutane contains isotretinoin, a medicine from the retinoid group related to vitamin A.",
+    ro_s1_p2: "Contains 30 brown-red and white soft gelatin capsules marked \"ROA 20\".",
+    ro_s1_box: "Used for treatment of severe acne types (nodular, conglobate, or scarring risk).",
+    ro_s1_info: "Used only when other treatments have failed, under dermatologist supervision.",
+    ro_s2_title: "Active & Excipient Ingredients",
+    ro_s2_h1: "Active Ingredient",
+    ro_s2_p1: "Each capsule contains 20 mg isotretinoin",
+    ro_s2_h2: "Excipient Ingredients",
+    ro_s2_l1: "Titanium dioxide",
+    ro_s2_l2: "Red iron oxide",
+    ro_s2_l3: "Soya oil",
+    ro_s2_l4: "Yellow beeswax",
+    ro_s2_l5: "Soybean oil",
+    ro_s2_l6: "Vegetable oils",
+    ro_s2_l7: "Gelatin",
+    ro_s2_l8: "Glycerol",
+    ro_s2_warn: "Do not use if allergic to soya oil.",
+    ro_s3_title: "2. Before You Use",
+    ro_s3_h1: "❌ Do Not Use",
+    ro_s3_l1: "Allergy to soya or excipients",
+    ro_s3_l2: "Pregnancy or suspected pregnancy",
+    ro_s3_l3: "Breastfeeding",
+    ro_s3_l4: "Liver disease",
+    ro_s3_l5: "Very high blood fat levels",
+    ro_s3_l6: "High vitamin A levels",
+    ro_s3_l7: "Under 12 years old",
+    ro_s3_l8: "On tetracycline treatment",
+    ro_s4_title: "For Female Patients",
+    ro_s4_warn: "🚨 CRITICAL: Roaccutane can seriously harm an unborn baby (teratogenic).",
+    ro_s4_l1: "Never use during pregnancy",
+    ro_s4_l2: "Never use while breastfeeding",
+    ro_s4_l3: "Use two effective birth control methods",
+    ro_s4_l4: "Start 1 month before, continue 1 month after treatment",
+    ro_s4_l5: "Negative pregnancy test required before treatment",
+    ro_s4_l6: "Monthly pregnancy tests required",
+    ro_s4_l7: "Final test 5 weeks after treatment ends",
+    ro_s4_stop: "If pregnant during or within 1 month after treatment, STOP IMMEDIATELY.",
+    ro_s5_title: "For Male Patients",
+    ro_s5_p1: "Not expected to harm sperm. Very low levels of isotretinoin found in semen.",
+    ro_s5_info: "Do not share your medicine, especially with women.",
+    ro_s6_title: "For All Patients",
+    ro_s6_l1: "Report any mental health history to your doctor",
+    ro_s6_l2: "Blood fats may increase; regular testing needed",
+    ro_s6_l3: "Liver enzymes may increase",
+    ro_s6_l4: "Blood sugar may increase",
+    ro_s6_l5: "Use moisturizing cream and lip balm",
+    ro_s6_l6: "Use at least SPF 15 sunscreen",
+    ro_s6_l7: "No waxing, dermabrasion or laser for 6 months",
+    ro_s6_l8: "Reduce intense exercise",
+    ro_s6_l9: "Do not take vitamin A supplements",
+    ro_s6_l10: "Do not donate blood for 1 month",
+    ro_s6_drive_h: "🚗 Driving",
+    ro_s6_drive: "Night vision may decrease. Do not drive if feeling fatigued.",
+    ro_s6_inter_h: "💊 Drug Interactions",
+    ro_s6_inter: "Do not take vitamin A supplements or tetracyclines.",
+    ro_s7_title: "3. How to Use",
+    ro_s7_box: "Starting dose: 0.5 mg/kg/day. E.g., 70 kg → 35 mg daily.",
+    ro_s7_l1: "Take 1-2 times daily with food",
+    ro_s7_l2: "Swallow whole with drink or food",
+    ro_s7_l3: "Dose range: 0.5–1.0 mg/kg/day",
+    ro_s7_l4: "Treatment duration: 16–24 weeks",
+    ro_s7_l5: "Usually 1 treatment cycle is sufficient",
+    ro_s7_info: "Acne may worsen initially but improves over time.",
+    ro_s7_spec_h: "Special Conditions",
+    ro_s7_spec1: "Under 12: Do not use",
+    ro_s7_spec2: "Kidney problems: Start with low dose",
+    ro_s7_spec3: "Liver failure: Do not use",
+    ro_s7_od: "If overdose, consult doctor. Do not take double dose.",
+    ro_s8_title: "4. Possible Side Effects",
+    ro_s8_p1: "Some side effects can be serious and may require hospitalization.",
+    ro_s8_emerg: "EMERGENCY: If suicidal thoughts, severe allergic reaction, or severe skin reactions occur, seek help IMMEDIATELY.",
+    ro_s8_mental_h: "🧠 Mental",
+    ro_s8_mental_vr: "Very Rare",
+    ro_s8_mental1: "Suicidal thoughts",
+    ro_s8_mental2: "Unusual behavior",
+    ro_s8_mental3: "Loss of contact with reality",
+    ro_s8_mental_r: "Rare",
+    ro_s8_mental4: "Depression and related disorders",
+    ro_s8_mental5: "Aggressive behavior",
+    ro_s8_skin_h: "💆 Skin and Hair",
+    ro_s8_skin_vc: "Very Common",
+    ro_s8_skin1: "Dry skin, cracked lips",
+    ro_s8_skin2: "Rash, itching, peeling",
+    ro_s8_skin_r: "Rare: Temporary hair loss",
+    ro_s8_blood_h: "🩸 Blood",
+    ro_s8_blood_vc: "Very Common",
+    ro_s8_blood1: "Easy bruising and bleeding",
+    ro_s8_blood2: "Anemia symptoms",
+    ro_s8_blood3: "Increased liver enzymes",
+    ro_s8_eye_h: "👁️ Eyes",
+    ro_s8_eye_vc: "Very Common",
+    ro_s8_eye1: "Conjunctivitis, dry eyes",
+    ro_s8_eye_vr: "Very Rare",
+    ro_s8_eye2: "Decreased night vision",
+    ro_s8_eye3: "Blurred vision, cataracts",
+    ro_s8_bone_h: "🦴 Bones and Muscles",
+    ro_s8_bone_vc: "Very Common: Back, muscle, joint pain",
+    ro_s8_bone_warn: "Reduce intense physical activity.",
+    ro_s8_other_h: "📋 Other",
+    ro_s8_other1: "Headache, high cholesterol",
+    ro_s8_other2: "Diabetes symptoms (very rare)",
+    ro_s8_other3: "Abdominal pain, gum bleeding (very rare)",
+    ro_s9_title: "5. Storage",
+    ro_s9_l1: "Keep out of reach of children",
+    ro_s9_l2: "Store below 25°C, protect from light and moisture",
+    ro_s9_l3: "Do not use after expiry date",
+    ro_s9_l4: "Return remaining capsules to your pharmacist",
+    ro_s9_mfg_h: "Manufacturing Information",
+    ro_s9_mfg1: "License: Roche – Maslak, Istanbul",
+    ro_s9_mfg2: "Manufactured: R.P. Scherer GmbH – Eberbach, Germany",
 
     /* ===== İBURAMİN COLD EN ===== */
     ib_title: "Iburamin Cold Capsule",
     ib_form: "💊 Ibuprofen 200mg + Pseudoephedrine 30mg + Chlorpheniramine 2mg",
     ib_route: "🥤 Oral Use",
     ib_count: "📦 24 Capsules",
-  },
-
-  de: {
-    nav_home: "Startseite",
-    nav_drugs: "Arzneimittelbibliothek",
-    nav_about: "Über uns",
-    nav_download: "App herunterladen",
-    hero_badge: "🌿 Papierlose Gesundheitsrevolution",
-    hero_title_1: "Ihren Beipackzettel",
-    hero_title_2: "Digital Mitnehmen",
-    hero_desc: "Scannen Sie den QR-Code auf Ihrer Medikamentenschachtel mit QrPektüs und greifen Sie sofort auf den Beipackzettel zu.",
-    hero_btn_primary: "Medikamente entdecken",
-    hero_btn_secondary: "App herunterladen",
-    features_title: "Warum QrPektüs?",
-    features_subtitle: "Intelligente Lösungen für Ihre digitale Gesundheit",
-    feat1_title: "Sofortzugriff per QR",
-    feat1_desc: "Scannen Sie den Barcode und greifen Sie in Sekunden auf den Beipackzettel zu.",
-    feat2_title: "Mehrsprachige Unterstützung",
-    feat2_desc: "Türkisch, Englisch, Deutsch, Französisch und Spanisch.",
-    feat3_title: "Medikamentenerinnerung",
-    feat3_desc: "Vergessen Sie nie Ihre Medikamentenzeiten. Intelligente Benachrichtigungen.",
-    feat4_title: "Papierverschwendung reduzieren",
-    feat4_desc: "Helfen Sie der Natur durch Digitalisierung von Beipackzetteln.",
-    feat5_title: "Nutzungskalender",
-    feat5_desc: "Verfolgen Sie Ihre täglichen Medikamente einfach.",
-    feat6_title: "Sichere Daten",
-    feat6_desc: "Ihre Daten werden sicher mit Firebase gespeichert.",
-    how_title: "Wie funktioniert es?",
-    how_subtitle: "In 4 Schritten zum Beipackzettel",
-    step1_title: "App herunterladen",
-    step1_desc: "Installieren Sie QrPektüs auf Ihrem Telefon.",
-    step2_title: "Barcode scannen",
-    step2_desc: "Scannen Sie den Barcode auf der Medikamentenschachtel.",
-    step3_title: "Info anzeigen",
-    step3_desc: "Sehen Sie sofort Zusammenfassungsinformationen.",
-    step4_title: "Details anklicken",
-    step4_desc: "Greifen Sie auf den vollständigen Beipackzettel zu.",
-    stats_drugs: "Registrierte Medikamente",
-    stats_users: "Aktive Benutzer",
-    stats_languages: "Sprachunterstützung",
-    stats_saved: "Papier gespart",
-    cta_title: "Digitalisieren Sie Ihre Gesundheit",
-    cta_desc: "Laden Sie die App herunter oder erkunden Sie unsere Bibliothek.",
-    cta_btn1: "Arzneimittelbibliothek",
-    cta_btn2: "App herunterladen",
-    footer_desc: "Wir verhindern Papierverschwendung durch Digitalisierung von Beipackzetteln.",
-    footer_links: "Schnelllinks",
-    footer_drugs_title: "Medikamente",
-    footer_contact: "Kontakt",
-    footer_rights: "© 2025 QrPektüs. Alle Rechte vorbehalten.",
-    footer_disclaimer: "Diese Seite dient nur zur Information und ersetzt keine medizinische Beratung.",
-    lib_title: "Arzneimittelbibliothek",
-    lib_subtitle: "Hier finden Sie die Beipackzettel aller Medikamente.",
-    lib_search: "Medikament suchen...",
-    lib_detail_btn: "Beipackzettel ansehen",
-    back_to_library: "← Zurück zur Bibliothek",
-    prospektus_barcode: "Barcode",
-    prospektus_manufacturer: "Hersteller",
-    warning_title: "⚠️ Wichtiger Hinweis",
-    warning_text: "Diese Seite dient nur zur Information. Konsultieren Sie immer Ihren Arzt oder Apotheker.",
-    toc_title: "Inhaltsverzeichnis",
-    btn_back: "← Zurück zur Bibliothek",
-    btn_download: "📱 App herunterladen",
-
-    oc_title: "Ocurin 0,05% Augentropfen Emulsion",
-    oc_form: "💧 5 mL Flasche",
-    oc_route: "👁️ Augenanwendung",
-    oc_s1_title: "1. Was ist Ocurin und wofür wird es angewendet?",
-    oc_s1_p1: "Ocurin ist eine Augentropfen-Emulsion mit Ciclosporin, die entzündungshemmend wirkt und das Immunsystem der Augenoberfläche reguliert.",
-    oc_s1_box: "Zweck: Zur Erhöhung der Tränenproduktion bei Patienten, deren Tränenproduktion durch Entzündung im Zusammenhang mit trockenen Augen unterdrückt wird.",
-
-    pa_title: "Parol 500 mg Tablette",
-    pa_form: "💊 Paracetamol 500 mg",
-    pa_route: "🥤 Orale Einnahme",
-    pa_s1_title: "1. Was ist Parol und wofür wird es angewendet?",
-    pa_s1_p1: "Parol ist ein Schmerzmittel und Fiebersenker mit 500 mg Paracetamol pro Tablette.",
-    pa_s1_box: "Zweck: Zur symptomatischen Behandlung von leichten bis mittelschweren Schmerzen und Fieber.",
-
-    ro_title: "Roaccutane 20 mg Weichgelatinekapsel",
-    ro_form: "💊 Isotretinoin 20 mg",
-    ro_route: "🥤 Orale Einnahme",
-    ro_count: "📦 30 Kapseln",
-    ro_preg_warn: "🚨 Schwangerschaftswarnung: Roaccutane kann einem ungeborenen Kind schweren Schaden zufügen.",
-
-    ib_title: "Iburamin Cold Kapsel",
-    ib_form: "💊 Ibuprofen 200mg + Pseudoephedrin 30mg + Chlorpheniramin 2mg",
-    ib_route: "🥤 Orale Einnahme",
-    ib_count: "📦 24 Kapseln",
-  },
-
-  fr: {
-    nav_home: "Accueil",
-    nav_drugs: "Bibliothèque",
-    nav_about: "À propos",
-    nav_download: "Télécharger",
-    hero_badge: "🌿 Révolution santé sans papier",
-    hero_title_1: "Prenez votre notice",
-    hero_title_2: "en numérique",
-    hero_desc: "Scannez le code QR avec QrPektüs et accédez instantanément à la notice.",
-    hero_btn_primary: "Explorer",
-    hero_btn_secondary: "Télécharger",
-    features_title: "Pourquoi QrPektüs?",
-    features_subtitle: "Des solutions intelligentes pour votre santé numérique",
-    feat1_title: "Accès instantané via QR",
-    feat1_desc: "Scannez le code-barres et accédez à la notice en secondes.",
-    feat2_title: "Support multilingue",
-    feat2_desc: "Turc, anglais, allemand, français et espagnol.",
-    feat3_title: "Rappel de médicaments",
-    feat3_desc: "N'oubliez jamais vos heures de médicaments.",
-    feat4_title: "Réduire le gaspillage",
-    feat4_desc: "Aidez la nature en numérisant les notices.",
-    feat5_title: "Calendrier d'utilisation",
-    feat5_desc: "Suivez facilement vos médicaments quotidiens.",
-    feat6_title: "Données sécurisées",
-    feat6_desc: "Vos données sont stockées en sécurité avec Firebase.",
-    how_title: "Comment ça marche?",
-    how_subtitle: "Accédez à votre notice en 4 étapes",
-    step1_title: "Télécharger l'app",
-    step1_desc: "Installez QrPektüs sur votre téléphone.",
-    step2_title: "Scanner le code",
-    step2_desc: "Scannez le code-barres sur la boîte.",
-    step3_title: "Voir les infos",
-    step3_desc: "Visualisez un résumé du médicament.",
-    step4_title: "Cliquer pour détails",
-    step4_desc: "Accédez à la notice complète.",
-    stats_drugs: "Médicaments enregistrés",
-    stats_languages: "Support linguistique",
-    stats_saved: "Papier économisé",
-    cta_title: "Numérisez votre santé",
-    cta_desc: "Téléchargez l'app ou explorez notre bibliothèque.",
-    cta_btn1: "Bibliothèque",
-    cta_btn2: "Télécharger",
-    footer_desc: "Nous prévenons le gaspillage en numérisant les notices.",
-    footer_links: "Liens rapides",
-    footer_drugs_title: "Médicaments",
-    footer_contact: "Contact",
-    footer_rights: "© 2025 QrPektüs. Tous droits réservés.",
-    footer_disclaimer: "Ce site est informatif et ne remplace pas les conseils médicaux.",
-    lib_title: "Bibliothèque de médicaments",
-    lib_subtitle: "Accédez aux notices de tous les médicaments.",
-    lib_search: "Rechercher...",
-    lib_detail_btn: "Voir la notice",
-    back_to_library: "← Retour",
-    prospektus_barcode: "Code-barres",
-    prospektus_manufacturer: "Fabricant",
-    warning_title: "⚠️ Avertissement",
-    warning_text: "Cette page est informative. Consultez toujours votre médecin.",
-    toc_title: "Sommaire",
-    btn_back: "← Retour à la bibliothèque",
-    btn_download: "📱 Télécharger l'app",
-
-    oc_title: "Ocurin 0,05% Collyre Émulsion",
-    oc_form: "💧 Flacon 5 mL",
-    oc_route: "👁️ Application oculaire",
-    oc_s1_title: "1. Qu'est-ce qu'Ocurin et dans quel cas est-il utilisé?",
-    oc_s1_p1: "Ocurin est un collyre en émulsion contenant de la ciclosporine, qui a des effets anti-inflammatoires et régule le système immunitaire de la surface oculaire.",
-    oc_s1_box: "Objectif: Utilisé pour augmenter la production de larmes chez les patients dont la production est supprimée en raison d'une inflammation liée à la sécheresse oculaire.",
-
-    pa_title: "Parol 500 mg Comprimé",
-    pa_form: "💊 Paracétamol 500 mg",
-    pa_route: "🥤 Voie orale",
-    pa_s1_title: "1. Qu'est-ce que Parol et dans quel cas est-il utilisé?",
-    pa_s1_p1: "Parol est un analgésique et antipyrétique contenant 500 mg de paracétamol par comprimé.",
-    pa_s1_box: "Objectif: Traitement symptomatique des douleurs légères à modérées et de la fièvre.",
-
-    ro_title: "Roaccutane 20 mg Capsule Molle",
-    ro_form: "💊 Isotrétinoïne 20 mg",
-    ro_route: "🥤 Voie orale",
-    ro_count: "📦 30 Capsules",
-    ro_preg_warn: "🚨 Avertissement grossesse: Roaccutane peut gravement nuire au bébé à naître.",
-
-    ib_title: "Iburamin Cold Capsule",
-    ib_form: "💊 Ibuprofène 200mg + Pseudoéphédrine 30mg + Chlorphéniramine 2mg",
-    ib_route: "🥤 Voie orale",
-    ib_count: "📦 24 Capsules",
-  },
-
-  es: {
-    nav_home: "Inicio",
-    nav_drugs: "Biblioteca",
-    nav_about: "Sobre nosotros",
-    nav_download: "Descargar",
-    hero_badge: "🌿 Revolución de salud sin papel",
-    hero_title_1: "Lleva tu prospecto",
-    hero_title_2: "al mundo digital",
-    hero_desc: "Escanea el código QR con QrPektüs y accede al prospecto al instante.",
-    hero_btn_primary: "Explorar",
-    hero_btn_secondary: "Descargar",
-    features_title: "¿Por qué QrPektüs?",
-    features_subtitle: "Soluciones inteligentes para tu salud digital",
-    feat1_title: "Acceso instantáneo por QR",
-    feat1_desc: "Escanea el código de barras y accede al prospecto en segundos.",
-    feat2_title: "Soporte multiidioma",
-    feat2_desc: "Turco, inglés, alemán, francés y español.",
-    feat3_title: "Recordatorio",
-    feat3_desc: "Nunca olvides tus horarios de medicación.",
-    feat4_title: "Reduce el desperdicio",
-    feat4_desc: "Ayuda a la naturaleza digitalizando prospectos.",
-    feat5_title: "Calendario de uso",
-    feat5_desc: "Sigue fácilmente tus medicamentos diarios.",
-    feat6_title: "Datos seguros",
-    feat6_desc: "Tus datos se almacenan de forma segura con Firebase.",
-    how_title: "¿Cómo funciona?",
-    how_subtitle: "Accede a tu prospecto en 4 pasos",
-    step1_title: "Descargar la app",
-    step1_desc: "Instala QrPektüs en tu teléfono.",
-    step2_title: "Escanear el código",
-    step2_desc: "Escanea el código de barras de la caja.",
-    step3_title: "Ver la información",
-    step3_desc: "Visualiza un resumen del medicamento.",
-    step4_title: "Clic para detalles",
-    step4_desc: "Accede al prospecto completo.",
-    stats_drugs: "Medicamentos registrados",
-    stats_languages: "Soporte de idiomas",
-    stats_saved: "Papel ahorrado",
-    cta_title: "Lleva tu salud al digital",
-    cta_desc: "Descarga la app o explora nuestra biblioteca.",
-    cta_btn1: "Biblioteca",
-    cta_btn2: "Descargar",
-    footer_desc: "Prevenimos el desperdicio digitalizando prospectos.",
-    footer_links: "Enlaces rápidos",
-    footer_drugs_title: "Medicamentos",
-    footer_contact: "Contacto",
-    footer_rights: "© 2025 QrPektüs. Todos los derechos reservados.",
-    footer_disclaimer: "Este sitio es solo informativo.",
-    lib_title: "Biblioteca de medicamentos",
-    lib_subtitle: "Accede a los prospectos de todos los medicamentos.",
-    lib_search: "Buscar...",
-    lib_detail_btn: "Ver prospecto",
-    back_to_library: "← Volver",
-    prospektus_barcode: "Código de barras",
-    prospektus_manufacturer: "Fabricante",
-    warning_title: "⚠️ Aviso importante",
-    warning_text: "Esta página es solo informativa. Consulte siempre a su médico.",
-    toc_title: "Contenido",
-    btn_back: "← Volver a la biblioteca",
-    btn_download: "📱 Descargar app",
-
-    oc_title: "Ocurin 0,05% Gotas Oftálmicas Emulsión",
-    oc_form: "💧 Frasco 5 mL",
-    oc_route: "👁️ Aplicación ocular",
-    oc_s1_title: "1. ¿Qué es Ocurin y para qué se utiliza?",
-    oc_s1_p1: "Ocurin es una emulsión de gotas oftálmicas con ciclosporina, que tiene efectos antiinflamatorios y regula el sistema inmunológico de la superficie ocular.",
-    oc_s1_box: "Propósito: Se utiliza para aumentar la producción de lágrimas en pacientes cuya producción está suprimida debido a la inflamación relacionada con el ojo seco.",
-
-    pa_title: "Parol 500 mg Comprimido",
-    pa_form: "💊 Paracetamol 500 mg",
-    pa_route: "🥤 Vía oral",
-    pa_s1_title: "1. ¿Qué es Parol y para qué se utiliza?",
-    pa_s1_p1: "Parol es un analgésico y antipirético que contiene 500 mg de paracetamol por comprimido.",
-    pa_s1_box: "Propósito: Tratamiento sintomático de dolores leves a moderados y fiebre.",
-
-    ro_title: "Roaccutane 20 mg Cápsula Blanda de Gelatina",
-    ro_form: "💊 Isotretinoína 20 mg",
-    ro_route: "🥤 Vía oral",
-    ro_count: "📦 30 Cápsulas",
-    ro_preg_warn: "🚨 Advertencia de embarazo: Roaccutane puede causar daño grave al bebé no nacido.",
-
-    ib_title: "Iburamin Cold Cápsula",
-    ib_form: "💊 Ibuprofeno 200mg + Pseudoefedrina 30mg + Clorfeniramina 2mg",
-    ib_route: "🥤 Vía oral",
-    ib_count: "📦 24 Cápsulas",
+    ib_toc1: "1. What is Iburamin Cold?",
+    ib_toc2: "Active & Excipient Ingredients",
+    ib_toc3: "2. Before You Use",
+    ib_toc4: "Do Not Use",
+    ib_toc5: "Use with Caution",
+    ib_toc6: "Use with Other Drugs",
+    ib_toc7: "Pregnancy & Breastfeeding",
+    ib_toc8: "3. How to Use",
+    ib_toc9: "Dosage",
+    ib_toc10: "4. Side Effects",
+    ib_toc11: "5. Storage",
+    ib_s1_title: "1. What is Iburamin Cold?",
+    ib_s1_p1: "A combined capsule with three active ingredients. Available as 24 capsules.",
+    ib_s1_info: "🔵 Chlorpheniramine: Antihistamine 🟠 Ibuprofen: Pain reliever 🟢 Pseudoephedrine: Decongestant",
+    ib_s1_box: "Used for sneezing, runny nose, congestion, pain, and fever caused by common cold.",
+    ib_s2_title: "Active & Excipient Ingredients",
+    ib_s2_h1: "Active Ingredients",
+    ib_s2_l1: "Ibuprofen: 200 mg",
+    ib_s2_l2: "Pseudoephedrine HCl: 30 mg",
+    ib_s2_l3: "Chlorpheniramine maleate: 2 mg",
+    ib_s2_h2: "Excipient Ingredients",
+    ib_s2_l4: "Potassium hydroxide, polysorbate 80, corn oil, gelatin, titanium dioxide and others",
+    ib_s3_title: "2. Before You Use",
+    ib_s3_h1: "❌ Do Not Use",
+    ib_s3_warn1: "Do not use if you took MAO inhibitors in the last 14 days.",
+    ib_s3_l1: "Allergy to ibuprofen or pseudoephedrine",
+    ib_s3_l2: "Active stomach/intestinal bleeding or ulcer",
+    ib_s3_l3: "Nasal polyps",
+    ib_s3_l4: "Aspirin allergy",
+    ib_s3_l5: "Within 2 weeks of bypass surgery",
+    ib_s3_warn2: "Ibuprofen may increase cardiovascular risk.",
+    ib_s3_warn3: "Risk of stomach bleeding or perforation.",
+    ib_s3_h2: "⚡ Use with Caution",
+    ib_s3_l6: "History of ulcer or bleeding",
+    ib_s3_l7: "Heart disease or high blood pressure",
+    ib_s3_l8: "Liver/kidney disease",
+    ib_s3_l9: "Thyroid, glaucoma, diabetes",
+    ib_s3_l10: "Prostate enlargement",
+    ib_s3_l11: "Bleeding disorder",
+    ib_s3_l12: "Smoking",
+    ib_s3_food_h: "🍽️ Food and Beverages",
+    ib_s3_food: "Do not drink alcohol. Take 1 hour before or 2 hours after orange juice and cola.",
+    ib_s3_preg_h: "🤰 Pregnancy and Breastfeeding",
+    ib_s3_preg: "May be harmful in the last 3 months of pregnancy. Passes into breast milk.",
+    ib_s3_drive_h: "🚗 Driving",
+    ib_s3_drive: "May affect your thinking and reactions. Be careful.",
+    ib_s4_title: "Use with Other Drugs",
+    ib_s4_l1: "Blood thinners (warfarin)",
+    ib_s4_l2: "Steroids",
+    ib_s4_l3: "Blood pressure medicines, beta-blockers",
+    ib_s4_l4: "ACE inhibitors",
+    ib_s4_l5: "Antidepressants",
+    ib_s4_l6: "Aspirin and other anti-inflammatories",
+    ib_s4_info: "Dose adjustment may be needed if using these medicines.",
+    ib_s5_title: "3. How to Use",
+    ib_s5_box: "Use the smallest effective dose for the shortest time.",
+    ib_s5_l1: "Single dose max: 800 mg ibuprofen",
+    ib_s5_l2: "Daily max: 3200 mg ibuprofen",
+    ib_s5_l3: "See a doctor if fever lasts more than 3 days",
+    ib_s5_l4: "See a doctor if symptoms persist after 7 days",
+    ib_s5_how_h: "Administration",
+    ib_s5_how1: "Oral use only",
+    ib_s5_how2: "Swallow capsules whole",
+    ib_s5_how3: "Preferably take with food",
+    ib_s5_age_h: "Age Groups",
+    ib_s5_age1: "Under 12: Should not be used",
+    ib_s5_age2: "Over 60: Increased risk of stomach bleeding",
+    ib_s5_spec: "Do not use in kidney/liver failure.",
+    ib_s5_surg: "Inform your doctor before any surgery.",
+    ib_s5_od: "If overdose, consult a doctor. Do not take double dose.",
+    ib_s6_title: "4. Possible Side Effects",
+    ib_s6_p1: "Side effects may occur in sensitive individuals.",
+    ib_s6_emerg: "EMERGENCY: If breathing difficulty, throat swelling, or hives occur, seek help IMMEDIATELY.",
+    ib_s6_emerg2: "If blood in urine, chest pain, blood from mouth, or dark stool occurs, go to emergency.",
+    ib_s6_c: "Other Side Effects",
+    ib_s6_c1: "Diarrhea, constipation, abdominal pain",
+    ib_s6_c2: "Indigestion, dry mouth",
+    ib_s6_c3: "Rash, fatigue, headache",
+    ib_s6_c4: "Jaundice, edema, prolonged bleeding",
+    ib_s7_title: "5. Storage",
+    ib_s7_l1: "Keep out of reach of children",
+    ib_s7_l2: "Store below 25°C, away from moisture",
+    ib_s7_l3: "Do not use after expiry date",
+    ib_s7_l4: "Do not use if defects are noticed",
+    ib_s7_mfg_h: "Manufacturing Information",
+    ib_s7_mfg1: "License: Berko İlaç – Ataşehir, Istanbul",
+    ib_s7_mfg2: "Manufactured: Berko İlaç – Sultanbeyli, Istanbul",
   }
 };
 
@@ -703,7 +1140,6 @@ const LangManager = {
     this.currentLang = lang;
     if (save) localStorage.setItem('qrpektus_lang', lang);
 
-    // data-i18n → textContent
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang][key]) {
@@ -711,7 +1147,6 @@ const LangManager = {
       }
     });
 
-    // data-i18n-html → innerHTML (for bold/formatted text)
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.getAttribute('data-i18n-html');
       if (translations[lang][key]) {
@@ -719,7 +1154,6 @@ const LangManager = {
       }
     });
 
-    // data-i18n-placeholder
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
       if (translations[lang][key]) {
@@ -731,13 +1165,9 @@ const LangManager = {
     this.updateLangBtn(lang);
   },
 
-  get(key) {
-    return translations[this.currentLang]?.[key] || translations['tr']?.[key] || key;
-  },
-
   updateLangBtn(lang) {
-    const flags = { tr: '🇹🇷', en: '🇬🇧', de: '🇩🇪', fr: '🇫🇷', es: '🇪🇸' };
-    const names = { tr: 'TR', en: 'EN', de: 'DE', fr: 'FR', es: 'ES' };
+    const flags = { tr: '🇹🇷', en: '🇬🇧' };
+    const names = { tr: 'TR', en: 'EN' };
     const btn = document.querySelector('.lang-current');
     if (btn) {
       btn.innerHTML = `<span class="flag">${flags[lang]}</span> ${names[lang]} <span>▾</span>`;
@@ -748,8 +1178,7 @@ const LangManager = {
     document.querySelectorAll('[data-lang]').forEach(el => {
       el.addEventListener('click', (e) => {
         e.preventDefault();
-        const lang = el.getAttribute('data-lang');
-        this.setLang(lang);
+        this.setLang(el.getAttribute('data-lang'));
         document.querySelector('.lang-dropdown')?.classList.remove('open');
       });
     });
@@ -779,20 +1208,12 @@ const Navbar = {
 
   handleScroll() {
     const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
-    if (window.scrollY > 20) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    if (navbar) {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
     }
-
-    const backToTop = document.querySelector('.back-to-top');
-    if (backToTop) {
-      if (window.scrollY > 400) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
+    const btt = document.querySelector('.back-to-top');
+    if (btt) {
+      btt.classList.toggle('visible', window.scrollY > 400);
     }
   },
 
@@ -803,21 +1224,17 @@ const Navbar = {
 
     toggle.addEventListener('click', () => {
       links.classList.toggle('open');
-      const spans = toggle.querySelectorAll('span');
-      spans[0].style.transform = links.classList.contains('open')
-        ? 'rotate(45deg) translate(5px, 6px)' : '';
-      spans[1].style.opacity = links.classList.contains('open') ? '0' : '1';
-      spans[2].style.transform = links.classList.contains('open')
-        ? 'rotate(-45deg) translate(5px, -6px)' : '';
+      const s = toggle.querySelectorAll('span');
+      const open = links.classList.contains('open');
+      s[0].style.transform = open ? 'rotate(45deg) translate(5px, 6px)' : '';
+      s[1].style.opacity = open ? '0' : '1';
+      s[2].style.transform = open ? 'rotate(-45deg) translate(5px, -6px)' : '';
     });
 
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('open');
-        toggle.querySelectorAll('span').forEach(s => {
-          s.style.transform = '';
-          s.style.opacity = '';
-        });
+        toggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
       });
     });
   },
@@ -826,9 +1243,7 @@ const Navbar = {
     const current = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(a => {
       const href = a.getAttribute('href');
-      if (href === current || (current === '' && href === 'index.html')) {
-        a.classList.add('active');
-      }
+      if (href === current || (current === '' && href === 'index.html')) a.classList.add('active');
     });
   }
 };
@@ -837,22 +1252,11 @@ const Navbar = {
 const ScrollAnimations = {
   init() {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      },
+      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-in'); }),
       { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
     );
-
-    document.querySelectorAll(
-      '.feature-card, .step-card, .drug-card, .prospektus-section, .stat-item'
-    ).forEach(el => {
-      el.classList.add('animate-ready');
-      observer.observe(el);
-    });
+    document.querySelectorAll('.feature-card, .step-card, .drug-card, .prospektus-section, .stat-item')
+      .forEach(el => { el.classList.add('animate-ready'); observer.observe(el); });
   }
 };
 
@@ -861,34 +1265,23 @@ const CounterAnimation = {
   init() {
     const counters = document.querySelectorAll('[data-count]');
     if (!counters.length) return;
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.animateCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { this.animate(entry.target); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.5 });
-
-    counters.forEach(counter => observer.observe(counter));
+    counters.forEach(c => observer.observe(c));
   },
-
-  animateCounter(el) {
+  animate(el) {
     const target = parseInt(el.getAttribute('data-count'));
     const suffix = el.getAttribute('data-suffix') || '';
     const duration = 1800;
     const start = performance.now();
-
     const update = (time) => {
-      const elapsed = time - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(eased * target);
-      el.textContent = current.toLocaleString() + suffix;
-      if (progress < 1) requestAnimationFrame(update);
+      const p = Math.min((time - start) / duration, 1);
+      el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target).toLocaleString() + suffix;
+      if (p < 1) requestAnimationFrame(update);
     };
-
     requestAnimationFrame(update);
   }
 };
@@ -896,41 +1289,34 @@ const CounterAnimation = {
 /* ---------- Drug Search ---------- */
 const DrugSearch = {
   init() {
-    const searchInput = document.querySelector('#drug-search');
-    if (!searchInput) return;
-
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
-      const cards = document.querySelectorAll('.drug-card');
-
-      cards.forEach(card => {
-        const name = card.querySelector('h3')?.textContent.toLowerCase() || '';
-        const desc = card.querySelector('.drug-short-desc')?.textContent.toLowerCase() || '';
-        const visible = name.includes(query) || desc.includes(query);
-        card.style.display = visible ? 'block' : 'none';
+    const input = document.querySelector('#drug-search');
+    if (!input) return;
+    input.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('.drug-card').forEach(card => {
+        const n = card.querySelector('h3')?.textContent.toLowerCase() || '';
+        const d = card.querySelector('.drug-short-desc')?.textContent.toLowerCase() || '';
+        card.style.display = (n.includes(q) || d.includes(q)) ? 'block' : 'none';
       });
     });
   }
 };
 
-/* ---------- TOC Active Highlight ---------- */
+/* ---------- TOC Highlight ---------- */
 const TOCHighlight = {
   init() {
     const sections = document.querySelectorAll('.prospektus-section[id]');
-    const tocLinks = document.querySelectorAll('.toc a');
-    if (!sections.length || !tocLinks.length) return;
-
+    const links = document.querySelectorAll('.toc a');
+    if (!sections.length || !links.length) return;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          tocLinks.forEach(link => link.classList.remove('active'));
-          const activeLink = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
-          if (activeLink) activeLink.classList.add('active');
+          links.forEach(l => l.classList.remove('active'));
+          document.querySelector(`.toc a[href="#${entry.target.id}"]`)?.classList.add('active');
         }
       });
     }, { rootMargin: '-20% 0px -70% 0px' });
-
-    sections.forEach(section => observer.observe(section));
+    sections.forEach(s => observer.observe(s));
   }
 };
 
@@ -938,37 +1324,27 @@ const TOCHighlight = {
 const BackToTop = {
   init() {
     const btn = document.querySelector('.back-to-top');
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (btn) btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 };
 
-/* ---------- Animate CSS helper ---------- */
+/* ---------- Animation CSS ---------- */
 const style = document.createElement('style');
 style.textContent = `
-  .animate-ready {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .animate-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-  .feature-card.animate-ready:nth-child(2) { transition-delay: 0.1s; }
-  .feature-card.animate-ready:nth-child(3) { transition-delay: 0.2s; }
-  .feature-card.animate-ready:nth-child(4) { transition-delay: 0.1s; }
-  .feature-card.animate-ready:nth-child(5) { transition-delay: 0.2s; }
-  .feature-card.animate-ready:nth-child(6) { transition-delay: 0.3s; }
-  .step-card.animate-ready:nth-child(2) { transition-delay: 0.1s; }
-  .step-card.animate-ready:nth-child(3) { transition-delay: 0.2s; }
-  .step-card.animate-ready:nth-child(4) { transition-delay: 0.3s; }
+  .animate-ready { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  .animate-in { opacity:1!important; transform:translateY(0)!important; }
+  .feature-card.animate-ready:nth-child(2){transition-delay:.1s}
+  .feature-card.animate-ready:nth-child(3){transition-delay:.2s}
+  .feature-card.animate-ready:nth-child(4){transition-delay:.1s}
+  .feature-card.animate-ready:nth-child(5){transition-delay:.2s}
+  .feature-card.animate-ready:nth-child(6){transition-delay:.3s}
+  .step-card.animate-ready:nth-child(2){transition-delay:.1s}
+  .step-card.animate-ready:nth-child(3){transition-delay:.2s}
+  .step-card.animate-ready:nth-child(4){transition-delay:.3s}
 `;
 document.head.appendChild(style);
 
-/* ---------- App Init ---------- */
+/* ---------- Init ---------- */
 document.addEventListener('DOMContentLoaded', () => {
   LangManager.init();
   Navbar.init();
@@ -977,4 +1353,4 @@ document.addEventListener('DOMContentLoaded', () => {
   DrugSearch.init();
   TOCHighlight.init();
   BackToTop.init();
-});
+});   
