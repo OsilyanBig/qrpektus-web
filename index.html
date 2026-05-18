@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QrPektüs – Dijital İlaç Prospektüsü</title>
-  <meta name="description" content="İlaç kutunuzdaki QR kodu tarayın, prospektüse anında ulaşın. Çoklu dil desteği, hatırlatıcılar ve daha fazlası." />
+  <title>QRpektüs – Dijital İlaç Prospektüsü</title>
+  <meta name="description" content="İlaç kutunuzdaki QR kodu tarayın, prospektüse anında ulaşın." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,33 +12,26 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container">
-
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="QrPektüs Logo"
+        <img src="images/logo.png" alt="QRpektüs Logo"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <div class="logo-placeholder" style="display:none;">Q</div>
-        QrPektüs
+        QRpektüs
       </a>
-
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="nav_home">Ana Sayfa</a></li>
         <li><a href="ilac-kutusu.html" data-i18n="nav_drugs">İlaç Kutusu</a></li>
         <li>
           <div class="lang-selector">
             <button class="lang-btn">
-              <span class="lang-current">
-                <span class="flag">🇹🇷</span> TR <span>▾</span>
-              </span>
+              <span class="lang-current"><span class="flag">🇹🇷</span> TR <span>▾</span></span>
             </button>
             <div class="lang-dropdown">
               <a href="#" data-lang="tr"><span class="flag">🇹🇷</span> Türkçe</a>
               <a href="#" data-lang="en"><span class="flag">🇬🇧</span> English</a>
-              <a href="#" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</a>
-              <a href="#" data-lang="fr"><span class="flag">🇫🇷</span> Français</a>
-              <a href="#" data-lang="es"><span class="flag">🇪🇸</span> Español</a>
             </div>
           </div>
         </li>
@@ -47,34 +40,25 @@
              data-i18n="nav_download">Uygulamayı İndir</a>
         </li>
       </ul>
-
-      <button class="nav-toggle" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
-
+      <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
-
       <div class="hero-content">
         <div class="hero-badge">
-          <span>🌿</span>
-          <span data-i18n="hero_badge">Kağıtsız Sağlık Devrimi</span>
+          <span data-i18n="hero_badge">🌿 Kağıtsız Sağlık Devrimi</span>
         </div>
-
         <h1>
           <span data-i18n="hero_title_1">İlaç Prospektüsünü</span><br />
           <span class="highlight" data-i18n="hero_title_2">Dijitalde Taşı</span>
         </h1>
-
         <p data-i18n="hero_desc">
-          QrPektüs ile ilaç kutunuzdaki QR kodu tarayın, prospektüse anında ulaşın.
+          QRpektüs ile ilaç kutunuzdaki QR kodu tarayın, prospektüse anında ulaşın.
           Çoklu dil desteği, hatırlatıcılar ve daha fazlası.
         </p>
-
         <div class="hero-buttons">
           <a href="ilac-kutusu.html" class="btn btn-primary">
             <span>💊</span>
@@ -89,48 +73,43 @@
 
       <!-- Telefon Görseli -->
       <div class="hero-visual">
-
         <div class="floating-pill">
           <div class="pill-icon" style="background:#D1FAE5;">💊</div>
           <div>
-            <div class="pill-text">Parol 500mg</div>
-            <div class="pill-sub">Tarandı ✓</div>
+            <div class="pill-text" data-i18n="pill1_text">Parol 500mg</div>
+            <div class="pill-sub" data-i18n="pill1_sub">Tarandı ✓</div>
           </div>
         </div>
 
         <div class="hero-phone">
           <div class="phone-screen">
-            <div class="phone-header">QrPektüs</div>
-            <div class="scan-icon">📷</div>
+            <div class="phone-header" data-i18n="phone_header">QRpektüs</div>
+            <div class="scan-icon" data-i18n="phone_scan">📷</div>
             <div class="phone-card">
-              <div class="phone-card-title">Ocurin %0,05 Göz Damlası</div>
-              <div class="phone-card-text">
-                Göz kuruluğuna bağlı iltihap tedavisinde kullanılır.
-                12 saatte bir 1 damla uygulanır.
-              </div>
-              <span class="phone-card-badge">Detaylı Bak →</span>
+              <div class="phone-card-title" data-i18n="phone_card1_title">Ocurin %0,05 Göz Damlası</div>
+              <div class="phone-card-text" data-i18n="phone_card1_text">Göz kuruluğuna bağlı iltihap tedavisinde kullanılır. 12 saatte bir 1 damla uygulanır.</div>
+              <span class="phone-card-badge" data-i18n="phone_card1_badge">Detaylı Bak →</span>
             </div>
             <div class="phone-card">
-              <div class="phone-card-title">⏰ Hatırlatıcı</div>
-              <div class="phone-card-text">Ocurin – Her gün 09:00 ve 21:00</div>
-              <span class="phone-card-badge" style="background:#FEF3C7; color:#92400E;">Aktif</span>
+              <div class="phone-card-title" data-i18n="phone_card2_title">⏰ Hatırlatıcı</div>
+              <div class="phone-card-text" data-i18n="phone_card2_text">Ocurin – Her gün 09:00 ve 21:00</div>
+              <span class="phone-card-badge" style="background:#FEF3C7; color:#92400E;" data-i18n="phone_card2_badge">Aktif</span>
             </div>
           </div>
         </div>
 
-        <div class="floating-pill" style="animation-delay:1s;">
+        <div class="floating-pill">
           <div class="pill-icon" style="background:#DBEAFE;">🔔</div>
           <div>
-            <div class="pill-text">İlaç Vakti!</div>
-            <div class="pill-sub">Roaccutane 20mg</div>
+            <div class="pill-text" data-i18n="pill2_text">İlaç Vakti!</div>
+            <div class="pill-sub" data-i18n="pill2_sub">Roaccutane 20mg</div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== STATS ===== -->
+  <!-- STATS -->
   <section class="stats">
     <div class="container">
       <div class="stats-grid">
@@ -139,247 +118,190 @@
           <p data-i18n="stats_drugs">Kayıtlı İlaç</p>
         </div>
         <div class="stat-item">
-          <h3 data-count="5" data-suffix="">5</h3>
+          <h3 data-count="2" data-suffix="">2</h3>
           <p data-i18n="stats_languages">Dil Desteği</p>
         </div>
         <div class="stat-item">
           <h3 data-count="100" data-suffix="%">100%</h3>
-          <p>Ücretsiz</p>
+          <p data-i18n="stats_free">Ücretsiz</p>
         </div>
         <div class="stat-item">
           <h3 data-count="0" data-suffix="">0</h3>
-          <p data-i18n="stats_saved">Kağıt İsrafı</p>
+          <p data-i18n="stats_paper">Kağıt İsrafı</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FEATURES ===== -->
+  <!-- FEATURES -->
   <section class="section features">
     <div class="container">
-      <h2 class="section-title" data-i18n="features_title">Neden QrPektüs?</h2>
-      <p class="section-subtitle" data-i18n="features_subtitle">
-        Sağlığınızı dijital dünyaya taşıyan akıllı çözümler
-      </p>
-
+      <h2 class="section-title" data-i18n="features_title">Neden QRpektüs?</h2>
+      <p class="section-subtitle" data-i18n="features_subtitle">Sağlığınızı dijital dünyaya taşıyan akıllı çözümler</p>
       <div class="features-grid">
-
         <div class="feature-card">
           <div class="feature-icon">📷</div>
           <h3 data-i18n="feat1_title">QR Kod ile Anında Erişim</h3>
-          <p data-i18n="feat1_desc">
-            İlaç kutusundaki barkodu tarayın, prospektüse saniyeler içinde ulaşın.
-          </p>
+          <p data-i18n="feat1_desc">İlaç kutusundaki barkodu tarayın, prospektüse saniyeler içinde ulaşın.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">🌍</div>
           <h3 data-i18n="feat2_title">Çoklu Dil Desteği</h3>
-          <p data-i18n="feat2_desc">
-            Türkçe, İngilizce, Almanca, Fransızca ve İspanyolca dil seçenekleri.
-          </p>
+          <p data-i18n="feat2_desc">Türkçe ve İngilizce dil seçenekleri ile herkes için erişilebilir.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">🔔</div>
           <h3 data-i18n="feat3_title">İlaç Hatırlatıcısı</h3>
-          <p data-i18n="feat3_desc">
-            İlaç saatlerinizi asla unutmayın. Akıllı bildirimler ile zamanında hatırlatma.
-          </p>
+          <p data-i18n="feat3_desc">İlaç saatlerinizi asla unutmayın. Akıllı bildirimler ile zamanında hatırlatma.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">🌱</div>
           <h3 data-i18n="feat4_title">Kağıt İsrafını Azalt</h3>
-          <p data-i18n="feat4_desc">
-            Milyonlarca prospektüs kağıdını dijitale taşıyarak doğaya katkı sağlayın.
-          </p>
+          <p data-i18n="feat4_desc">Milyonlarca prospektüs kağıdını dijitale taşıyarak doğaya katkı sağlayın.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">📅</div>
           <h3 data-i18n="feat5_title">Kullanım Takvimi</h3>
-          <p data-i18n="feat5_desc">
-            Günlük ilaç takibinizi kolayca yapın, aldığınız ilaçları işaretleyin.
-          </p>
+          <p data-i18n="feat5_desc">Günlük ilaç takibinizi kolayca yapın, aldığınız ilaçları işaretleyin.</p>
         </div>
-
         <div class="feature-card">
           <div class="feature-icon">🔒</div>
           <h3 data-i18n="feat6_title">Güvenli Veri</h3>
-          <p data-i18n="feat6_desc">
-            Verileriniz Firebase altyapısı ile güvenli şekilde saklanır.
-          </p>
+          <p data-i18n="feat6_desc">Verileriniz Firebase altyapısı ile güvenli şekilde saklanır.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== HOW IT WORKS ===== -->
+  <!-- HOW IT WORKS -->
   <section class="section how-it-works">
     <div class="container">
       <h2 class="section-title" data-i18n="how_title">Nasıl Çalışır?</h2>
-      <p class="section-subtitle" data-i18n="how_subtitle">
-        4 adımda ilaç prospektüsünüze ulaşın
-      </p>
-
+      <p class="section-subtitle" data-i18n="how_subtitle">4 adımda ilaç prospektüsünüze ulaşın</p>
       <div class="steps-container">
-
         <div class="step-card">
           <div class="step-number">1</div>
           <h3 data-i18n="step1_title">Uygulamayı İndir</h3>
-          <p data-i18n="step1_desc">QrPektüs uygulamasını telefonuna yükle.</p>
+          <p data-i18n="step1_desc">QRpektüs uygulamasını telefonuna yükle.</p>
         </div>
-
         <div class="step-card">
           <div class="step-number">2</div>
           <h3 data-i18n="step2_title">Barkodu Tara</h3>
           <p data-i18n="step2_desc">İlaç kutusundaki barkodu kamerayla tara.</p>
         </div>
-
         <div class="step-card">
           <div class="step-number">3</div>
           <h3 data-i18n="step3_title">Bilgiyi Gör</h3>
           <p data-i18n="step3_desc">İlaç hakkında özet bilgiyi anında görüntüle.</p>
         </div>
-
         <div class="step-card">
           <div class="step-number">4</div>
           <h3 data-i18n="step4_title">Detay İçin Tıkla</h3>
           <p data-i18n="step4_desc">Tam prospektüse web sitemizden ulaş.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== DRUG PREVIEW ===== -->
+  <!-- DRUG PREVIEW -->
   <section class="section" style="background:white;">
     <div class="container">
-      <h2 class="section-title">İlaç Kütüphanemiz</h2>
-      <p class="section-subtitle">
-        Kayıtlı ilaçlarımızdan bazıları – tümünü görmek için İlaç Kutusu sayfasını ziyaret edin.
-      </p>
-
-      <div class="drugs-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px,1fr));">
+      <h2 class="section-title" data-i18n="drug_preview_title">İlaç Kütüphanemiz</h2>
+      <p class="section-subtitle" data-i18n="drug_preview_subtitle">Kayıtlı ilaçlarımızdan bazıları – tümünü görmek için İlaç Kutusu sayfasını ziyaret edin.</p>
+      <div class="drugs-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));">
 
         <div class="drug-card">
           <div class="drug-card-image">
-            <img src="images/ocurin.png" alt="Ocurin"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <img src="images/ocurin.png" alt="Ocurin" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
             <span class="placeholder-icon" style="display:none;">👁️</span>
           </div>
           <div class="drug-card-body">
-            <h3>Ocurin %0,05</h3>
+            <h3 data-i18n="drug_oc_name">Ocurin %0,05</h3>
             <div class="drug-barcode">8699569610359</div>
-            <p class="drug-short-desc">Göz kuruluğuna bağlı iltihap tedavisinde kullanılan göz damlası.</p>
+            <p class="drug-short-desc" data-i18n="drug_oc_desc">Göz kuruluğuna bağlı iltihap tedavisinde kullanılan göz damlası.</p>
             <a href="ocurin.html" class="btn btn-primary" data-i18n="lib_detail_btn">Prospektüsü Gör</a>
           </div>
         </div>
 
         <div class="drug-card">
           <div class="drug-card-image">
-            <img src="images/parol.png" alt="Parol"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <img src="images/parol.png" alt="Parol" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
             <span class="placeholder-icon" style="display:none;">💊</span>
           </div>
           <div class="drug-card-body">
-            <h3>Parol 500mg</h3>
+            <h3 data-i18n="drug_pa_name">Parol 500mg</h3>
             <div class="drug-barcode">8699717010093</div>
-            <p class="drug-short-desc">Ağrı kesici ve ateş düşürücü parasetamol tableti.</p>
+            <p class="drug-short-desc" data-i18n="drug_pa_desc">Ağrı kesici ve ateş düşürücü parasetamol tableti.</p>
             <a href="parol.html" class="btn btn-primary" data-i18n="lib_detail_btn">Prospektüsü Gör</a>
           </div>
         </div>
 
         <div class="drug-card">
           <div class="drug-card-image">
-            <img src="images/roaccutane.png" alt="Roaccutane"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <img src="images/roaccutane.png" alt="Roaccutane" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
             <span class="placeholder-icon" style="display:none;">💊</span>
           </div>
           <div class="drug-card-body">
-            <h3>Roaccutane 20mg</h3>
+            <h3 data-i18n="drug_ro_name">Roaccutane 20mg</h3>
             <div class="drug-barcode">8699505191287</div>
-            <p class="drug-short-desc">Şiddetli akne tedavisinde kullanılan izotretinoin kapsülü.</p>
+            <p class="drug-short-desc" data-i18n="drug_ro_desc">Şiddetli akne tedavisinde kullanılan izotretinoin kapsülü.</p>
             <a href="roaccutane.html" class="btn btn-primary" data-i18n="lib_detail_btn">Prospektüsü Gör</a>
           </div>
         </div>
 
         <div class="drug-card">
           <div class="drug-card-image">
-            <img src="images/iburamin.png" alt="İburamin Cold"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <img src="images/iburamin.png" alt="İburamin Cold" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
             <span class="placeholder-icon" style="display:none;">🤧</span>
           </div>
           <div class="drug-card-body">
-            <h3>İburamin Cold</h3>
+            <h3 data-i18n="drug_ib_name">İburamin Cold</h3>
             <div class="drug-barcode">8699591090099</div>
-            <p class="drug-short-desc">Soğuk algınlığı semptomlarını gideren kombine kapsül.</p>
+            <p class="drug-short-desc" data-i18n="drug_ib_desc">Soğuk algınlığı semptomlarını gideren kombine kapsül.</p>
             <a href="iburamin-cold.html" class="btn btn-primary" data-i18n="lib_detail_btn">Prospektüsü Gör</a>
           </div>
         </div>
 
       </div>
-
       <div style="text-align:center; margin-top:16px;">
-        <a href="ilac-kutusu.html" class="btn btn-secondary">
-          Tüm İlaçları Gör →
-        </a>
+        <a href="ilac-kutusu.html" class="btn btn-secondary" data-i18n="drug_preview_btn">Tüm İlaçları Gör →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== DOWNLOAD ===== -->
-  <section class="section" id="download" style="background: var(--bg);">
+  <!-- DOWNLOAD CTA -->
+  <section class="section" id="download" style="background:var(--bg);">
     <div class="container">
       <div class="cta-box">
         <h2 data-i18n="cta_title">Sağlığınızı Dijitale Taşıyın</h2>
-        <p data-i18n="cta_desc">
-          Hemen uygulamayı indirin veya ilaç kütüphanemizi keşfedin.
-        </p>
+        <p data-i18n="cta_desc">Hemen uygulamayı indirin veya ilaç kütüphanemizi keşfedin.</p>
         <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
           <a href="ilac-kutusu.html" class="btn btn-accent">
-            <span>💊</span>
-            <span data-i18n="cta_btn1">İlaç Kutusu</span>
+            <span>💊</span> <span data-i18n="cta_btn1">İlaç Kutusu</span>
           </a>
-          <!-- Uygulama yüklenince href güncellenecek -->
-          <a href="#" class="btn btn-secondary"
-             style="background:rgba(255,255,255,0.15); color:white; border-color:rgba(255,255,255,0.4);">
-            <span>📱</span>
-            <span data-i18n="cta_btn2">Uygulamayı İndir</span>
+          <a href="#" class="btn btn-secondary" style="background:rgba(255,255,255,0.15); color:white; border-color:rgba(255,255,255,0.4);">
+            <span>📱</span> <span data-i18n="cta_btn2">Uygulamayı İndir</span>
           </a>
         </div>
-        <p style="margin-top:20px; font-size:0.85rem; opacity:0.7;">
-          Yakında Google Play Store'da
-        </p>
+        <p style="margin-top:20px; font-size:0.85rem; opacity:0.7;" data-i18n="cta_soon">Yakında Google Play Store'da</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-
         <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="logo-placeholder">Q</div>
-            QrPektüs
-          </div>
-          <p data-i18n="footer_desc">
-            İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor,
-            çok dilli sağlık bilgisine erişimi kolaylaştırıyoruz.
-          </p>
+          <div class="footer-logo"><div class="logo-placeholder">Q</div> QRpektüs</div>
+          <p data-i18n="footer_desc">İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor, çok dilli sağlık bilgisine erişimi kolaylaştırıyoruz.</p>
         </div>
-
         <div class="footer-col">
           <h4 data-i18n="footer_links">Hızlı Bağlantılar</h4>
           <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
           <a href="ilac-kutusu.html" data-i18n="nav_drugs">İlaç Kutusu</a>
           <a href="#download" data-i18n="nav_download">Uygulamayı İndir</a>
         </div>
-
         <div class="footer-col">
           <h4 data-i18n="footer_drugs_title">İlaçlar</h4>
           <a href="ocurin.html">Ocurin %0,05</a>
@@ -387,26 +309,19 @@
           <a href="roaccutane.html">Roaccutane 20mg</a>
           <a href="iburamin-cold.html">İburamin Cold</a>
         </div>
-
         <div class="footer-col">
-          <h4 data-i18n="footer_contact">İletişim</h4>
+          <h4>QRpektüs</h4>
           <a href="#">qrpektus.vercel.app</a>
         </div>
-
       </div>
-
       <div class="footer-bottom">
-        <span data-i18n="footer_rights">© 2025 QrPektüs. Tüm hakları saklıdır.</span>
-        <span data-i18n="footer_disclaimer">
-          Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.
-        </span>
+        <span data-i18n="footer_rights">© 2025 QRpektüs. Tüm hakları saklıdır.</span>
+        <span data-i18n="footer_disclaimer">Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</span>
       </div>
     </div>
   </footer>
 
-  <!-- Back to Top -->
   <button class="back-to-top" aria-label="Yukarı çık">↑</button>
-
   <script src="js/main.js"></script>
 </body>
 </html>
