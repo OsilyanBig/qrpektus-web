@@ -1,5 +1,5 @@
 /* ============================================
-   QrPektüs - Global Styles
+   QrPektüs - Global Styles (UPDATED)
    ============================================ */
 
 /* ---------- CSS Variables ---------- */
@@ -399,11 +399,13 @@ img {
   flex-wrap: wrap;
 }
 
+/* ===== HERO VISUAL - FIXED ===== */
 .hero-visual {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 580px;
 }
 
 .hero-phone {
@@ -415,6 +417,8 @@ img {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-xl), 0 0 60px rgba(13, 148, 136, 0.15);
+  z-index: 2;
+  flex-shrink: 0;
 }
 
 .hero-phone::before {
@@ -439,7 +443,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  overflow: hidden;
 }
 
 .phone-screen .phone-header {
@@ -449,17 +454,18 @@ img {
 }
 
 .phone-screen .scan-icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: 3px dashed var(--primary);
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--primary);
   animation: pulse 2s infinite;
-  margin: 8px 0;
+  margin: 4px 0;
+  flex-shrink: 0;
 }
 
 @keyframes pulse {
@@ -471,34 +477,36 @@ img {
   width: 100%;
   background: white;
   border-radius: 12px;
-  padding: 12px;
+  padding: 10px 12px;
   box-shadow: var(--shadow);
+  flex-shrink: 0;
 }
 
 .phone-card-title {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .phone-card-text {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--text-light);
   line-height: 1.4;
 }
 
 .phone-card-badge {
   display: inline-block;
-  margin-top: 6px;
-  padding: 3px 8px;
+  margin-top: 4px;
+  padding: 2px 8px;
   background: var(--primary-light);
   color: var(--primary);
   border-radius: 4px;
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   font-weight: 600;
 }
 
+/* Floating Pills - FIXED POSITIONING */
 .floating-pill {
   position: absolute;
   background: white;
@@ -510,18 +518,19 @@ img {
   gap: 10px;
   animation: float 3s ease-in-out infinite;
   z-index: 3;
+  white-space: nowrap;
 }
 
 .floating-pill:nth-child(1) {
-  top: 80px;
-  right: -30px;
+  top: 40px;
+  right: 0;
   animation-delay: 0s;
 }
 
-.floating-pill:nth-child(2) {
-  bottom: 120px;
-  left: -40px;
-  animation-delay: 1s;
+.floating-pill:nth-child(3) {
+  bottom: 60px;
+  left: 0;
+  animation-delay: 1.5s;
 }
 
 .floating-pill .pill-icon {
@@ -532,6 +541,7 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .floating-pill .pill-text {
@@ -586,24 +596,12 @@ img {
   margin: 0 auto 20px;
 }
 
-.feature-card:nth-child(1) .feature-icon {
-  background: #DBEAFE;
-}
-.feature-card:nth-child(2) .feature-icon {
-  background: #D1FAE5;
-}
-.feature-card:nth-child(3) .feature-icon {
-  background: #FEF3C7;
-}
-.feature-card:nth-child(4) .feature-icon {
-  background: #FCE7F3;
-}
-.feature-card:nth-child(5) .feature-icon {
-  background: #E0E7FF;
-}
-.feature-card:nth-child(6) .feature-icon {
-  background: #CCFBF1;
-}
+.feature-card:nth-child(1) .feature-icon { background: #DBEAFE; }
+.feature-card:nth-child(2) .feature-icon { background: #D1FAE5; }
+.feature-card:nth-child(3) .feature-icon { background: #FEF3C7; }
+.feature-card:nth-child(4) .feature-icon { background: #FCE7F3; }
+.feature-card:nth-child(5) .feature-icon { background: #E0E7FF; }
+.feature-card:nth-child(6) .feature-icon { background: #CCFBF1; }
 
 .feature-card h3 {
   font-size: 1.2rem;
@@ -999,6 +997,10 @@ img {
 .warning-box p {
   color: #991B1B;
   font-size: 0.95rem;
+}
+
+.warning-box ul li {
+  color: #991B1B;
 }
 
 .info-box {
