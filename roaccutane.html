@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roaccutane 20 mg Kapsül – QrPektüs</title>
-  <meta name="description" content="Roaccutane 20 mg yumuşak jelatin kapsül prospektüsü. Kullanım talimatı, yan etkiler, uyarılar ve saklama koşulları." />
+  <title>Roaccutane 20 mg – QRpektüs</title>
+  <meta name="description" content="Roaccutane 20 mg kapsül prospektüsü." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,14 +12,14 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="QrPektüs Logo"
+        <img src="images/logo.png" alt="QRpektüs Logo"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <div class="logo-placeholder" style="display:none;">Q</div>
-        QrPektüs
+        QRpektüs
       </a>
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="nav_home">Ana Sayfa</a></li>
@@ -32,9 +32,6 @@
             <div class="lang-dropdown">
               <a href="#" data-lang="tr"><span class="flag">🇹🇷</span> Türkçe</a>
               <a href="#" data-lang="en"><span class="flag">🇬🇧</span> English</a>
-              <a href="#" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</a>
-              <a href="#" data-lang="fr"><span class="flag">🇫🇷</span> Français</a>
-              <a href="#" data-lang="es"><span class="flag">🇪🇸</span> Español</a>
             </div>
           </div>
         </li>
@@ -43,552 +40,322 @@
              data-i18n="nav_download">Uygulamayı İndir</a>
         </li>
       </ul>
-      <button class="nav-toggle" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="prospektus-hero">
     <div class="container">
-
       <div class="drug-image">
-        <img src="images/roaccutane.png" alt="Roaccutane 20 mg"
+        <img src="images/roaccutane.png" alt="Roaccutane 20mg"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
         <span class="placeholder-icon" style="display:none;">💊</span>
       </div>
-
       <div class="drug-info">
         <a href="ilac-kutusu.html" style="color:var(--primary); font-size:0.9rem; font-weight:600;"
            data-i18n="back_to_library">← İlaç Kutusuna Dön</a>
-
-        <h1>Roaccutane 20 mg Yumuşak Jelatin Kapsül</h1>
-
+        <h1 data-i18n="ro_title">Roaccutane 20 mg Yumuşak Jelatin Kapsül</h1>
         <div class="drug-meta">
           <span>📊 <strong data-i18n="prospektus_barcode">Barkod</strong>: 8699505191287</span>
           <span>🏭 <strong data-i18n="prospektus_manufacturer">Üretici</strong>: Roche</span>
-          <span>💊 İzotretinoin 20 mg</span>
-          <span>🥤 Ağızdan Kullanım</span>
-          <span>📦 30 Kapsül</span>
+          <span data-i18n="ro_form">💊 İzotretinoin 20 mg</span>
+          <span data-i18n="ro_route">🥤 Ağızdan Kullanım</span>
+          <span data-i18n="ro_count">📦 30 Kapsül</span>
         </div>
-
         <div class="warning-box">
           <p>
             <strong data-i18n="warning_title">⚠️ Önemli Uyarı</strong><br />
-            <span data-i18n="warning_text">Bu sayfa yalnızca bilgilendirme amaçlıdır. İlaç kullanımında mutlaka doktorunuza veya eczacınıza danışınız.</span>
+            <span data-i18n="warning_text">Bu sayfa yalnızca bilgilendirme amaçlıdır.</span>
           </p>
         </div>
-
         <div class="warning-box" style="background:#FFF7ED; border-left-color:#F97316;">
-          <p style="color:#9A3412;">
-            <strong>🚨 Hamilelik Uyarısı:</strong> Roaccutane doğmamış bebeğe ciddi zarar verebilir.
-            Hamileyken kesinlikle kullanılmamalıdır. Tedavi sırasında ve sonraki 1 ay boyunca etkili doğum kontrolü uygulanmalıdır.
+          <p style="color:#9A3412;" data-i18n="ro_preg_warn">
+            🚨 Hamileyken kesinlikle kullanılmamalıdır.
           </p>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== PROSPEKTÜS İÇERİĞİ ===== -->
+  <!-- İÇERİK -->
   <section class="prospektus-content">
     <div class="container">
 
       <!-- Sidebar -->
       <aside class="prospektus-sidebar">
         <div class="toc">
-          <h4>İçindekiler</h4>
-          <a href="#nedir">1. Roaccutane Nedir?</a>
-          <a href="#icindekiler">Etkin ve Yardımcı Maddeler</a>
-          <a href="#dikkat">2. Dikkat Edilmesi Gerekenler</a>
-          <a href="#kullanmayiniz">Kullanmayınız</a>
-          <a href="#kadin-uyari">Kadın Hastalar İçin</a>
-          <a href="#erkek-uyari">Erkek Hastalar İçin</a>
-          <a href="#tum-hastalar">Tüm Hastalar İçin</a>
-          <a href="#nasil">3. Nasıl Kullanılır?</a>
-          <a href="#doz">Doz Bilgisi</a>
-          <a href="#yan-etkiler">4. Yan Etkiler</a>
-          <a href="#ruhsal">Ruhsal Etkiler</a>
-          <a href="#cilt">Cilt ve Saç</a>
-          <a href="#goz">Göz Bozuklukları</a>
-          <a href="#diger-yan">Diğer Yan Etkiler</a>
-          <a href="#saklama">5. Saklama Koşulları</a>
+          <h4 data-i18n="toc_title">İçindekiler</h4>
+          <a href="#nedir"       data-i18n="ro_toc1">1. Roaccutane Nedir?</a>
+          <a href="#icindekiler" data-i18n="ro_toc2">Etkin ve Yardımcı Maddeler</a>
+          <a href="#dikkat"      data-i18n="ro_toc3">2. Dikkat Edilmesi Gerekenler</a>
+          <a href="#kullanmayiniz" data-i18n="ro_toc4">Kullanmayınız</a>
+          <a href="#kadin"       data-i18n="ro_toc5">Kadın Hastalar</a>
+          <a href="#erkek"       data-i18n="ro_toc6">Erkek Hastalar</a>
+          <a href="#tumhastalar" data-i18n="ro_toc7">Tüm Hastalar</a>
+          <a href="#nasil"       data-i18n="ro_toc8">3. Nasıl Kullanılır?</a>
+          <a href="#doz"         data-i18n="ro_toc9">Doz Bilgisi</a>
+          <a href="#yan-etkiler" data-i18n="ro_toc10">4. Yan Etkiler</a>
+          <a href="#saklama"     data-i18n="ro_toc11">5. Saklama</a>
         </div>
       </aside>
 
       <!-- Ana İçerik -->
       <div class="prospektus-main">
 
-        <!-- 1. ROACCUTANE NEDİR -->
+        <!-- 1 -->
         <div class="prospektus-section" id="nedir">
-          <h2><span class="section-icon">ℹ️</span> 1. Roaccutane Nedir ve Ne İçin Kullanılır?</h2>
-
-          <p>
-            Roaccutane, etkin madde olarak <strong>izotretinoin</strong> içermektedir. İzotretinoin, A vitamini
-            ile ilişkili <strong>retinoidler</strong> grubuna dahil bir maddedir.
-          </p>
-
-          <p>
-            Her ambalajda 10'ar kapsüllük blisterler halinde toplam <strong>30 adet</strong> yumuşak jelatin kapsül
-            bulunmaktadır. Kapsüller oval, opak, kahverengi-kırmızı ile beyaz renkli olup üzerlerinde "ROA 20" baskısı vardır.
-          </p>
-
+          <h2><span class="section-icon">ℹ️</span>
+            <span data-i18n="ro_s1_title">1. Roaccutane Nedir?</span></h2>
+          <p data-i18n="ro_s1_p1">Roaccutane, izotretinoin içeren, A vitamini ile ilişkili retinoidler grubundan bir ilaçtır.</p>
+          <p data-i18n="ro_s1_p2">30 adet kahverengi-kırmızı ve beyaz renkli, "ROA 20" baskılı kapsül içerir.</p>
           <div class="success-box">
-            <p>
-              <strong>Kullanım Amacı:</strong> Aknenin (sivilcenin) şiddetli tiplerinin tedavisinde kullanılır.
-              Bunlara örnek olarak yumrulu (nodüler) akne, yuvarlak (konglobat) akne veya
-              <strong>kalıcı yara izi bırakma riski olan akne</strong> verilebilir.
-            </p>
+            <p data-i18n="ro_s1_box">Şiddetli akne tiplerinin (nodüler, konglobat veya kalıcı yara izi riski olan) tedavisinde kullanılır.</p>
           </div>
-
           <div class="info-box">
-            <p>
-              <strong>Ne zaman kullanılır?</strong> Roaccutane, akneniz antibiyotik ve cilt tedavileri dahil
-              diğer akne karşıtı tedavilerle iyileşmediği takdirde kullanılır. Tedavi bir
-              <strong>dermatolog</strong> tarafından denetlenmelidir.
-            </p>
+            <p data-i18n="ro_s1_info">Sadece diğer tedaviler başarısız olduğunda, dermatolog denetiminde kullanılır.</p>
           </div>
         </div>
 
-        <!-- ETKİN MADDELER -->
+        <!-- Etkin Maddeler -->
         <div class="prospektus-section" id="icindekiler">
-          <h2><span class="section-icon">🧪</span> Etkin ve Yardımcı Maddeler</h2>
-
-          <h3>Etkin Madde</h3>
-          <p>Her kapsülde <strong>20 mg izotretinoin</strong> bulunur.</p>
-
-          <h3>Yardımcı Maddeler</h3>
+          <h2><span class="section-icon">🧪</span>
+            <span data-i18n="ro_s2_title">Etkin ve Yardımcı Maddeler</span></h2>
+          <h3 data-i18n="ro_s2_h1">Etkin Madde</h3>
+          <p data-i18n="ro_s2_p1">Her kapsülde 20 mg izotretinoin</p>
+          <h3 data-i18n="ro_s2_h2">Yardımcı Maddeler</h3>
           <ul>
-            <li>Titandioksit</li>
-            <li>Kırmızı demir oksit</li>
-            <li>Soya yağı</li>
-            <li>Sarı balmumu</li>
-            <li>Soya fasulyesi yağı</li>
-            <li>Bitkisel yağlar</li>
-            <li>Jelatin</li>
-            <li>Gliserol</li>
+            <li data-i18n="ro_s2_l1">Titandioksit</li>
+            <li data-i18n="ro_s2_l2">Kırmızı demir oksit</li>
+            <li data-i18n="ro_s2_l3">Soya yağı</li>
+            <li data-i18n="ro_s2_l4">Sarı balmumu</li>
+            <li data-i18n="ro_s2_l5">Soya fasulyesi yağı</li>
+            <li data-i18n="ro_s2_l6">Bitkisel yağlar</li>
+            <li data-i18n="ro_s2_l7">Jelatin</li>
+            <li data-i18n="ro_s2_l8">Gliserol</li>
           </ul>
-
           <div class="warning-box">
-            <p>
-              <strong>Soya Alerjisi:</strong> Bu ilaç soya yağı içermektedir. Soya yağına alerjiniz varsa
-              Roaccutane kullanmayınız.
-            </p>
+            <p data-i18n="ro_s2_warn">Soya alerjiniz varsa kullanmayınız.</p>
           </div>
         </div>
 
-        <!-- 2. DİKKAT -->
+        <!-- 2 Dikkat -->
         <div class="prospektus-section" id="dikkat">
-          <h2><span class="section-icon">⚠️</span> 2. Kullanmadan Önce Dikkat Edilmesi Gerekenler</h2>
+          <h2><span class="section-icon">⚠️</span>
+            <span data-i18n="ro_s3_title">2. Dikkat Edilmesi Gerekenler</span></h2>
 
-          <h3 id="kullanmayiniz">❌ Aşağıdaki Durumlarda Kullanmayınız</h3>
+          <h3 id="kullanmayiniz" data-i18n="ro_s3_h1">❌ Kullanmayınız</h3>
           <ul>
-            <li>Soya veya Roaccutane'ın yardımcı maddelerinden herhangi birine alerjiniz varsa</li>
-            <li>Hamileyseniz veya hamile olduğunuzu düşünüyorsanız</li>
-            <li>Emziriyorsanız</li>
-            <li>Karaciğer hastalığınız varsa</li>
-            <li>Çok yüksek kan yağ değerleriniz varsa (yüksek kolesterol veya trigliseridler)</li>
-            <li>Vücudunuzda çok yüksek A vitamini değerleriniz varsa</li>
-            <li>Fruktoz veya sorbitol şekerlerine direnciniz yoksa</li>
-            <li><strong>12 yaşından küçükseniz</strong> (sadece ergenlik dönemine gelmiş çocuklarda kullanılabilir)</li>
-            <li>Tetrasiklinlerle birlikte tedavi görüyorsanız</li>
+            <li data-i18n="ro_s3_l1">Soya veya yardımcı maddelere alerji</li>
+            <li data-i18n="ro_s3_l2">Hamilelik veya hamilelik şüphesi</li>
+            <li data-i18n="ro_s3_l3">Emzirme</li>
+            <li data-i18n="ro_s3_l4">Karaciğer hastalığı</li>
+            <li data-i18n="ro_s3_l5">Çok yüksek kan yağları</li>
+            <li data-i18n="ro_s3_l6">Yüksek A vitamini düzeyi</li>
+            <li data-i18n="ro_s3_l7">12 yaşından küçükler</li>
+            <li data-i18n="ro_s3_l8">Tetrasiklin tedavisi görenler</li>
           </ul>
         </div>
 
-        <!-- KADIN HASTALAR -->
-        <div class="prospektus-section" id="kadin-uyari">
-          <h2><span class="section-icon">👩</span> Kadın Hastalar İçin Önemli Uyarılar</h2>
-
+        <!-- Kadın Hastalar -->
+        <div class="prospektus-section" id="kadin">
+          <h2><span class="section-icon">👩</span>
+            <span data-i18n="ro_s4_title">Kadın Hastalar İçin</span></h2>
           <div class="warning-box" style="background:#FFF7ED; border-left-color:#F97316;">
-            <p style="color:#9A3412;">
-              <strong>🚨 KRİTİK UYARI:</strong> Roaccutane doğmamış bebeğinize ciddi zarar verebilir
-              (teratojeniktir). Ayrıca düşük riskini de artırmaktadır.
-            </p>
-          </div>
-
-          <ul>
-            <li><strong>Hamileyken</strong> Roaccutane kesinlikle kullanılmamalıdır</li>
-            <li><strong>Emzirirken</strong> kullanılmamalıdır; ilacın süte geçme olasılığı vardır</li>
-            <li>Tedavi sırasında hamile kalma olasılığınız varsa ilacı kullanmayınız</li>
-          </ul>
-
-          <h3>Doğum Kontrolü Kuralları</h3>
-          <div class="info-box">
-            <p>Hamile kalma olasılığı bulunan kadın hastalara çok sıkı kurallar uygulanır:</p>
+            <p style="color:#9A3412;" data-i18n="ro_s4_warn">🚨 KRİTİK: Roaccutane doğmamış bebeğe ciddi zarar verebilir (teratojeniktir).</p>
           </div>
           <ul>
-            <li>Roaccutane'ı sadece diğer tedavilerin işe yaramadığı şiddetli aknede kullanın</li>
-            <li>Doktorunuz doğum kusurlarını ve hamilelikten korunma gerekliliklerini açıklamalıdır</li>
-            <li>Tercihen <strong>iki etkili doğum kontrol yöntemi</strong> kullanın (kondom, spermisid vb.)</li>
-            <li>Doğum kontrolüne tedaviden <strong>1 ay önce</strong> başlayın ve tedavi bittikten <strong>1 ay sonrasına</strong> kadar sürdürün</li>
-            <li>Tedaviye başlamadan önce <strong>negatif hamilelik testi</strong> yaptırın</li>
-            <li>Aylık doktor ziyaretlerinde ilave hamilelik testleri yaptırın</li>
-            <li>Roaccutane kesildikten <strong>5 hafta sonra</strong> son testi yaptırın</li>
+            <li data-i18n="ro_s4_l1">Hamileyken kesinlikle kullanılmaz</li>
+            <li data-i18n="ro_s4_l2">Emzirirken kullanılmaz</li>
+            <li data-i18n="ro_s4_l3">İki etkili doğum kontrol yöntemi kullanınız</li>
+            <li data-i18n="ro_s4_l4">Tedaviden 1 ay önce başlayın, 1 ay sonrasına kadar sürdürün</li>
+            <li data-i18n="ro_s4_l5">Tedavi öncesi negatif hamilelik testi gereklidir</li>
+            <li data-i18n="ro_s4_l6">Aylık hamilelik testleri yaptırınız</li>
+            <li data-i18n="ro_s4_l7">Tedavi sonrası 5 hafta bekleyip son test</li>
           </ul>
-
           <div class="warning-box">
-            <p>
-              <strong>Tedavi sırasında veya tedavi kesildikten sonraki 1 ay içerisinde hamile kalırsanız</strong>,
-              HEMEN ilacı almayı durdurun ve doktorunuza danışın.
-            </p>
+            <p data-i18n="ro_s4_stop">Tedavi sırasında veya sonraki 1 ayda hamile kalırsanız HEMEN durdurun.</p>
           </div>
         </div>
 
-        <!-- ERKEK HASTALAR -->
-        <div class="prospektus-section" id="erkek-uyari">
-          <h2><span class="section-icon">👨</span> Erkek Hastalar İçin Tavsiyeler</h2>
-
-          <p>
-            Roaccutane'ın sperme zarar vermesi beklenmez. Kullanan erkek hastaların semeninde çok düşük
-            seviyelerde izotretinoin bulunmaktadır, ancak bu partnerinizin bebeğine zarar vermeyecek
-            kadar çok azdır.
-          </p>
-
+        <!-- Erkek Hastalar -->
+        <div class="prospektus-section" id="erkek">
+          <h2><span class="section-icon">👨</span>
+            <span data-i18n="ro_s5_title">Erkek Hastalar İçin</span></h2>
+          <p data-i18n="ro_s5_p1">Sperme zarar vermesi beklenmez. Semende çok düşük seviyede izotretinoin bulunur.</p>
           <div class="info-box">
-            <p>
-              <strong>Hatırlatma:</strong> İlacınızı başkası ile, özellikle kadınlarla paylaşmayınız.
-            </p>
+            <p data-i18n="ro_s5_info">İlacınızı başkasıyla, özellikle kadınlarla paylaşmayınız.</p>
           </div>
         </div>
 
-        <!-- TÜM HASTALAR -->
-        <div class="prospektus-section" id="tum-hastalar">
-          <h2><span class="section-icon">👥</span> Tüm Hastalar İçin Önemli Tavsiyeler</h2>
-
+        <!-- Tüm Hastalar -->
+        <div class="prospektus-section" id="tumhastalar">
+          <h2><span class="section-icon">👥</span>
+            <span data-i18n="ro_s6_title">Tüm Hastalar İçin</span></h2>
           <ul>
-            <li>
-              <strong>Ruhsal sağlık:</strong> Depresyon, intihar davranışı veya ruh hastalığı geçmişiniz varsa
-              doktorunuza söyleyiniz
-            </li>
-            <li>
-              <strong>Kan yağları:</strong> Roaccutane kolesterol ve trigliseridleri artırabilir.
-              Doktorunuz tedavi öncesinde, sırasında ve sonrasında kan testleri yapacaktır
-            </li>
-            <li>
-              <strong>Karaciğer:</strong> Karaciğer enzimleri yükselebilir; düzenli kan testleri yapılmalıdır
-            </li>
-            <li>
-              <strong>Kan şekeri:</strong> Seyrek durumlarda diyabet gelişebilir. Diyabet, obezite veya
-              alkolizm riskiniz varsa kan şekeri takip edilmelidir
-            </li>
-            <li>
-              <strong>Cilt bakımı:</strong> Cildiniz kuruyacaktır. Nemlendirici krem ve dudak kremi kullanınız.
-              Soyucu ürünlerden kaçınınız
-            </li>
-            <li>
-              <strong>Güneşten korunma:</strong> Cildiniz güneşe karşı çok hassas olacaktır.
-              En az <strong>SPF 15</strong> güneş koruyucu kullanınız; solaryumdan kaçınınız
-            </li>
-            <li>
-              <strong>Kozmetik işlemler:</strong> Tedavi sırasında ve sonraki <strong>6 ay</strong> boyunca
-              ağda, dermabrazyon veya lazer tedavisi yaptırmayınız
-            </li>
-            <li>
-              <strong>Fiziksel aktivite:</strong> Yoğun egzersizi azaltınız; kas ve eklem ağrısı olabilir
-            </li>
-            <li>
-              <strong>A vitamini:</strong> Tedavi sırasında A vitamini takviyesi almayınız
-            </li>
-            <li>
-              <strong>Kan bağışı:</strong> Tedavi sırasında ve sonraki <strong>1 ay</strong> boyunca
-              kan bağışında bulunmayınız
-            </li>
+            <li data-i18n="ro_s6_l1">Ruhsal sağlık geçmişinizi doktorunuza bildirin</li>
+            <li data-i18n="ro_s6_l2">Kan yağları yükselebilir; düzenli test gerekir</li>
+            <li data-i18n="ro_s6_l3">Karaciğer enzimleri yükselebilir</li>
+            <li data-i18n="ro_s6_l4">Kan şekeri artabilir</li>
+            <li data-i18n="ro_s6_l5">Nemlendirici krem ve dudak kremi kullanınız</li>
+            <li data-i18n="ro_s6_l6">En az SPF 15 güneş koruyucu kullanınız</li>
+            <li data-i18n="ro_s6_l7">6 ay boyunca ağda, dermabrazyon, lazer yaptırmayınız</li>
+            <li data-i18n="ro_s6_l8">Yoğun egzersizi azaltınız</li>
+            <li data-i18n="ro_s6_l9">A vitamini takviyesi almayınız</li>
+            <li data-i18n="ro_s6_l10">1 ay boyunca kan bağışı yapmayınız</li>
           </ul>
 
-          <h3>🚗 Araç ve Makine Kullanımı</h3>
-          <p>
-            Tedavi süresince geceleri iyi göremeyebilirsiniz; bu durum aniden başlayabilir.
-            Seyrek durumlarda tedavi kesildikten sonra da devam edebilir.
-            Bitkinlik ve sersemlik hissederseniz araç ve makine kullanmayınız.
-          </p>
+          <h3 data-i18n="ro_s6_drive_h">🚗 Araç Kullanımı</h3>
+          <p data-i18n="ro_s6_drive">Gece görüşü azalabilir. Bitkinlik hissederseniz araç kullanmayınız.</p>
 
-          <h3>💊 Diğer İlaçlar ile Kullanımı</h3>
+          <h3 data-i18n="ro_s6_inter_h">💊 İlaç Etkileşimleri</h3>
           <div class="warning-box">
-            <p>
-              Roaccutane kullanırken <strong>A vitamini takviyesi</strong> veya <strong>tetrasiklin</strong>
-              (antibiyotik) almayınız. Nemlendirici ve yumuşatıcılar kullanabilirsiniz.
-            </p>
+            <p data-i18n="ro_s6_inter">A vitamini takviyesi veya tetrasiklin almayınız.</p>
           </div>
         </div>
 
-        <!-- 3. NASIL KULLANILIR -->
+        <!-- 3 Kullanım -->
         <div class="prospektus-section" id="nasil">
-          <h2><span class="section-icon">💊</span> 3. Roaccutane Nasıl Kullanılır?</h2>
+          <h2><span class="section-icon">💊</span>
+            <span data-i18n="ro_s7_title">3. Nasıl Kullanılır?</span></h2>
 
-          <h3 id="doz">📋 Doz Bilgisi</h3>
-
+          <h3 id="doz">📋</h3>
           <div class="success-box">
-            <p>
-              <strong>Başlangıç dozu:</strong> Vücut ağırlığı başına günde <strong>0,5 mg/kg</strong>.<br />
-              Örneğin 70 kg ağırlığında iseniz günde 35 mg ile başlanır.
-            </p>
+            <p data-i18n="ro_s7_box">Başlangıç: 0,5 mg/kg/gün. Örn: 70 kg → günde 35 mg.</p>
           </div>
-
           <ul>
-            <li>Kapsülleri günde <strong>1 veya 2 kere</strong> tok karnına alınız</li>
-            <li>İçecek veya yemekle birlikte bütün olarak yutunuz</li>
-            <li>Birkaç hafta sonra doktorunuz dozu ayarlayabilir</li>
-            <li>Çoğu hasta için doz: <strong>0,5–1,0 mg/kg/gün</strong></li>
-            <li>Tedavi genel olarak <strong>16–24 hafta</strong> sürer</li>
-            <li>Çoğu hastaya 1 tedavi dönemi yeterlidir</li>
+            <li data-i18n="ro_s7_l1">Günde 1-2 kere tok karnına alınız</li>
+            <li data-i18n="ro_s7_l2">Yemekle birlikte bütün olarak yutunuz</li>
+            <li data-i18n="ro_s7_l3">Doz: 0,5-1,0 mg/kg/gün arasında ayarlanır</li>
+            <li data-i18n="ro_s7_l4">Tedavi süresi: 16-24 hafta</li>
+            <li data-i18n="ro_s7_l5">Genellikle 1 tedavi dönemi yeterli</li>
           </ul>
-
           <div class="info-box">
-            <p>
-              <strong>Tedavinin başında:</strong> Bazı hastalar ilk haftalarda aknelerinin kötüleştiğini fark edebilir.
-              Bu durum tedavi devam ettikçe düzelir. Akneniz tedaviden sonraki <strong>8 haftaya kadar</strong>
-              iyileşmeye devam edebilir.
-            </p>
+            <p data-i18n="ro_s7_info">İlk haftalarda akne kötüleşebilir, zamanla düzelir.</p>
           </div>
 
-          <h3>Özel Durumlar</h3>
+          <h3 data-i18n="ro_s7_spec_h">Özel Durumlar</h3>
           <ul>
-            <li><strong>12 yaş altı:</strong> Kullanılmamalıdır. 12 yaş üzeri çocuklarda yalnızca ergenlik dönemine gelmiş olanlarda kullanılmalıdır</li>
-            <li><strong>Böbrek yetmezliği:</strong> Şiddetli böbrek problemi varsa düşük dozla (günde 10 mg gibi) başlanır ve tolere edilen en yüksek doza çıkarılır</li>
-            <li><strong>Karaciğer yetmezliği:</strong> Karaciğer yetmezliğinde Roaccutane kullanılmamalıdır</li>
+            <li data-i18n="ro_s7_spec1">12 yaş altı kullanılmaz</li>
+            <li data-i18n="ro_s7_spec2">Böbrek sorunu: Düşük dozla başlanır</li>
+            <li data-i18n="ro_s7_spec3">Karaciğer yetmezliğinde kullanılmaz</li>
           </ul>
 
-          <h3>Doz Aşımı veya Unutma</h3>
-          <ul>
-            <li><strong>Fazla kullanım:</strong> Gereğinden fazla kullandıysanız bir doktor veya eczacı ile konuşunuz</li>
-            <li><strong>Doz unutma:</strong> Mümkün olan en kısa sürede unutulan dozu alınız. Sonraki doza yakınsa atlayınız. Çift doz almayınız</li>
-            <li><strong>Tedavi sonlandırma:</strong> Herhangi bir olumsuz etki beklenmemektedir</li>
-          </ul>
+          <div class="warning-box">
+            <p data-i18n="ro_s7_od">Fazla kullandıysanız doktora danışınız. Çift doz almayınız.</p>
+          </div>
         </div>
 
-        <!-- 4. YAN ETKİLER -->
+        <!-- 4 Yan Etkiler -->
         <div class="prospektus-section" id="yan-etkiler">
-          <h2><span class="section-icon">🩺</span> 4. Olası Yan Etkiler</h2>
-
-          <p>
-            Tüm ilaçlar gibi Roaccutane'ın yan etkileri olabilir. Bu yan etkilerin bazıları ciddi olabilir
-            ve hastaneye yatırılmayı gerektirebilir.
-          </p>
-
+          <h2><span class="section-icon">🩺</span>
+            <span data-i18n="ro_s8_title">4. Olası Yan Etkiler</span></h2>
+          <p data-i18n="ro_s8_p1">Bazı yan etkiler ciddi olabilir ve hastaneye yatış gerektirebilir.</p>
           <div class="warning-box">
-            <p>
-              <strong>ACİL DURUM – Hemen ilacı bırakın ve acile başvurun:</strong>
-            </p>
+            <p data-i18n="ro_s8_emerg">ACİL: İntihar düşüncesi, ciddi alerjik reaksiyon, şiddetli deri reaksiyonları görülürse DERHAL başvurunuz.</p>
           </div>
 
-          <!-- RUHSAL -->
-          <h3 id="ruhsal">🧠 Ruhsal Problemler</h3>
-
+          <!-- Ruhsal -->
+          <h3 data-i18n="ro_s8_mental_h">🧠 Ruhsal</h3>
           <div class="side-effect-category category-very-rare">
-            <span class="category-label">Çok Seyrek (10.000 hastanın 1'inden az)</span>
+            <span class="category-label" data-i18n="ro_s8_mental_vr">Çok Seyrek</span>
             <ul>
-              <li>İntihar düşüncesi veya teşebbüsü</li>
-              <li>Olağandışı davranış</li>
-              <li>Gerçekle bağlantı kaybı (sesler duyma, var olmayan şeyleri görme)</li>
+              <li data-i18n="ro_s8_mental1">İntihar düşüncesi</li>
+              <li data-i18n="ro_s8_mental2">Olağandışı davranış</li>
+              <li data-i18n="ro_s8_mental3">Gerçekle bağlantı kaybı</li>
             </ul>
           </div>
-
           <div class="side-effect-category category-rare">
-            <span class="category-label">Seyrek (1.000 hastanın 1'inden az)</span>
+            <span class="category-label" data-i18n="ro_s8_mental_r">Seyrek</span>
             <ul>
-              <li>Depresyon ve ilgili bozukluklar (üzgünlük, ruh değişiklikleri, ağlama, hırçınlık, sosyal aktivitelere ilgi kaybı, iştah değişiklikleri)</li>
-              <li>Varolan depresyonun kötüleşmesi</li>
-              <li>Sert veya saldırgan davranış</li>
+              <li data-i18n="ro_s8_mental4">Depresyon ve ilgili bozukluklar</li>
+              <li data-i18n="ro_s8_mental5">Saldırgan davranış</li>
             </ul>
           </div>
 
-          <!-- ALERJİK -->
-          <h3>🔴 Alerjik Reaksiyonlar</h3>
-
+          <!-- Cilt -->
+          <h3 data-i18n="ro_s8_skin_h">💆 Cilt ve Saç</h3>
+          <div class="side-effect-category category-very-common">
+            <span class="category-label" data-i18n="ro_s8_skin_vc">Çok Yaygın</span>
+            <ul>
+              <li data-i18n="ro_s8_skin1">Ciltte kuruluk, dudak çatlağı</li>
+              <li data-i18n="ro_s8_skin2">Döküntü, kaşıntı, soyulma</li>
+            </ul>
+          </div>
           <div class="side-effect-category category-rare">
-            <span class="category-label">Seyrek</span>
-            <ul>
-              <li>Şiddetli (anafilaktik) reaksiyonlar: boğazda, yüzde, dudaklarda şişme, nefes alma ve yutkunma güçlüğü</li>
-              <li>Ellerin, ayakların ve bileklerin aniden şişmesi</li>
-              <li>Döküntü ve kaşıntı</li>
-            </ul>
+            <span class="category-label" data-i18n="ro_s8_skin_r">Seyrek: Geçici saç kaybı</span>
           </div>
 
-          <!-- CİLT REAKSIYONLARI -->
-          <h3>⚡ Şiddetli Cilt Reaksiyonları</h3>
-          <ul>
-            <li>Eritema multiforme (el, yüz ve ayakta dantele benzer kızarıklık)</li>
-            <li>Stevens-Johnson sendromu (ciltte ve göz çevresinde iltihap)</li>
-            <li>Toksik epidermal nekroliz (deride içi sıvı dolu kabarcıklarla seyreden ciddi hastalık)</li>
-          </ul>
-
-          <!-- CİLT VE SAÇ -->
-          <h3 id="cilt">💆 Cilt ve Saç Etkileri</h3>
-
+          <!-- Kan -->
+          <h3 data-i18n="ro_s8_blood_h">🩸 Kan</h3>
           <div class="side-effect-category category-very-common">
-            <span class="category-label">Çok Yaygın (10 hastanın en az 1'inde)</span>
+            <span class="category-label" data-i18n="ro_s8_blood_vc">Çok Yaygın</span>
             <ul>
-              <li>Ciltte kuruluk, özellikle dudaklarda ve yüzde</li>
-              <li>Ciltte iltihap, dudaklarda çatlak</li>
-              <li>Döküntü, hafif kaşıntı ve soyulma</li>
-              <li>Cilt normalden daha kırmızı ve hassas olabilir</li>
+              <li data-i18n="ro_s8_blood1">Kolay çürüme ve kanama</li>
+              <li data-i18n="ro_s8_blood2">Kansızlık belirtileri</li>
+              <li data-i18n="ro_s8_blood3">Artmış karaciğer enzimleri</li>
             </ul>
           </div>
 
-          <div class="side-effect-category category-rare">
-            <span class="category-label">Seyrek</span>
-            <ul>
-              <li>Saç kaybı (geçici – tedavi sonlandırıldıktan sonra eski haline döner)</li>
-            </ul>
-          </div>
-
-          <div class="side-effect-category category-very-rare">
-            <span class="category-label">Çok Seyrek</span>
-            <ul>
-              <li>İlk haftalarda akne kötüleşebilir (zamanla düzelir)</li>
-              <li>Ciltte koyulaşma, aşırı terleme veya kaşınma</li>
-              <li>Işığa hassasiyet artışı</li>
-              <li>Tırnak değişiklikleri ve tırnak kökünde enfeksiyonlar</li>
-              <li>Vücut kıllarında artış</li>
-            </ul>
-          </div>
-
-          <!-- KAN -->
-          <h3>🩸 Kan Etkileri</h3>
-
+          <!-- Göz -->
+          <h3 data-i18n="ro_s8_eye_h">👁️ Göz</h3>
           <div class="side-effect-category category-very-common">
-            <span class="category-label">Çok Yaygın</span>
+            <span class="category-label" data-i18n="ro_s8_eye_vc">Çok Yaygın</span>
             <ul>
-              <li>Kolay çürüme ve kanama</li>
-              <li>Kansızlık (yorgunluk, sersemlik, soluk cilt)</li>
-              <li>Enfeksiyonlara yatkınlıkta artış</li>
-              <li>Artmış karaciğer enzimleri (kan testinde)</li>
-              <li>Kan yağları seviyelerinde değişiklikler</li>
+              <li data-i18n="ro_s8_eye1">Konjonktivit, göz kuruluğu</li>
+            </ul>
+          </div>
+          <div class="side-effect-category category-very-rare">
+            <span class="category-label" data-i18n="ro_s8_eye_vr">Çok Seyrek</span>
+            <ul>
+              <li data-i18n="ro_s8_eye2">Gece görüş azalması</li>
+              <li data-i18n="ro_s8_eye3">Bulanık görme, katarakt</li>
             </ul>
           </div>
 
-          <!-- GÖZ -->
-          <h3 id="goz">👁️ Göz Bozuklukları</h3>
-
+          <!-- Kemik -->
+          <h3 data-i18n="ro_s8_bone_h">🦴 Kemik ve Kas</h3>
           <div class="side-effect-category category-very-common">
-            <span class="category-label">Çok Yaygın</span>
-            <ul>
-              <li>Gözde konjonktivit ve göz kapağında iltihap</li>
-              <li>Gözlerde kuruluk ve tahriş hissi</li>
-            </ul>
+            <span class="category-label" data-i18n="ro_s8_bone_vc">Çok Yaygın: Sırt, kas, eklem ağrısı</span>
           </div>
-
-          <div class="side-effect-category category-very-rare">
-            <span class="category-label">Çok Seyrek</span>
-            <ul>
-              <li>Gece görüşünde azalma</li>
-              <li>Renk körlüğü ve renk görüşünde kötüleşme</li>
-              <li>Işığa hassasiyet artışı</li>
-              <li>Bulanık görme, çarpık görme</li>
-              <li>Korneal bulanıklık, katarakt</li>
-            </ul>
-          </div>
-
-          <!-- KULAK BURUN BOĞAZ -->
-          <h3>👂 Kulak, Burun ve Boğaz</h3>
-
-          <div class="side-effect-category category-common">
-            <span class="category-label">Yaygın</span>
-            <ul>
-              <li>Burun içinde kuruluk ve kabuklanma, hafif burun kanaması</li>
-              <li>Boğazda ve burunda yara ve iltihap</li>
-            </ul>
-          </div>
-
-          <div class="side-effect-category category-very-rare">
-            <span class="category-label">Çok Seyrek</span>
-            <ul>
-              <li>Boğazda kuruluk, ses kısıklığı</li>
-              <li>Göğüs gerilmesi, nefes kesilmesi ve hırıltı</li>
-              <li>Duyma zorlukları</li>
-            </ul>
-          </div>
-
-          <!-- KEMİK VE KAS -->
-          <h3>🦴 Kemikler ve Kaslar</h3>
-
-          <div class="side-effect-category category-very-common">
-            <span class="category-label">Çok Yaygın</span>
-            <ul>
-              <li>Sırt ağrısı, kas ağrısı, eklem ağrısı</li>
-            </ul>
-          </div>
-
-          <div class="side-effect-category category-very-rare">
-            <span class="category-label">Çok Seyrek</span>
-            <ul>
-              <li>Kemik bozuklukları (büyümede gecikme, kemik yoğunluğu değişiklikleri)</li>
-              <li>Yumuşak dokularda kalsiyum birikintisi</li>
-              <li>Ciddi iskelet kası yıkımı (hastaneye yatış gerektirebilir)</li>
-            </ul>
-          </div>
-
           <div class="warning-box">
-            <p>
-              <strong>Uyarı:</strong> Kemik ve kas problemlerinizi kötüleştirmemek için Roaccutane kullanırken
-              <strong>yoğun fiziksel aktiviteyi azaltınız</strong>.
-            </p>
+            <p data-i18n="ro_s8_bone_warn">Yoğun fiziksel aktiviteyi azaltınız.</p>
           </div>
 
-          <!-- DİĞER -->
-          <h3 id="diger-yan">📋 Diğer Yan Etkiler</h3>
-
+          <!-- Diğer -->
+          <h3 data-i18n="ro_s8_other_h">📋 Diğer</h3>
           <div class="side-effect-category category-common">
-            <span class="category-label">Yaygın</span>
+            <span class="category-label">Yaygın / Çok Seyrek</span>
             <ul>
-              <li>Baş ağrısı</li>
-              <li>Kanda yüksek kolesterol seviyeleri</li>
-              <li>İdrarda protein veya kan</li>
+              <li data-i18n="ro_s8_other1">Baş ağrısı, yüksek kolesterol</li>
+              <li data-i18n="ro_s8_other2">Diyabet belirtileri (çok seyrek)</li>
+              <li data-i18n="ro_s8_other3">Karın ağrısı, diş eti kanaması (çok seyrek)</li>
             </ul>
-          </div>
-
-          <div class="side-effect-category category-very-rare">
-            <span class="category-label">Çok Seyrek</span>
-            <ul>
-              <li>Diyabet belirtileri (aşırı susama, sık idrara çıkma)</li>
-              <li>Karaciğer veya böbrek iltihabı belirtileri (sarılık, yorgunluk, idrar güçlüğü)</li>
-              <li>Şiddetli karın ağrısı, kanlı ishal, mide bulantısı</li>
-              <li>Diş eti kanaması ve iltihabı</li>
-              <li>Lenf bezlerinde şişme</li>
-              <li>Genel olarak iyi hissetmeme</li>
-              <li>Kanda yüksek ürik asit</li>
-              <li>Bakteriyel enfeksiyonlar</li>
-              <li>Kan damarlarının iltihabı</li>
-            </ul>
-          </div>
-
-          <div class="info-box">
-            <p>
-              Bu kullanma talimatında bahsedilmeyen herhangi bir yan etki fark ederseniz doktorunuzu
-              veya eczacınızı bilgilendiriniz.
-            </p>
           </div>
         </div>
 
-        <!-- 5. SAKLAMA -->
+        <!-- 5 Saklama -->
         <div class="prospektus-section" id="saklama">
-          <h2><span class="section-icon">📦</span> 5. Saklama Koşulları</h2>
-
+          <h2><span class="section-icon">📦</span>
+            <span data-i18n="ro_s9_title">5. Saklama</span></h2>
           <ul>
-            <li>Çocukların göremeyeceği ve erişemeyeceği yerlerde saklayınız</li>
-            <li><strong>25°C'nin altındaki</strong> oda sıcaklığında saklayınız</li>
-            <li>Işıktan ve nemden koruyunuz</li>
-            <li>Son kullanma tarihinden sonra kullanmayınız</li>
-            <li>Artan kapsülleri eczacınıza teslim ediniz</li>
+            <li data-i18n="ro_s9_l1">Çocukların erişemeyeceği yerde</li>
+            <li data-i18n="ro_s9_l2">25°C altında, ışık ve nemden koruyun</li>
+            <li data-i18n="ro_s9_l3">Son kullanma tarihinden sonra kullanmayınız</li>
+            <li data-i18n="ro_s9_l4">Artan kapsülleri eczacınıza teslim ediniz</li>
           </ul>
-
-          <h3>Üretim Bilgileri</h3>
+          <h3 data-i18n="ro_s9_mfg_h">Üretim Bilgileri</h3>
           <ul>
-            <li><strong>Ruhsat Sahibi:</strong> Roche Müstahzarları Sanayi A.Ş. – Maslak / İstanbul</li>
-            <li><strong>Üretim Yeri:</strong> R.P. Scherer GmbH – Eberbach, Almanya</li>
+            <li data-i18n="ro_s9_mfg1">Ruhsat: Roche – Maslak, İstanbul</li>
+            <li data-i18n="ro_s9_mfg2">Üretim: R.P. Scherer GmbH – Eberbach, Almanya</li>
           </ul>
         </div>
 
         <!-- CTA -->
         <div style="text-align:center; margin-top:32px;">
           <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-            <a href="ilac-kutusu.html" class="btn btn-secondary">
-              ← İlaç Kutusuna Dön
-            </a>
-            <a href="index.html#download" class="btn btn-primary">
-              📱 Uygulamayı İndir
-            </a>
+            <a href="ilac-kutusu.html" class="btn btn-secondary" data-i18n="btn_back">← İlaç Kutusuna Dön</a>
+            <a href="index.html#download" class="btn btn-primary" data-i18n="btn_download">📱 Uygulamayı İndir</a>
           </div>
         </div>
 
@@ -596,19 +363,13 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="logo-placeholder">Q</div>
-            QrPektüs
-          </div>
-          <p data-i18n="footer_desc">
-            İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor,
-            çok dilli sağlık bilgisine erişimi kolaylaştırıyoruz.
-          </p>
+          <div class="footer-logo"><div class="logo-placeholder">Q</div> QRpektüs</div>
+          <p data-i18n="footer_desc">İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor.</p>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer_links">Hızlı Bağlantılar</h4>
@@ -624,13 +385,12 @@
           <a href="iburamin-cold.html">İburamin Cold</a>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer_contact">İletişim</h4>
-          <a href="mailto:info@qrpektus.com">info@qrpektus.com</a>
+          <h4>QRpektüs</h4>
           <a href="#">qrpektus.vercel.app</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span data-i18n="footer_rights">© 2025 QrPektüs. Tüm hakları saklıdır.</span>
+        <span data-i18n="footer_rights">© 2025 QRpektüs. Tüm hakları saklıdır.</span>
         <span data-i18n="footer_disclaimer">Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</span>
       </div>
     </div>
