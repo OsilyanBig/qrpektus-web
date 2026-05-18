@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parol 500 mg Tablet – QrPektüs</title>
-  <meta name="description" content="Parol 500 mg tablet prospektüsü. Kullanım talimatı, doz bilgisi, yan etkiler, uyarılar ve saklama koşulları." />
+  <title>Parol 500 mg – QRpektüs</title>
+  <meta name="description" content="Parol 500 mg tablet prospektüsü." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,16 +12,15 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="QrPektüs Logo"
+        <img src="images/logo.png" alt="QRpektüs Logo"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <div class="logo-placeholder" style="display:none;">Q</div>
-        QrPektüs
+        QRpektüs
       </a>
-
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="nav_home">Ana Sayfa</a></li>
         <li><a href="ilac-kutusu.html" data-i18n="nav_drugs">İlaç Kutusu</a></li>
@@ -33,9 +32,6 @@
             <div class="lang-dropdown">
               <a href="#" data-lang="tr"><span class="flag">🇹🇷</span> Türkçe</a>
               <a href="#" data-lang="en"><span class="flag">🇬🇧</span> English</a>
-              <a href="#" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</a>
-              <a href="#" data-lang="fr"><span class="flag">🇫🇷</span> Français</a>
-              <a href="#" data-lang="es"><span class="flag">🇪🇸</span> Español</a>
             </div>
           </div>
         </li>
@@ -44,394 +40,264 @@
              data-i18n="nav_download">Uygulamayı İndir</a>
         </li>
       </ul>
-
-      <button class="nav-toggle" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="prospektus-hero">
     <div class="container">
-
       <div class="drug-image">
-        <img src="images/parol.png" alt="Parol 500 mg Tablet"
+        <img src="images/parol.png" alt="Parol 500mg"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
         <span class="placeholder-icon" style="display:none;">💊</span>
       </div>
-
       <div class="drug-info">
         <a href="ilac-kutusu.html" style="color:var(--primary); font-size:0.9rem; font-weight:600;"
            data-i18n="back_to_library">← İlaç Kutusuna Dön</a>
-
-        <h1>Parol 500 mg Tablet</h1>
-
+        <h1 data-i18n="pa_title">Parol 500 mg Tablet</h1>
         <div class="drug-meta">
           <span>📊 <strong data-i18n="prospektus_barcode">Barkod</strong>: 8699717010093</span>
           <span>🏭 <strong data-i18n="prospektus_manufacturer">Üretici</strong>: Atabay</span>
-          <span>💊 Parasetamol 500 mg</span>
-          <span>🥤 Ağızdan Kullanım</span>
+          <span data-i18n="pa_form">💊 Parasetamol 500 mg</span>
+          <span data-i18n="pa_route">🥤 Ağızdan Kullanım</span>
         </div>
-
         <div class="warning-box">
           <p>
             <strong data-i18n="warning_title">⚠️ Önemli Uyarı</strong><br />
-            <span data-i18n="warning_text">Bu sayfa yalnızca bilgilendirme amaçlıdır. İlaç kullanımında mutlaka doktorunuza veya eczacınıza danışınız.</span>
+            <span data-i18n="warning_text">Bu sayfa yalnızca bilgilendirme amaçlıdır.</span>
           </p>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== PROSPEKTÜS İÇERİĞİ ===== -->
+  <!-- İÇERİK -->
   <section class="prospektus-content">
     <div class="container">
 
       <!-- Sidebar -->
       <aside class="prospektus-sidebar">
         <div class="toc">
-          <h4>İçindekiler</h4>
-          <a href="#nedir">1. Parol Nedir?</a>
-          <a href="#icindekiler">Etkin ve Yardımcı Maddeler</a>
-          <a href="#dikkat">2. Dikkat Edilmesi Gerekenler</a>
-          <a href="#kullanmayiniz">Kullanmayınız</a>
-          <a href="#dikkatli">Dikkatli Kullanınız</a>
-          <a href="#etkilesim">Diğer İlaçlarla Kullanımı</a>
-          <a href="#hamilelik">Hamilelik ve Emzirme</a>
-          <a href="#nasil">3. Nasıl Kullanılır?</a>
-          <a href="#doz">Doz Bilgisi</a>
-          <a href="#yan-etkiler">4. Yan Etkiler</a>
-          <a href="#saklama">5. Saklama Koşulları</a>
+          <h4 data-i18n="toc_title">İçindekiler</h4>
+          <a href="#nedir"        data-i18n="pa_toc1">1. Parol Nedir?</a>
+          <a href="#icindekiler"  data-i18n="pa_toc2">Etkin ve Yardımcı Maddeler</a>
+          <a href="#dikkat"       data-i18n="pa_toc3">2. Dikkat Edilmesi Gerekenler</a>
+          <a href="#kullanmayiniz" data-i18n="pa_toc4">Kullanmayınız</a>
+          <a href="#dikkatli"     data-i18n="pa_toc5">Dikkatli Kullanınız</a>
+          <a href="#etkilesim"    data-i18n="pa_toc6">Diğer İlaçlarla Kullanımı</a>
+          <a href="#hamilelik"    data-i18n="pa_toc7">Hamilelik ve Emzirme</a>
+          <a href="#nasil"        data-i18n="pa_toc8">3. Nasıl Kullanılır?</a>
+          <a href="#doz"          data-i18n="pa_toc9">Doz Bilgisi</a>
+          <a href="#yan-etkiler"  data-i18n="pa_toc10">4. Yan Etkiler</a>
+          <a href="#saklama"      data-i18n="pa_toc11">5. Saklama Koşulları</a>
         </div>
       </aside>
 
       <!-- Ana İçerik -->
       <div class="prospektus-main">
 
-        <!-- 1. PAROL NEDİR -->
+        <!-- 1 -->
         <div class="prospektus-section" id="nedir">
-          <h2><span class="section-icon">ℹ️</span> 1. Parol Nedir ve Ne İçin Kullanılır?</h2>
-
-          <p>
-            Parol, her tabletinde <strong>500 mg parasetamol</strong> içeren, ağrı kesici ve ateş düşürücü
-            olarak etki eden bir ilaçtır. 20 ve 30 tablet içeren blister ambalajlarda sunulur.
-          </p>
-
+          <h2><span class="section-icon">ℹ️</span>
+            <span data-i18n="pa_s1_title">1. Parol Nedir ve Ne İçin Kullanılır?</span></h2>
+          <p data-i18n="pa_s1_p1">Parol, her tabletinde 500 mg parasetamol içeren ağrı kesici ve ateş düşürücü ilaçtır.</p>
           <div class="success-box">
-            <p>
-              <strong>Kullanım Amacı:</strong> Hafif ve orta şiddetli ağrıların ve ateşin
-              <strong>semptomatik tedavisinde</strong> kullanılır.
-            </p>
+            <p data-i18n="pa_s1_box">Hafif ve orta şiddetli ağrıların ve ateşin semptomatik tedavisinde kullanılır.</p>
           </div>
-
-          <p>
-            Baş ağrısı, diş ağrısı, kas ağrısı, soğuk algınlığına eşlik eden ateş gibi durumlarda
-            doktor veya eczacı önerisine göre kullanılabilir.
-          </p>
+          <p data-i18n="pa_s1_p2">Baş ağrısı, diş ağrısı, kas ağrısı, soğuk algınlığı ateşi için kullanılabilir.</p>
         </div>
 
-        <!-- ETKİN MADDELER -->
+        <!-- Etkin Maddeler -->
         <div class="prospektus-section" id="icindekiler">
-          <h2><span class="section-icon">🧪</span> Etkin ve Yardımcı Maddeler</h2>
-
-          <h3>Etkin Madde</h3>
-          <p>Her tablette <strong>500 mg parasetamol</strong> bulunur.</p>
-
-          <h3>Yardımcı Maddeler</h3>
+          <h2><span class="section-icon">🧪</span>
+            <span data-i18n="pa_s2_title">Etkin ve Yardımcı Maddeler</span></h2>
+          <h3 data-i18n="pa_s2_h1">Etkin Madde</h3>
+          <p data-i18n="pa_s2_p1">Her tablette 500 mg parasetamol bulunur.</p>
+          <h3 data-i18n="pa_s2_h2">Yardımcı Maddeler</h3>
           <ul>
-            <li>Mikrokristalin selüloz</li>
-            <li>Povidon K-30</li>
-            <li>Mısır nişastası</li>
-            <li>Stearik asit</li>
+            <li data-i18n="pa_s2_l1">Mikrokristalin selüloz</li>
+            <li data-i18n="pa_s2_l2">Povidon K-30</li>
+            <li data-i18n="pa_s2_l3">Mısır nişastası</li>
+            <li data-i18n="pa_s2_l4">Stearik asit</li>
           </ul>
         </div>
 
-        <!-- 2. DİKKAT -->
+        <!-- 2 Dikkat -->
         <div class="prospektus-section" id="dikkat">
-          <h2><span class="section-icon">⚠️</span> 2. Kullanmadan Önce Dikkat Edilmesi Gerekenler</h2>
+          <h2><span class="section-icon">⚠️</span>
+            <span data-i18n="pa_s3_title">2. Dikkat Edilmesi Gerekenler</span></h2>
 
-          <h3 id="kullanmayiniz">❌ Aşağıdaki Durumlarda Kullanmayınız</h3>
+          <h3 id="kullanmayiniz" data-i18n="pa_s3_h1">❌ Kullanmayınız</h3>
           <ul>
-            <li>Parasetamole veya ilacın içeriğindeki diğer maddelere karşı alerjiniz varsa</li>
-            <li>Şiddetli karaciğer yetmezliğiniz varsa</li>
-            <li>Şiddetli böbrek yetmezliğiniz varsa</li>
+            <li data-i18n="pa_s3_l1">Parasetamole alerjiniz varsa</li>
+            <li data-i18n="pa_s3_l2">Şiddetli karaciğer yetmezliği</li>
+            <li data-i18n="pa_s3_l3">Şiddetli böbrek yetmezliği</li>
           </ul>
 
-          <h3 id="dikkatli">⚡ Aşağıdaki Durumlarda Dikkatli Kullanınız</h3>
+          <h3 id="dikkatli" data-i18n="pa_s3_h2">⚡ Dikkatli Kullanınız</h3>
           <ul>
-            <li>Kansızlık (anemi) varsa</li>
-            <li>Akciğer hastalığınız varsa</li>
-            <li>Karaciğer veya böbrek fonksiyon bozukluğu varsa</li>
-            <li>Deride kızarıklık, döküntü veya başka bir cilt reaksiyonu gelişirse</li>
-            <li>Başka bir <strong>parasetamol içeren ilaç</strong> kullanıyorsanız</li>
-            <li>Kilonuz normalin altındaysa, anoreksikseniz veya yetersiz besleniyorsanız</li>
-            <li>Gilbert sendromunuz varsa</li>
-            <li>Glukoz-6-fosfat dehidrogenaz enzim eksikliğiniz varsa</li>
-            <li>Alkol kullanıyorsanız</li>
+            <li data-i18n="pa_s3_l4">Kansızlık (anemi) varsa</li>
+            <li data-i18n="pa_s3_l5">Akciğer hastalığı varsa</li>
+            <li data-i18n="pa_s3_l6">Karaciğer veya böbrek bozukluğu</li>
+            <li data-i18n="pa_s3_l7">Deride kızarıklık veya döküntü gelişirse</li>
+            <li data-i18n="pa_s3_l8">Başka parasetamol içeren ilaç kullanıyorsanız</li>
+            <li data-i18n="pa_s3_l9">Kilonuz düşükse veya yetersiz besleniyorsanız</li>
+            <li data-i18n="pa_s3_l10">Gilbert sendromu varsa</li>
+            <li data-i18n="pa_s3_l11">Alkol kullanıyorsanız</li>
           </ul>
 
           <div class="warning-box">
-            <p>
-              <strong>Önemli:</strong> Parasetamol içeren başka ilaçlarla birlikte kullanım
-              <strong>doz aşımına</strong> neden olabilir. Ağrı kesici, ateş düşürücü, grip ve nezle
-              semptomlarını giderici ya da uykuya yardımcı bazı ilaçlarda da parasetamol bulunabilir.
-            </p>
+            <p data-i18n="pa_s3_warn1">Parasetamol içeren başka ilaçlarla birlikte kullanım doz aşımına neden olabilir.</p>
           </div>
-
           <div class="warning-box">
-            <p>
-              <strong>Karaciğer Riski:</strong> Parol yüksek dozda alındığında ciddi karaciğer toksisitesine yol açabilir.
-              Alkol kullanan kişilerde karaciğer zehirlenmesi riski nedeniyle günlük toplam parasetamol dozu
-              <strong>2000 mg'ı (4 tablet)</strong> aşmamalıdır.
-            </p>
+            <p data-i18n="pa_s3_warn2">Yüksek dozda ciddi karaciğer toksisitesi riski vardır. Alkol kullananlarda günlük doz 2000 mg'ı aşmamalıdır.</p>
           </div>
-
           <div class="info-box">
-            <p>
-              <strong>Doktora Başvurun:</strong> 3-5 gün içinde yeni belirtiler oluşursa veya ağrı/ateş azalmazsa,
-              ilacı bırakıp doktorunuza danışınız.
-            </p>
+            <p data-i18n="pa_s3_info">3-5 gün içinde düzelme olmazsa doktorunuza danışınız.</p>
           </div>
 
-          <h3>🍽️ Yiyecek ve İçecek ile Kullanımı</h3>
-          <p>
-            Alkolle veya alkol içeren ürünlerle birlikte kullanıldığında karaciğer üzerine zararlı etki riski artabilir.
-            Besinler parasetamolün bağırsaktan emilimini azaltabilir.
-          </p>
+          <h3 data-i18n="pa_s3_food_h">🍽️ Yiyecek ve İçecek</h3>
+          <p data-i18n="pa_s3_food">Alkol ile karaciğer riski artar. Besinler emilimi azaltabilir.</p>
 
-          <h3 id="hamilelik">🤰 Hamilelik ve Emzirme</h3>
-          <p>
-            <strong>Hamilelik:</strong> Hamilelikte kullanımına ilişkin belirgin zararlı etkiler bildirilmemiştir;
-            ancak yine de hekim önerisi ile kullanılmalıdır.
-          </p>
-          <p>
-            <strong>Emzirme:</strong> Parasetamol az miktarda anne sütüne geçer. Emziren anneler bu dönemde
-            hekim önerisi ile kullanabilir.
-          </p>
+          <h3 id="hamilelik" data-i18n="pa_s3_preg_h">🤰 Hamilelik ve Emzirme</h3>
+          <p data-i18n="pa_s3_preg">Hamilelikte belirgin zarar bildirilmemiştir; hekim önerisi ile kullanılır.</p>
+          <p data-i18n="pa_s3_lact">Az miktarda süte geçer. Emziren anneler hekim önerisi ile kullanabilir.</p>
 
-          <h3>🚗 Araç ve Makine Kullanımı</h3>
-          <p>
-            Genellikle araç ve makine kullanımı üzerine belirgin etki beklenmez. Ancak bazı hastalarda
-            baş dönmesi veya uyku hali yapabilir. Uyanık kalmanızı gerektiren işlerde dikkatli olunmalıdır.
-          </p>
+          <h3 data-i18n="pa_s3_drive_h">🚗 Araç Kullanımı</h3>
+          <p data-i18n="pa_s3_drive">Bazı hastalarda baş dönmesi veya uyku hali yapabilir.</p>
         </div>
 
-        <!-- ETKİLEŞİM -->
+        <!-- Etkileşim -->
         <div class="prospektus-section" id="etkilesim">
-          <h2><span class="section-icon">💊</span> Diğer İlaçlar ile Birlikte Kullanımı</h2>
-
-          <p>Parol bazı ilaçlarla birlikte kullanıldığında etkisi değişebilir. Özellikle şu ilaçlarla dikkatli olunmalıdır:</p>
-
+          <h2><span class="section-icon">💊</span>
+            <span data-i18n="pa_s4_title">Diğer İlaçlarla Kullanımı</span></h2>
+          <p data-i18n="pa_s4_p1">Şu ilaçlarla etkileşebilir:</p>
           <ul>
-            <li>Mide boşalmasını geciktiren ilaçlar (ör. propantelin)</li>
-            <li>Mide boşalmasını hızlandıran ilaçlar (ör. metoklopramid)</li>
-            <li>Karaciğer enzimlerini uyaran bazı uyku ilaçları</li>
-            <li>Sara tedavisinde kullanılan ilaçlar (fenitoin, fenobarbital, karbamazepin)</li>
-            <li>Kloramfenikol ve rifampisin gibi antibiyotikler</li>
-            <li>Varfarin ve kumarin türevi kan sulandırıcılar</li>
-            <li>Zidovudin</li>
-            <li>Domperidon</li>
-            <li>Sarı kantaron (St. John’s Wort) içeren ürünler</li>
-            <li>Kolestiramin</li>
-            <li>Tropisetron ve granisetron</li>
-            <li>Diğer ağrı kesiciler</li>
-            <li>Alkol</li>
-            <li>Bazı antidepresan ilaçlar</li>
+            <li data-i18n="pa_s4_l1">Mide boşalmasını etkileyen ilaçlar</li>
+            <li data-i18n="pa_s4_l2">Sara ilaçları (fenitoin, fenobarbital, karbamazepin)</li>
+            <li data-i18n="pa_s4_l3">Kloramfenikol, rifampisin</li>
+            <li data-i18n="pa_s4_l4">Varfarin ve kan sulandırıcılar</li>
+            <li data-i18n="pa_s4_l5">Zidovudin</li>
+            <li data-i18n="pa_s4_l6">Sarı kantaron içeren ürünler</li>
+            <li data-i18n="pa_s4_l7">Kolestiramin</li>
+            <li data-i18n="pa_s4_l8">Diğer ağrı kesiciler ve alkol</li>
           </ul>
-
           <div class="info-box">
-            <p>
-              Reçeteli veya reçetesiz kullandığınız tüm ilaçları doktorunuza veya eczacınıza bildiriniz.
-            </p>
+            <p data-i18n="pa_s4_info">Tüm kullandığınız ilaçları doktorunuza bildiriniz.</p>
           </div>
         </div>
 
-        <!-- 3. NASIL KULLANILIR -->
+        <!-- 3 Kullanım -->
         <div class="prospektus-section" id="nasil">
-          <h2><span class="section-icon">💊</span> 3. Parol Nasıl Kullanılır?</h2>
+          <h2><span class="section-icon">💊</span>
+            <span data-i18n="pa_s5_title">3. Parol Nasıl Kullanılır?</span></h2>
 
-          <h3 id="doz">📋 Doz Bilgisi</h3>
-
+          <h3 id="doz" data-i18n="pa_s5_h1">📋 Doz Bilgisi</h3>
           <div class="success-box">
-            <p>
-              <strong>Yetişkinler ve 12 yaş üzeri çocuklar:</strong> Önerilen doz <strong>1-2 tablet</strong>tir.
-              Gerekirse doz her <strong>4 saatte bir</strong> tekrarlanabilir.
-            </p>
+            <p data-i18n="pa_s5_box">Yetişkinler ve 12 yaş üzeri: 1-2 tablet, her 4 saatte bir tekrarlanabilir.</p>
           </div>
-
           <ul>
-            <li><strong>Günlük en yüksek doz:</strong> 4000 mg</li>
-            <li><strong>24 saatte:</strong> 4 dozdan fazla kullanılmamalıdır</li>
+            <li data-i18n="pa_s5_l1">Günlük en yüksek doz: 4000 mg</li>
+            <li data-i18n="pa_s5_l2">24 saatte 4 dozdan fazla kullanılmamalı</li>
           </ul>
-
           <div class="info-box">
-            <p>
-              <strong>6-12 yaş arası çocuklar:</strong> 4-6 saat ara ile <strong>yarım tablet - 1 tablet</strong> önerilir.
-              Günlük en yüksek doz 10-15 mg/kg bölünmüş dozlarda toplam <strong>60 mg/kg</strong>dır.
-            </p>
+            <p data-i18n="pa_s5_child">6-12 yaş: 4-6 saat ara ile yarım-1 tablet. Günlük max: 60 mg/kg</p>
           </div>
 
-          <h3>Uygulama Şekli</h3>
+          <h3 data-i18n="pa_s5_how_h">Uygulama</h3>
           <ul>
-            <li>Ağızdan alınır</li>
-            <li>Bir bardak su ile yutunuz</li>
-            <li>Belirtilerin giderilebilmesi için her zaman etkili olan en düşük dozda kullanınız</li>
+            <li data-i18n="pa_s5_how1">Ağızdan alınır</li>
+            <li data-i18n="pa_s5_how2">Bir bardak su ile yutunuz</li>
+            <li data-i18n="pa_s5_how3">En düşük etkili dozda kullanınız</li>
           </ul>
 
-          <h3>Yaş Gruplarına Göre Kullanım</h3>
+          <h3 data-i18n="pa_s5_age_h">Yaş Grupları</h3>
           <ul>
-            <li><strong>6 yaş altı:</strong> Doktor önerisi olmadıkça kullanılmamalıdır</li>
-            <li><strong>6-11 yaş:</strong> Doktora danışmadan 3 günden fazla kullanılmamalıdır</li>
-            <li><strong>Yaşlılar:</strong> Sağlıklı yaşlılarda normal yetişkin dozu kullanılabilir; zayıf ve hareketsiz yaşlılarda doz azaltılabilir</li>
+            <li data-i18n="pa_s5_age1">6 yaş altı: Doktor önerisi olmadan kullanılmaz</li>
+            <li data-i18n="pa_s5_age2">6-11 yaş: 3 günden fazla doktorsuz kullanılmaz</li>
+            <li data-i18n="pa_s5_age3">Yaşlılar: Zayıf/hareketsiz yaşlılarda doz azaltılmalı</li>
           </ul>
 
-          <h3>Özel Kullanım Durumları</h3>
-          <ul>
-            <li>Hafif ve orta şiddette karaciğer veya böbrek fonksiyon bozukluğu olanlarda dikkatli kullanılmalıdır</li>
-          </ul>
-
-          <h3>Fazla Kullanım</h3>
+          <h3 data-i18n="pa_s5_od_h">Doz Aşımı</h3>
           <div class="warning-box">
-            <p>
-              Doz aşımı durumunda solgunluk, iştahsızlık, bulantı ve kusma görülebilir.
-              Bazı durumlarda belirtiler saatlerce ortaya çıkmayabilir. Aşırı doz veya kazayla fazla kullanımda
-              <strong>derhal doktora veya hastaneye başvurunuz</strong>.
-            </p>
+            <p data-i18n="pa_s5_od">Doz aşımında derhal doktora veya hastaneye başvurunuz.</p>
           </div>
 
-          <h3>Doz Unutma ve Tedavi Sonlandırma</h3>
-          <ul>
-            <li>Unutulan dozları dengelemek için çift doz almayınız</li>
-            <li>İlacınızı doktorunuzun önerdiği süre boyunca kullanınız</li>
-            <li>Tedavi sonlandırıldığında genellikle olumsuz bir etki beklenmez</li>
-          </ul>
+          <h3 data-i18n="pa_s5_miss_h">Doz Unutma</h3>
+          <p data-i18n="pa_s5_miss">Çift doz almayınız.</p>
         </div>
 
-        <!-- 4. YAN ETKİLER -->
+        <!-- 4 Yan Etkiler -->
         <div class="prospektus-section" id="yan-etkiler">
-          <h2><span class="section-icon">🩺</span> 4. Olası Yan Etkiler</h2>
-
-          <p>
-            Parasetamolün istenmeyen etkileri genellikle hafiftir. Ancak yüksek dozlarda ciddi zarar oluşturabilir.
-          </p>
-
+          <h2><span class="section-icon">🩺</span>
+            <span data-i18n="pa_s6_title">4. Olası Yan Etkiler</span></h2>
+          <p data-i18n="pa_s6_p1">Genellikle hafif yan etkileri vardır.</p>
           <div class="warning-box">
-            <p>
-              <strong>ACİL DURUM:</strong> Aşağıdakilerden biri olursa Parol'u kullanmayı durdurun ve
-              <strong>DERHAL</strong> doktorunuza bildirin veya en yakın acil servise başvurun:
-            </p>
-            <ul style="margin-top:10px;">
-              <li>El, ayak, yüz, dudak veya özellikle boğazda şişme</li>
-              <li>Alerjik belirtiler veya anafilaktik şok</li>
-              <li>Astım benzeri nefes darlığı veya bronkospazm</li>
-              <li>Beklenmeyen morarma ve kanama</li>
-            </ul>
+            <p data-i18n="pa_s6_emerg">ACİL: Şişme, alerjik belirtiler, nefes darlığı, beklenmeyen kanama olursa DERHAL başvurunuz.</p>
           </div>
 
           <div class="side-effect-category category-common">
-            <span class="category-label">Yaygın</span>
+            <span class="category-label" data-i18n="pa_s6_c">Yaygın</span>
             <ul>
-              <li>Uyku hali</li>
-              <li>Baş ağrısı</li>
-              <li>Baş dönmesi</li>
-              <li>Üst solunum yolu enfeksiyon belirtileri</li>
-              <li>Bulantı</li>
-              <li>Kusma</li>
-              <li>Uyuşma, karıncalanma, yanma hissi</li>
-              <li>Bağırsak gazı</li>
-              <li>Karın ağrısı</li>
-              <li>Kabızlık</li>
-              <li>Hazımsızlık</li>
+              <li data-i18n="pa_s6_c1">Uyku hali, baş ağrısı, baş dönmesi</li>
+              <li data-i18n="pa_s6_c2">Bulantı, kusma, karın ağrısı</li>
+              <li data-i18n="pa_s6_c3">Kabızlık, hazımsızlık, gaz</li>
             </ul>
           </div>
 
           <div class="side-effect-category category-uncommon">
-            <span class="category-label">Yaygın Olmayan</span>
+            <span class="category-label" data-i18n="pa_s6_uc">Yaygın Olmayan</span>
             <ul>
-              <li>Uzun süreli uygulamada böbrek hasarı (papiler nekroz)</li>
-              <li>Sindirim sisteminde kanama</li>
+              <li data-i18n="pa_s6_uc1">Böbrek hasarı (uzun süreli kullanım)</li>
+              <li data-i18n="pa_s6_uc2">Sindirim sistemi kanaması</li>
             </ul>
           </div>
 
           <div class="side-effect-category category-rare">
-            <span class="category-label">Seyrek</span>
+            <span class="category-label" data-i18n="pa_s6_r">Seyrek</span>
             <ul>
-              <li>Lökopeni, pansitopeni, anemi gibi kan hücresi bozuklukları</li>
-              <li>Metemoglobinemi</li>
-              <li>Trombositopenik purpura</li>
-              <li>Bulantı, kusma, ishal, karın ağrısı</li>
-              <li>Ani başlayan ciddi alerjik reaksiyon (anafilaksi)</li>
-              <li>Deri döküntüsü, kaşıntı, egzama</li>
-              <li>Anjiyoödem</li>
-              <li>Akut jeneralize ekzantematöz püstülozis</li>
-              <li>Eritema multiforme</li>
-              <li>Stevens-Johnson sendromu</li>
-              <li>Toksik epidermal nekroliz (Lyell sendromu)</li>
+              <li data-i18n="pa_s6_r1">Kan hücresi bozuklukları</li>
+              <li data-i18n="pa_s6_r2">Ciddi alerjik reaksiyon (anafilaksi)</li>
+              <li data-i18n="pa_s6_r3">Deri döküntüsü, Stevens-Johnson sendromu</li>
             </ul>
           </div>
 
           <div class="side-effect-category category-very-rare">
-            <span class="category-label">Çok Seyrek</span>
+            <span class="category-label" data-i18n="pa_s6_vr">Çok Seyrek</span>
             <ul>
-              <li>Agranülositoz</li>
-              <li>Trombositopeni</li>
-              <li>Alerjik reaksiyon belirtileri</li>
-              <li>Bronkospazm</li>
-              <li>Karaciğer işlev bozukluğu</li>
-            </ul>
-          </div>
-
-          <div class="side-effect-category category-rare">
-            <span class="category-label">Bilinmiyor</span>
-            <ul>
-              <li>Merkezi sinir sisteminde uyarılma</li>
-              <li>Baş dönmesi</li>
-              <li>Ensefalopati</li>
-              <li>Uykusuzluk</li>
-              <li>Titreme</li>
-              <li>Pozitif alerji testi</li>
-              <li>İmmün trombositopeni</li>
+              <li data-i18n="pa_s6_vr1">Trombositopeni</li>
+              <li data-i18n="pa_s6_vr2">Karaciğer işlev bozukluğu</li>
             </ul>
           </div>
 
           <div class="info-box">
-            <p>
-              <strong>Yan Etki Bildirimi:</strong> Karşılaştığınız yan etkileri
-              <strong>www.titck.gov.tr</strong> üzerinden veya <strong>0 800 314 00 08</strong>
-              numaralı hat aracılığıyla TÜFAM'a bildirebilirsiniz.
-            </p>
+            <p data-i18n="pa_s6_report">Yan etkileri www.titck.gov.tr veya 0800 314 00 08'den bildirebilirsiniz.</p>
           </div>
         </div>
 
-        <!-- 5. SAKLAMA -->
+        <!-- 5 Saklama -->
         <div class="prospektus-section" id="saklama">
-          <h2><span class="section-icon">📦</span> 5. Saklama Koşulları</h2>
-
+          <h2><span class="section-icon">📦</span>
+            <span data-i18n="pa_s7_title">5. Saklama Koşulları</span></h2>
           <ul>
-            <li>Çocukların göremeyeceği ve erişemeyeceği yerlerde saklayınız</li>
-            <li><strong>25°C'nin altındaki</strong> oda sıcaklığında ve orijinal ambalajında saklayınız</li>
-            <li>Son kullanma tarihinden sonra kullanmayınız</li>
-            <li>Kullanılmayan ilaçları çöpe atmayınız; uygun toplama sistemine veriniz</li>
+            <li data-i18n="pa_s7_l1">Çocukların erişemeyeceği yerde saklayınız</li>
+            <li data-i18n="pa_s7_l2">25°C altında, orijinal ambalajda saklayınız</li>
+            <li data-i18n="pa_s7_l3">Son kullanma tarihinden sonra kullanmayınız</li>
+            <li data-i18n="pa_s7_l4">Kullanılmayan ilaçları uygun şekilde atınız</li>
           </ul>
-
-          <h3>Üretim Bilgileri</h3>
+          <h3 data-i18n="pa_s7_mfg_h">Üretim Bilgileri</h3>
           <ul>
-            <li><strong>Ruhsat Sahibi:</strong> Atabay Kimya San. ve Tic. A.Ş. – Kadıköy / İstanbul</li>
-            <li><strong>Üretim Yeri:</strong> Atabay İlaç Fabrikası A.Ş. – Kadıköy / İstanbul</li>
+            <li data-i18n="pa_s7_mfg1">Ruhsat: Atabay Kimya – Kadıköy, İstanbul</li>
+            <li data-i18n="pa_s7_mfg2">Üretim: Atabay İlaç Fabrikası – Kadıköy, İstanbul</li>
           </ul>
         </div>
 
         <!-- CTA -->
         <div style="text-align:center; margin-top:32px;">
           <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-            <a href="ilac-kutusu.html" class="btn btn-secondary">
-              ← İlaç Kutusuna Dön
-            </a>
-            <a href="index.html#download" class="btn btn-primary">
-              📱 Uygulamayı İndir
-            </a>
+            <a href="ilac-kutusu.html" class="btn btn-secondary" data-i18n="btn_back">← İlaç Kutusuna Dön</a>
+            <a href="index.html#download" class="btn btn-primary" data-i18n="btn_download">📱 Uygulamayı İndir</a>
           </div>
         </div>
 
@@ -439,19 +305,13 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="logo-placeholder">Q</div>
-            QrPektüs
-          </div>
-          <p data-i18n="footer_desc">
-            İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor,
-            çok dilli sağlık bilgisine erişimi kolaylaştırıyoruz.
-          </p>
+          <div class="footer-logo"><div class="logo-placeholder">Q</div> QRpektüs</div>
+          <p data-i18n="footer_desc">İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor.</p>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer_links">Hızlı Bağlantılar</h4>
@@ -467,12 +327,12 @@
           <a href="iburamin-cold.html">İburamin Cold</a>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer_contact">İletişim</h4>
+          <h4>QRpektüs</h4>
           <a href="#">qrpektus.vercel.app</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span data-i18n="footer_rights">© 2025 QrPektüs. Tüm hakları saklıdır.</span>
+        <span data-i18n="footer_rights">© 2025 QRpektüs. Tüm hakları saklıdır.</span>
         <span data-i18n="footer_disclaimer">Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</span>
       </div>
     </div>
