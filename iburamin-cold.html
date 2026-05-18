@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>İburamin Cold Kapsül – QrPektüs</title>
-  <meta name="description" content="İburamin Cold kapsül prospektüsü. Kullanım talimatı, yan etkiler, uyarılar ve saklama koşulları." />
+  <title>İburamin Cold – QRpektüs</title>
+  <meta name="description" content="İburamin Cold kapsül prospektüsü." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,14 +12,14 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="QrPektüs Logo"
+        <img src="images/logo.png" alt="QRpektüs Logo"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <div class="logo-placeholder" style="display:none;">Q</div>
-        QrPektüs
+        QRpektüs
       </a>
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="nav_home">Ana Sayfa</a></li>
@@ -32,9 +32,6 @@
             <div class="lang-dropdown">
               <a href="#" data-lang="tr"><span class="flag">🇹🇷</span> Türkçe</a>
               <a href="#" data-lang="en"><span class="flag">🇬🇧</span> English</a>
-              <a href="#" data-lang="de"><span class="flag">🇩🇪</span> Deutsch</a>
-              <a href="#" data-lang="fr"><span class="flag">🇫🇷</span> Français</a>
-              <a href="#" data-lang="es"><span class="flag">🇪🇸</span> Español</a>
             </div>
           </div>
         </li>
@@ -43,428 +40,247 @@
              data-i18n="nav_download">Uygulamayı İndir</a>
         </li>
       </ul>
-      <button class="nav-toggle" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="prospektus-hero">
     <div class="container">
-
       <div class="drug-image">
-        <img src="images/iburamin.png" alt="İburamin Cold Kapsül"
+        <img src="images/iburamin.png" alt="İburamin Cold"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
         <span class="placeholder-icon" style="display:none;">🤧</span>
       </div>
-
       <div class="drug-info">
-        <a href="ilac-kutusu.html"
-           style="color:var(--primary); font-size:0.9rem; font-weight:600;"
+        <a href="ilac-kutusu.html" style="color:var(--primary); font-size:0.9rem; font-weight:600;"
            data-i18n="back_to_library">← İlaç Kutusuna Dön</a>
-
-        <h1>İburamin Cold Kapsül</h1>
-
+        <h1 data-i18n="ib_title">İburamin Cold Kapsül</h1>
         <div class="drug-meta">
           <span>📊 <strong data-i18n="prospektus_barcode">Barkod</strong>: 8699591090099</span>
           <span>🏭 <strong data-i18n="prospektus_manufacturer">Üretici</strong>: Berko İlaç</span>
-          <span>💊 İbuprofen 200mg + Psödoefedrin 30mg + Klorfeniramin 2mg</span>
-          <span>🥤 Ağızdan Kullanım</span>
-          <span>📦 24 Kapsül</span>
+          <span data-i18n="ib_form">💊 İbuprofen 200mg + Psödoefedrin 30mg + Klorfeniramin 2mg</span>
+          <span data-i18n="ib_route">🥤 Ağızdan Kullanım</span>
+          <span data-i18n="ib_count">📦 24 Kapsül</span>
         </div>
-
         <div class="warning-box">
           <p>
             <strong data-i18n="warning_title">⚠️ Önemli Uyarı</strong><br />
-            <span data-i18n="warning_text">
-              Bu sayfa yalnızca bilgilendirme amaçlıdır. İlaç kullanımında mutlaka
-              doktorunuza veya eczacınıza danışınız.
-            </span>
+            <span data-i18n="warning_text">Bu sayfa yalnızca bilgilendirme amaçlıdır.</span>
           </p>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== PROSPEKTÜS İÇERİĞİ ===== -->
+  <!-- İÇERİK -->
   <section class="prospektus-content">
     <div class="container">
 
       <!-- Sidebar -->
       <aside class="prospektus-sidebar">
         <div class="toc">
-          <h4>İçindekiler</h4>
-          <a href="#nedir">1. İburamin Cold Nedir?</a>
-          <a href="#icindekiler">Etkin ve Yardımcı Maddeler</a>
-          <a href="#dikkat">2. Dikkat Edilmesi Gerekenler</a>
-          <a href="#kullanmayiniz">Kullanmayınız</a>
-          <a href="#dikkatli">Dikkatli Kullanınız</a>
-          <a href="#etkilesim">Diğer İlaçlarla Kullanımı</a>
-          <a href="#hamilelik">Hamilelik ve Emzirme</a>
-          <a href="#nasil">3. Nasıl Kullanılır?</a>
-          <a href="#doz">Doz Bilgisi</a>
-          <a href="#yan-etkiler">4. Yan Etkiler</a>
-          <a href="#saklama">5. Saklama Koşulları</a>
+          <h4 data-i18n="toc_title">İçindekiler</h4>
+          <a href="#nedir"        data-i18n="ib_toc1">1. İburamin Cold Nedir?</a>
+          <a href="#icindekiler"  data-i18n="ib_toc2">Etkin ve Yardımcı Maddeler</a>
+          <a href="#dikkat"       data-i18n="ib_toc3">2. Dikkat Edilmesi Gerekenler</a>
+          <a href="#kullanmayiniz" data-i18n="ib_toc4">Kullanmayınız</a>
+          <a href="#dikkatli"     data-i18n="ib_toc5">Dikkatli Kullanınız</a>
+          <a href="#etkilesim"    data-i18n="ib_toc6">Diğer İlaçlarla Kullanımı</a>
+          <a href="#hamilelik"    data-i18n="ib_toc7">Hamilelik ve Emzirme</a>
+          <a href="#nasil"        data-i18n="ib_toc8">3. Nasıl Kullanılır?</a>
+          <a href="#doz"          data-i18n="ib_toc9">Doz Bilgisi</a>
+          <a href="#yan-etkiler"  data-i18n="ib_toc10">4. Yan Etkiler</a>
+          <a href="#saklama"      data-i18n="ib_toc11">5. Saklama</a>
         </div>
       </aside>
 
       <!-- Ana İçerik -->
       <div class="prospektus-main">
 
-        <!-- 1. İBURAMİN COLD NEDİR -->
+        <!-- 1 -->
         <div class="prospektus-section" id="nedir">
-          <h2><span class="section-icon">ℹ️</span> 1. İburamin Cold Nedir ve Ne İçin Kullanılır?</h2>
-
-          <p>
-            İburamin Cold, soğuk algınlığının semptomlarını gidermek amacıyla geliştirilmiş
-            <strong>üç etkin madde</strong> içeren kombine bir kapsüldür. Pilfer-proof HDPE kapaklı,
-            desikant kapsül içeren HDPE şişede <strong>24 kapsül</strong> olarak pazarlanmaktadır.
-          </p>
-
+          <h2><span class="section-icon">ℹ️</span>
+            <span data-i18n="ib_s1_title">1. İburamin Cold Nedir?</span></h2>
+          <p data-i18n="ib_s1_p1">Üç etkin madde içeren kombine kapsül. 24 kapsül olarak sunulur.</p>
           <div class="info-box">
-            <p>
-              <strong>Etkin maddelerin görevleri:</strong><br /><br />
-              🔵 <strong>Klorfeniramin:</strong> Antihistaminik; histamini azaltarak hapşırık,
-              kaşıntı, gözlerde sulanma ve burun akıntısını önler.<br /><br />
-              🟠 <strong>İbuprofen:</strong> Non-steroid antiinflamatuar; ağrı ve iltihaplanmaya
-              yol açan hormonları azaltır.<br /><br />
-              🟢 <strong>Psödoefedrin:</strong> Dekonjestan; nazal pasajlardaki kan damarlarını
-              büzerek burun tıkanıklığını giderir.
-            </p>
+            <p data-i18n="ib_s1_info">🔵 Klorfeniramin: Antihistaminik 🟠 İbuprofen: Ağrı kesici 🟢 Psödoefedrin: Burun açıcı</p>
           </div>
-
           <div class="success-box">
-            <p>
-              <strong>Kullanım Amacı:</strong> Soğuk algınlığının sebep olduğu
-              <strong>hapşırık, kaşıntı, gözlerde sulanma, burun akıntısı, burun ve sinüs tıkanıklığı,
-              öksürük, ağrı ve ateşin</strong> tedavisinde kullanılır.
-            </p>
+            <p data-i18n="ib_s1_box">Soğuk algınlığının hapşırık, burun akıntısı, tıkanıklık, ağrı ve ateş belirtilerinde kullanılır.</p>
           </div>
         </div>
 
-        <!-- ETKİN MADDELER -->
+        <!-- Etkin Maddeler -->
         <div class="prospektus-section" id="icindekiler">
-          <h2><span class="section-icon">🧪</span> Etkin ve Yardımcı Maddeler</h2>
-
-          <h3>Etkin Maddeler (Her kapsülde)</h3>
+          <h2><span class="section-icon">🧪</span>
+            <span data-i18n="ib_s2_title">Etkin ve Yardımcı Maddeler</span></h2>
+          <h3 data-i18n="ib_s2_h1">Etkin Maddeler</h3>
           <ul>
-            <li><strong>İbuprofen:</strong> 200 mg</li>
-            <li><strong>Psödoefedrin hidroklorür:</strong> 30 mg</li>
-            <li><strong>Klorfeniramin maleat:</strong> 2 mg</li>
+            <li data-i18n="ib_s2_l1">İbuprofen: 200 mg</li>
+            <li data-i18n="ib_s2_l2">Psödoefedrin hidroklorür: 30 mg</li>
+            <li data-i18n="ib_s2_l3">Klorfeniramin maleat: 2 mg</li>
           </ul>
-
-          <h3>Yardımcı Maddeler</h3>
+          <h3 data-i18n="ib_s2_h2">Yardımcı Maddeler</h3>
           <ul>
-            <li>Potasyum hidroksit (24 mg)</li>
-            <li>Polisorbat 80</li>
-            <li>Mısırözü yağı</li>
-            <li>Metakrilik asit-etil akrilat kopolimer dispersiyonu</li>
-            <li>Jelatin</li>
-            <li>Patent blue V (E131)</li>
-            <li>Sunset yellow (E110)</li>
-            <li>Tartrazin (E102)</li>
-            <li>Titanium dioksit (E171)</li>
+            <li data-i18n="ib_s2_l4">Potasyum hidroksit, polisorbat 80, mısırözü yağı, jelatin, titanyum dioksit ve diğerleri</li>
           </ul>
         </div>
 
-        <!-- 2. DİKKAT -->
+        <!-- 2 Dikkat -->
         <div class="prospektus-section" id="dikkat">
-          <h2><span class="section-icon">⚠️</span> 2. Kullanmadan Önce Dikkat Edilmesi Gerekenler</h2>
+          <h2><span class="section-icon">⚠️</span>
+            <span data-i18n="ib_s3_title">2. Dikkat Edilmesi Gerekenler</span></h2>
 
-          <h3 id="kullanmayiniz">❌ Aşağıdaki Durumlarda Kesinlikle Kullanmayınız</h3>
-
+          <h3 id="kullanmayiniz" data-i18n="ib_s3_h1">❌ Kullanmayınız</h3>
           <div class="warning-box">
-            <p>
-              <strong>MAO İnhibitörü Uyarısı:</strong> Son 14 gün içinde iskarboksazid, fenelzin,
-              rasagilin, selegilin veya tranilsipromin gibi MAO inhibitörü aldıysanız
-              İburamin Cold kullanmayınız. Ciddi, hayatı tehdit edici yan etkiler oluşabilir.
-            </p>
+            <p data-i18n="ib_s3_warn1">Son 14 günde MAO inhibitörü aldıysanız kullanmayınız.</p>
+          </div>
+          <ul>
+            <li data-i18n="ib_s3_l1">İbuprofen veya psödoefedrine alerji</li>
+            <li data-i18n="ib_s3_l2">Aktif mide/bağırsak kanaması veya ülser</li>
+            <li data-i18n="ib_s3_l3">Burun polipi</li>
+            <li data-i18n="ib_s3_l4">Aspirin alerjisi</li>
+            <li data-i18n="ib_s3_l5">Bypass ameliyatı öncesi/sonrası 2 hafta</li>
+          </ul>
+          <div class="warning-box">
+            <p data-i18n="ib_s3_warn2">İbuprofen kalp ve damar riskini artırabilir.</p>
+          </div>
+          <div class="warning-box">
+            <p data-i18n="ib_s3_warn3">Mide kanaması veya delinme riski vardır.</p>
           </div>
 
+          <h3 id="dikkatli" data-i18n="ib_s3_h2">⚡ Dikkatli Kullanınız</h3>
           <ul>
-            <li>İbuprofen veya psödoefedrine karşı alerjiniz varsa</li>
-            <li>Mide veya bağırsakta aktif kanama veya ülser varsa</li>
-            <li>Burnunuzda polip varsa</li>
-            <li>Aspirin veya diğer antiinflamatuvarlara karşı alerjiniz varsa</li>
-            <li>
-              Tam koroner arter bypass ameliyatından önce veya sonraki
-              <strong>2 hafta</strong> içinde kullanmayınız
-            </li>
+            <li data-i18n="ib_s3_l6">Ülser veya kanama geçmişi</li>
+            <li data-i18n="ib_s3_l7">Kalp veya tansiyon sorunu</li>
+            <li data-i18n="ib_s3_l8">Karaciğer/böbrek rahatsızlığı</li>
+            <li data-i18n="ib_s3_l9">Tiroid, glokom, diyabet</li>
+            <li data-i18n="ib_s3_l10">Prostat büyümesi</li>
+            <li data-i18n="ib_s3_l11">Kanama bozukluğu</li>
+            <li data-i18n="ib_s3_l12">Sigara kullanımı</li>
           </ul>
 
+          <h3 data-i18n="ib_s3_food_h">🍽️ Yiyecek ve İçecek</h3>
           <div class="warning-box">
-            <p>
-              <strong>Kalp ve Damar Riski:</strong> İbuprofen, kalp krizi de dahil olmak üzere
-              hayatı tehdit eden kalp ve damar problemlerini artırabilir. Bu risk uzun süreli
-              kullanımda daha da artar.
-            </p>
+            <p data-i18n="ib_s3_food">Alkol almayınız. Portakal suyu ve koladan 1 saat önce veya 2 saat sonra alınız.</p>
           </div>
 
+          <h3 id="hamilelik" data-i18n="ib_s3_preg_h">🤰 Hamilelik ve Emzirme</h3>
           <div class="warning-box">
-            <p>
-              <strong>Mide-Bağırsak Riski:</strong> İbuprofen herhangi bir belirti vermeden
-              mide veya bağırsakta kanama veya delinme gibi ciddi riskler oluşturabilir.
-              Yaşlı bireylerde bu risk daha yüksektir.
-            </p>
+            <p data-i18n="ib_s3_preg">Son 3 ayda bebek için zararlı olabilir. Anne sütüne geçer.</p>
           </div>
 
-          <h3 id="dikkatli">⚡ Aşağıdaki Durumlarda Dikkatli Kullanınız</h3>
-          <p>Aşağıdaki durumlardan herhangi biri varsa doktorunuza danışınız:</p>
-          <ul>
-            <li>Midenizde ülser (yara) veya geçirilmiş kanama</li>
-            <li>Kalp rahatsızlığı veya yüksek tansiyon</li>
-            <li>Sistemik lupus eritematozus</li>
-            <li>Karaciğer veya böbrek rahatsızlığı</li>
-            <li>Tiroid bezi rahatsızlığı</li>
-            <li>Glokom (göz içi basıncının artması)</li>
-            <li>Diyabet (kan şekeri bozuklukları)</li>
-            <li>İdrar yapma güçlüğü veya prostat büyümesi</li>
-            <li>Kanama veya kan pıhtılaşma bozukluğu</li>
-            <li>Sigara kullanımı</li>
-          </ul>
-
-          <h3>🍽️ Yiyecek ve İçecek ile Kullanımı</h3>
-          <div class="warning-box">
-            <p>
-              <strong>Alkol:</strong> İburamin Cold alırken alkol almayınız. Günde üçten fazla
-              kadeh alkol tüketiyorsanız ibuprofen mide kanaması riskini artırabilir.<br /><br />
-              <strong>Portakal suyu ve kola</strong> ile birlikte kullanmayınız. Bu besinlerden
-              en az <strong>1 saat önce veya 2 saat sonra</strong> alınız.
-            </p>
-          </div>
-
-          <h3 id="hamilelik">🤰 Hamilelik ve Emzirme</h3>
-          <div class="warning-box">
-            <p>
-              <strong>Hamilelik:</strong> Hamilelikte, özellikle <strong>hamileliğin son üç
-              ayında</strong> kullanılması bebek için zararlı olabilir. Doktorunuz söylemedikçe
-              kullanmayınız.
-            </p>
-          </div>
-          <p>
-            <strong>Emzirme:</strong> İburamin Cold anne sütüne geçer; emzirilen bebek için
-            zararlı olabilir. Doktorunuza danışmadan kullanmayınız.
-          </p>
-
-          <h3>🚗 Araç ve Makine Kullanımı</h3>
-          <p>
-            İburamin Cold düşünce veya reaksiyonlarınızı olumsuz etkileyebilecek yan etkilere
-            yol açabilir. Araç kullanıyorsanız veya uyanık kalmanızı gerektiren işler yapıyorsanız
-            <strong>dikkatli olunuz</strong>.
-          </p>
+          <h3 data-i18n="ib_s3_drive_h">🚗 Araç Kullanımı</h3>
+          <p data-i18n="ib_s3_drive">Düşünce ve reaksiyonlarınızı etkileyebilir. Dikkatli olunuz.</p>
         </div>
 
-        <!-- ETKİLEŞİM -->
+        <!-- Etkileşim -->
         <div class="prospektus-section" id="etkilesim">
-          <h2><span class="section-icon">💊</span> Diğer İlaçlar ile Birlikte Kullanımı</h2>
-
-          <p>
-            Aşağıdaki ilaçları kullanıyorsanız İburamin Cold almadan önce mutlaka doktorunuza danışınız:
-          </p>
-
+          <h2><span class="section-icon">💊</span>
+            <span data-i18n="ib_s4_title">Diğer İlaçlarla Kullanımı</span></h2>
           <ul>
-            <li>Warfarin gibi kan sulandırıcılar</li>
-            <li>Steroidler (prednisolon ve diğerleri)</li>
-            <li>Diüretikler veya yüksek tansiyon ilaçları</li>
-            <li>Beta-blokerler (atenolol, metoprolol, propranolol, sotalol, timolol vb.)</li>
-            <li>ACE inhibitörleri</li>
-            <li>Antidepresanlar (amitriptilin, klomipramin, imipramin vb.)</li>
-            <li>Aspirin veya diğer non-steroid antiinflamatuarlar (diklofenak, flurbiprofen, indometazin, ketoprofen, naproksen, piroksikam vb.)</li>
+            <li data-i18n="ib_s4_l1">Kan sulandırıcılar (warfarin)</li>
+            <li data-i18n="ib_s4_l2">Steroidler</li>
+            <li data-i18n="ib_s4_l3">Tansiyon ilaçları, beta-blokerler</li>
+            <li data-i18n="ib_s4_l4">ACE inhibitörleri</li>
+            <li data-i18n="ib_s4_l5">Antidepresanlar</li>
+            <li data-i18n="ib_s4_l6">Aspirin ve diğer antiinflamatuarlar</li>
           </ul>
-
           <div class="info-box">
-            <p>
-              Bu ilaçlardan herhangi birini kullanıyorsanız yeni bir doz ayarlaması veya
-              tedavi sırasında özel testler gerekebilir.
-            </p>
+            <p data-i18n="ib_s4_info">Bu ilaçları kullanıyorsanız doz ayarı gerekebilir.</p>
           </div>
         </div>
 
-        <!-- 3. NASIL KULLANILIR -->
+        <!-- 3 Kullanım -->
         <div class="prospektus-section" id="nasil">
-          <h2><span class="section-icon">💊</span> 3. İburamin Cold Nasıl Kullanılır?</h2>
+          <h2><span class="section-icon">💊</span>
+            <span data-i18n="ib_s5_title">3. Nasıl Kullanılır?</span></h2>
 
-          <h3 id="doz">📋 Doz Bilgisi</h3>
-
+          <h3 id="doz">📋</h3>
           <div class="success-box">
-            <p>
-              İburamin Cold tam olarak kullanma talimatında tarif edildiği gibi veya
-              doktorunuzun söylediği şekilde kullanılmalıdır. Semptomlarınızı giderebilecek
-              en küçük dozu ve en kısa süreyi tercih ediniz.
-            </p>
+            <p data-i18n="ib_s5_box">En küçük etkili dozu, en kısa süre kullanınız.</p>
           </div>
-
           <ul>
-            <li>
-              <strong>İbuprofen maksimum tek doz:</strong> 800 mg<br />
-              <strong>İbuprofen günlük maksimum doz:</strong> 3200 mg
-            </li>
-            <li>Şikayetler geçene kadar kısa süre kullanınız</li>
-            <li>
-              Ateş <strong>3 günden fazla</strong> devam ederse veya
-              ilacı <strong>7 gün</strong> kullanmanıza rağmen şikayetleriniz geçmezse
-              doktorunuza başvurunuz
-            </li>
+            <li data-i18n="ib_s5_l1">Tek doz max: 800 mg ibuprofen</li>
+            <li data-i18n="ib_s5_l2">Günlük max: 3200 mg ibuprofen</li>
+            <li data-i18n="ib_s5_l3">Ateş 3 günden fazla sürerse doktora başvurun</li>
+            <li data-i18n="ib_s5_l4">7 gün sonra şikayetler geçmediyse doktora başvurun</li>
           </ul>
 
-          <h3>Uygulama Şekli</h3>
+          <h3 data-i18n="ib_s5_how_h">Uygulama</h3>
           <ul>
-            <li>Sadece ağızdan kullanım içindir</li>
-            <li>Kapsülleri bütün olarak yutunuz</li>
-            <li>Tercihen yemeklerle birlikte alınız</li>
+            <li data-i18n="ib_s5_how1">Sadece ağızdan kullanım</li>
+            <li data-i18n="ib_s5_how2">Kapsülleri bütün yutunuz</li>
+            <li data-i18n="ib_s5_how3">Tercihen yemekle alınız</li>
           </ul>
 
-          <h3>Yaş Gruplarına Göre Kullanım</h3>
+          <h3 data-i18n="ib_s5_age_h">Yaş Grupları</h3>
           <ul>
-            <li>
-              <strong>12 yaş altı çocuklar:</strong> Kullanılmamalıdır
-            </li>
-            <li>
-              <strong>60 yaş üzeri hastalar:</strong> İburamin Cold mide kanaması
-              riskini artırabilir; dikkatli kullanılmalıdır
-            </li>
+            <li data-i18n="ib_s5_age1">12 yaş altı: Kullanılmamalıdır</li>
+            <li data-i18n="ib_s5_age2">60 yaş üzeri: Mide kanaması riski artar</li>
           </ul>
 
-          <h3>Özel Kullanım Durumları</h3>
           <div class="warning-box">
-            <p>
-              <strong>Böbrek ve Karaciğer Yetmezliği:</strong> Bu durumlarda
-              İburamin Cold kullanmayınız.
-            </p>
+            <p data-i18n="ib_s5_spec">Böbrek/karaciğer yetmezliğinde kullanmayınız.</p>
           </div>
-
-          <h3>Cerrahi Operasyon</h3>
-          <p>
-            Herhangi bir cerrahi operasyon geçirecekseniz ve bu ilacı birkaç gün önce
-            kullandıysanız operasyonun başında doktorunuza haber veriniz.
-          </p>
 
           <div class="info-box">
-            <p>
-              <strong>Alerji Testleri:</strong> Bu ilacı kullanırken alerji deri testlerinde
-              beklenmeyen sonuçlar görülebilir.
-            </p>
+            <p data-i18n="ib_s5_surg">Cerrahi operasyon öncesi doktorunuzu bilgilendiriniz.</p>
           </div>
 
-          <h3>Doz Aşımı veya Unutma</h3>
-          <ul>
-            <li>
-              <strong>Fazla kullanım:</strong> Gereğinden fazla kullandıysanız
-              bir doktor veya eczacı ile konuşunuz. Aşırı ibuprofen dozu mide ve
-              bağırsaklarınıza zarar verebilir
-            </li>
-            <li>
-              <strong>Doz unutma:</strong> Unutulan dozları dengelemek için çift doz
-              almayınız. Sonraki normal alım saatinde önerilen doza devam ediniz
-            </li>
-            <li>
-              <strong>Tedavi sonlandırma:</strong> Herhangi bir olumsuz etki beklenmemektedir
-            </li>
-          </ul>
+          <div class="warning-box">
+            <p data-i18n="ib_s5_od">Fazla kullandıysanız doktora danışınız. Çift doz almayınız.</p>
+          </div>
         </div>
 
-        <!-- 4. YAN ETKİLER -->
+        <!-- 4 Yan Etkiler -->
         <div class="prospektus-section" id="yan-etkiler">
-          <h2><span class="section-icon">🩺</span> 4. Olası Yan Etkiler</h2>
-
-          <p>
-            Tüm ilaçlar gibi İburamin Cold'un içeriğinde bulunan maddelere duyarlı olan
-            kişilerde yan etkiler olabilir.
-          </p>
+          <h2><span class="section-icon">🩺</span>
+            <span data-i18n="ib_s6_title">4. Olası Yan Etkiler</span></h2>
+          <p data-i18n="ib_s6_p1">Duyarlı kişilerde yan etkiler olabilir.</p>
 
           <div class="warning-box">
-            <p>
-              <strong>ACİL DURUM – Hemen ilacı bırakın ve acil servise başvurun:</strong>
-            </p>
-            <ul style="margin-top:10px;">
-              <li>Soluk almada güçlük</li>
-              <li>Boğazınızda şişlik</li>
-              <li>Kurdeşen veya deride döküntü</li>
-            </ul>
-            <p style="margin-top:10px; font-size:0.85rem; opacity:0.8;">
-              Bu çok ciddi yan etkiler seyrek görülür.
-            </p>
+            <p data-i18n="ib_s6_emerg">ACİL: Nefes güçlüğü, boğaz şişliği, kurdeşen olursa DERHAL başvurunuz.</p>
           </div>
 
           <div class="warning-box">
-            <p>
-              <strong>Hemen doktorunuza bildirin veya acile başvurun:</strong>
-            </p>
-            <ul style="margin-top:10px;">
-              <li>İdrarda kan gelmesi</li>
-              <li>Böbrek ağrısı</li>
-              <li>Göğüs ağrısı</li>
-              <li>Mide ağrısı</li>
-              <li>Ağızdan kan gelmesi</li>
-              <li>Dışkının renginin koyulaşması</li>
-            </ul>
+            <p data-i18n="ib_s6_emerg2">İdrarda kan, göğüs ağrısı, ağızdan kan, koyu dışkı olursa acile başvurunuz.</p>
           </div>
 
           <div class="side-effect-category category-common">
-            <span class="category-label">Doktorunuza bildirmeniz gereken yan etkiler</span>
+            <span class="category-label" data-i18n="ib_s6_c">Diğer Yan Etkiler</span>
             <ul>
-              <li>İshal</li>
-              <li>Kabızlık</li>
-              <li>Karın ağrısı</li>
-              <li>Hazımsızlık</li>
-              <li>Ağızda kuruma</li>
-              <li>Döküntü</li>
-              <li>Rahatsızlık veya kaygı-endişe</li>
-              <li>Yorgunluk</li>
-              <li>Baş ağrısı</li>
-              <li>Sarılık</li>
-              <li>Ödem (şişlik)</li>
-              <li>Normalden uzun süren kanama</li>
+              <li data-i18n="ib_s6_c1">İshal, kabızlık, karın ağrısı</li>
+              <li data-i18n="ib_s6_c2">Hazımsızlık, ağız kuruluğu</li>
+              <li data-i18n="ib_s6_c3">Döküntü, yorgunluk, baş ağrısı</li>
+              <li data-i18n="ib_s6_c4">Sarılık, ödem, uzun süren kanama</li>
             </ul>
-          </div>
-
-          <div class="info-box">
-            <p>
-              Bu kullanma talimatında bahsedilmeyen herhangi bir yan etki ile karşılaşırsanız
-              doktorunuzu veya eczacınızı bilgilendiriniz.
-            </p>
           </div>
         </div>
 
-        <!-- 5. SAKLAMA -->
+        <!-- 5 Saklama -->
         <div class="prospektus-section" id="saklama">
-          <h2><span class="section-icon">📦</span> 5. Saklama Koşulları</h2>
-
+          <h2><span class="section-icon">📦</span>
+            <span data-i18n="ib_s7_title">5. Saklama</span></h2>
           <ul>
-            <li>Çocukların göremeyeceği ve erişemeyeceği yerlerde saklayınız</li>
-            <li><strong>25°C'nin altındaki</strong> oda sıcaklığında saklayınız</li>
-            <li>Nem ve sıcaktan uzakta saklayınız</li>
-            <li>Son kullanma tarihi ile uyumlu olarak kullanınız</li>
-            <li>Üründe veya ambalajında bozukluk fark ederseniz kullanmayınız</li>
-            <li>Son kullanma tarihi geçmiş ilaçları çöpe atmayınız; uygun toplama sistemine veriniz</li>
+            <li data-i18n="ib_s7_l1">Çocukların erişemeyeceği yerde</li>
+            <li data-i18n="ib_s7_l2">25°C altında, nemden uzakta</li>
+            <li data-i18n="ib_s7_l3">Son kullanma tarihinden sonra kullanmayınız</li>
+            <li data-i18n="ib_s7_l4">Bozukluk varsa kullanmayınız</li>
           </ul>
-
-          <h3>Üretim Bilgileri</h3>
+          <h3 data-i18n="ib_s7_mfg_h">Üretim Bilgileri</h3>
           <ul>
-            <li>
-              <strong>Ruhsat Sahibi:</strong> Berko İlaç ve Kimya San. A.Ş.<br />
-              Yenişehir Mah. Özgür Sok. No:16 Ataşehir / İstanbul<br />
-              Tel: 0216 456 65 70
-            </li>
-            <li>
-              <strong>Üretim Yeri:</strong> Berko İlaç ve Kimya San. A.Ş.<br />
-              Adil Mah. Beykoz Cad. Tanıdık Sok. No:1 Sultanbeyli / İstanbul<br />
-              Tel: 0216 592 33 00
-            </li>
+            <li data-i18n="ib_s7_mfg1">Ruhsat: Berko İlaç – Ataşehir, İstanbul</li>
+            <li data-i18n="ib_s7_mfg2">Üretim: Berko İlaç – Sultanbeyli, İstanbul</li>
           </ul>
         </div>
 
         <!-- CTA -->
         <div style="text-align:center; margin-top:32px;">
           <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-            <a href="ilac-kutusu.html" class="btn btn-secondary">
-              ← İlaç Kutusuna Dön
-            </a>
-            <a href="index.html#download" class="btn btn-primary">
-              📱 Uygulamayı İndir
-            </a>
+            <a href="ilac-kutusu.html" class="btn btn-secondary" data-i18n="btn_back">← İlaç Kutusuna Dön</a>
+            <a href="index.html#download" class="btn btn-primary" data-i18n="btn_download">📱 Uygulamayı İndir</a>
           </div>
         </div>
 
@@ -472,19 +288,13 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="logo-placeholder">Q</div>
-            QrPektüs
-          </div>
-          <p data-i18n="footer_desc">
-            İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor,
-            çok dilli sağlık bilgisine erişimi kolaylaştırıyoruz.
-          </p>
+          <div class="footer-logo"><div class="logo-placeholder">Q</div> QRpektüs</div>
+          <p data-i18n="footer_desc">İlaç prospektüslerini dijitale taşıyarak kağıt israfını önlüyor.</p>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer_links">Hızlı Bağlantılar</h4>
@@ -500,16 +310,13 @@
           <a href="iburamin-cold.html">İburamin Cold</a>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer_contact">İletişim</h4>
-          <a href="mailto:info@qrpektus.com">info@qrpektus.com</a>
+          <h4>QRpektüs</h4>
           <a href="#">qrpektus.vercel.app</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span data-i18n="footer_rights">© 2025 QrPektüs. Tüm hakları saklıdır.</span>
-        <span data-i18n="footer_disclaimer">
-          Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.
-        </span>
+        <span data-i18n="footer_rights">© 2025 QRpektüs. Tüm hakları saklıdır.</span>
+        <span data-i18n="footer_disclaimer">Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</span>
       </div>
     </div>
   </footer>
